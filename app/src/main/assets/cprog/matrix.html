@@ -1,0 +1,214 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<h3>Addition of two matrices using arrays source code.</h3>
+<div class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/* */</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>(){
+  <span style="color: #333399; font-weight: bold">int</span> a[<span style="color: #0000DD; font-weight: bold">3</span>][<span style="color: #0000DD; font-weight: bold">3</span>],b[<span style="color: #0000DD; font-weight: bold">3</span>][<span style="color: #0000DD; font-weight: bold">3</span>],c[<span style="color: #0000DD; font-weight: bold">3</span>][<span style="color: #0000DD; font-weight: bold">3</span>],i,j;
+  printf(<span style="background-color: #fff0f0">&quot;Enter the First matrix: &quot;</span>);
+  <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">3</span>;i<span style="color: #333333">++</span>)
+      <span style="color: #008800; font-weight: bold">for</span>(j<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;j<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">3</span>;j<span style="color: #333333">++</span>)
+           scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>a[i][j]);
+  printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">Enter the Second matrix : &quot;</span>);
+  <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">3</span>;i<span style="color: #333333">++</span>)
+      <span style="color: #008800; font-weight: bold">for</span>(j<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;j<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">3</span>;j<span style="color: #333333">++</span>)
+           scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>b[i][j]);
+   <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">3</span>;i<span style="color: #333333">++</span>)
+       <span style="color: #008800; font-weight: bold">for</span>(j<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;j<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">3</span>;j<span style="color: #333333">++</span>)
+            c[i][j]<span style="color: #333333">=</span>a[i][j]<span style="color: #333333">+</span>b[i][j];
+   printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">The Addition of two matrix is</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>);
+   <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">3</span>;i<span style="color: #333333">++</span>){
+       printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>);
+       <span style="color: #008800; font-weight: bold">for</span>(j<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;j<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">3</span>;j<span style="color: #333333">++</span>)
+            printf(<span style="background-color: #fff0f0">&quot;%d</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\t</span><span style="background-color: #fff0f0">&quot;</span>,c[i][j]);
+   }
+}
+</pre></div>
+<h3>Subtraction of matrix</h3>
+<div class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/**/</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">void</span>  <span style="color: #0066BB; font-weight: bold">main</span>(){
+  <span style="color: #333399; font-weight: bold">int</span> a[<span style="color: #0000DD; font-weight: bold">3</span>][<span style="color: #0000DD; font-weight: bold">3</span>],b[<span style="color: #0000DD; font-weight: bold">3</span>][<span style="color: #0000DD; font-weight: bold">3</span>],c[<span style="color: #0000DD; font-weight: bold">3</span>][<span style="color: #0000DD; font-weight: bold">3</span>],i,j;
+  printf(<span style="background-color: #fff0f0">&quot;Enter the First matrix: &quot;</span>);
+  <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">3</span>;i<span style="color: #333333">++</span>)
+      <span style="color: #008800; font-weight: bold">for</span>(j<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;j<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">3</span>;j<span style="color: #333333">++</span>)
+           scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>a[i][j]);
+  printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">Enter the Second matrix: &quot;</span>);
+  <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">3</span>;i<span style="color: #333333">++</span>)
+      <span style="color: #008800; font-weight: bold">for</span>(j<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;j<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">3</span>;j<span style="color: #333333">++</span>)
+           scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>b[i][j]);
+   <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">3</span>;i<span style="color: #333333">++</span>)
+       <span style="color: #008800; font-weight: bold">for</span>(j<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;j<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">3</span>;j<span style="color: #333333">++</span>)
+            c[i][j]<span style="color: #333333">=</span>a[i][j]<span style="color: #333333">-</span>b[i][j];
+   printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">The Subtraction of two matrix is</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>);
+   <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">3</span>;i<span style="color: #333333">++</span>){
+       printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>);
+       <span style="color: #008800; font-weight: bold">for</span>(j<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;j<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">3</span>;j<span style="color: #333333">++</span>)
+            printf(<span style="background-color: #fff0f0">&quot;%d</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\t</span><span style="background-color: #fff0f0">&quot;</span>,c[i][j]);
+   }
+}
+</pre></div>
+<h3>Multiplication of matrix</h3>
+<div class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/**/</span>
+<span style="color: #557799">#include &lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span> ()
+{
+    <span style="color: #333399; font-weight: bold">int</span> a[<span style="color: #0000DD; font-weight: bold">5</span>][<span style="color: #0000DD; font-weight: bold">5</span>], b[<span style="color: #0000DD; font-weight: bold">5</span>][<span style="color: #0000DD; font-weight: bold">5</span>], c[<span style="color: #0000DD; font-weight: bold">5</span>][<span style="color: #0000DD; font-weight: bold">5</span>], i, j, k, sum <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">0</span>, m, n, o, p;
+    printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">Enter the row and column of first matrix&quot;</span>);
+    scanf(<span style="background-color: #fff0f0">&quot;%d %d&quot;</span>, <span style="color: #333333">&amp;</span>m, <span style="color: #333333">&amp;</span>n);
+    printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">Enter the row and column of second matrix&quot;</span>);
+    scanf(<span style="background-color: #fff0f0">&quot;%d %d&quot;</span>, <span style="color: #333333">&amp;</span>o, <span style="color: #333333">&amp;</span>p);
+    <span style="color: #008800; font-weight: bold">if</span> (n <span style="color: #333333">!=</span> o)
+    {
+        printf(<span style="background-color: #fff0f0">&quot;Matrix mutiplication is not possible&quot;</span>);
+        printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">Column of first matrix must be same as row of second matrix&quot;</span>);
+    }
+    <span style="color: #008800; font-weight: bold">else</span>
+    {
+        printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">Enter the First matrix: &quot;</span>);
+        <span style="color: #008800; font-weight: bold">for</span> (i <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">0</span>; i <span style="color: #333333">&lt;</span> m; i<span style="color: #333333">++</span>)
+        {
+            <span style="color: #008800; font-weight: bold">for</span> (j <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">0</span>; j <span style="color: #333333">&lt;</span> n; j<span style="color: #333333">++</span>)
+            {
+                scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>, <span style="color: #333333">&amp;</span>a[i][j]);
+            }
+        }
+        printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">Enter the Second matrix: &quot;</span>);
+        <span style="color: #008800; font-weight: bold">for</span> (i <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">0</span>; i <span style="color: #333333">&lt;</span> o; i<span style="color: #333333">++</span>)
+        {
+            <span style="color: #008800; font-weight: bold">for</span> (j <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">0</span>; j <span style="color: #333333">&lt;</span> p; j<span style="color: #333333">++</span>)
+            {
+                scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>, <span style="color: #333333">&amp;</span>b[i][j]);
+            }
+        }
+        <span style="color: #008800; font-weight: bold">for</span> (i <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">0</span>; i <span style="color: #333333">&lt;</span> m; i<span style="color: #333333">++</span>)
+        {
+            <span style="color: #008800; font-weight: bold">for</span> (j <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">0</span>; j <span style="color: #333333">&lt;</span> p; j<span style="color: #333333">++</span>)
+            {
+                c[i][j] <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">0</span>;
+                <span style="color: #008800; font-weight: bold">for</span> (i <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">0</span>; i <span style="color: #333333">&lt;</span> m; i<span style="color: #333333">++</span>)
+                {           <span style="color: #888888">//row of first matrix</span>
+                    {
+                        <span style="color: #008800; font-weight: bold">for</span> (j <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">0</span>; j <span style="color: #333333">&lt;</span> p; j<span style="color: #333333">++</span>)
+                        {   <span style="color: #888888">//column of second matrix</span>
+                            {
+                                sum <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">0</span>;
+                                <span style="color: #008800; font-weight: bold">for</span> (k <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">0</span>; k <span style="color: #333333">&lt;</span> n; k<span style="color: #333333">++</span>)
+                                {
+                                    sum <span style="color: #333333">=</span> sum <span style="color: #333333">+</span> a[i][k] <span style="color: #333333">*</span> b[k][j];
+                                }
+                                c[i][j] <span style="color: #333333">=</span> sum;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">The multiplication of two matrix is</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>);
+        <span style="color: #008800; font-weight: bold">for</span> (i <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">0</span>; i <span style="color: #333333">&lt;</span> m; i<span style="color: #333333">++</span>)
+        {
+            printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>);
+            <span style="color: #008800; font-weight: bold">for</span> (j <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">0</span>; j <span style="color: #333333">&lt;</span> p; j<span style="color: #333333">++</span>)
+            {
+                printf(<span style="background-color: #fff0f0">&quot;%d</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\t</span><span style="background-color: #fff0f0">&quot;</span>, c[i][j]);
+            }
+        }
+    }
+</pre></div>
+<h3>Sum of diagonal elements of a matrix in C</h3>
+<div class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888"></span>
+<span style="color: #888888"></span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>(){
+  <span style="color: #333399; font-weight: bold">int</span> a[<span style="color: #0000DD; font-weight: bold">10</span>][<span style="color: #0000DD; font-weight: bold">10</span>],i,j,sum<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>,m,n;
+  printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">Enter the row and column of matrix: &quot;</span>);
+  scanf(<span style="background-color: #fff0f0">&quot;%d%d&quot;</span>,<span style="color: #333333">&amp;</span>m,<span style="color: #333333">&amp;</span>n);
+  printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">Enter the elements of matrix: &quot;</span>);
+  <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span>m;i<span style="color: #333333">++</span>)
+      <span style="color: #008800; font-weight: bold">for</span>(j<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;j<span style="color: #333333">&lt;</span>n;j<span style="color: #333333">++</span>)
+           scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>a[i][j]);
+  printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">The matrix is</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>);
+  <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span>m;i<span style="color: #333333">++</span>){
+      printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>);
+      <span style="color: #008800; font-weight: bold">for</span>(j<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;j<span style="color: #333333">&lt;</span>m;j<span style="color: #333333">++</span>){
+      printf(<span style="background-color: #fff0f0">&quot;%d</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\t</span><span style="background-color: #fff0f0">&quot;</span>,a[i][j]);
+      }
+ }
+ <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span>m;i<span style="color: #333333">++</span>){
+     <span style="color: #008800; font-weight: bold">for</span>(j<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;j<span style="color: #333333">&lt;</span>n;j<span style="color: #333333">++</span>){
+          <span style="color: #008800; font-weight: bold">if</span>(i<span style="color: #333333">==</span>j)
+              sum<span style="color: #333333">=</span>sum<span style="color: #333333">+</span>a[i][j];
+     }
+ }
+ printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">Sum of the diagonal elements of a matrix is: %d&quot;</span>,sum);
+}
+</pre></div>
+<h3>Inverse of a 3x3 matrix</h3>
+<div class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/* */</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">main</span>(){
+  <span style="color: #333399; font-weight: bold">int</span> a[<span style="color: #0000DD; font-weight: bold">3</span>][<span style="color: #0000DD; font-weight: bold">3</span>],i,j;
+  <span style="color: #333399; font-weight: bold">float</span> determinant<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;
+  printf(<span style="background-color: #fff0f0">&quot;Enter the 9 elements of matrix: &quot;</span>);
+  <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">3</span>;i<span style="color: #333333">++</span>)
+      <span style="color: #008800; font-weight: bold">for</span>(j<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;j<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">3</span>;j<span style="color: #333333">++</span>)
+           scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>a[i][j]);
+  printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">The matrix is</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>);
+  <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">3</span>;i<span style="color: #333333">++</span>){
+      printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>);
+      <span style="color: #008800; font-weight: bold">for</span>(j<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;j<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">3</span>;j<span style="color: #333333">++</span>)
+           printf(<span style="background-color: #fff0f0">&quot;%d</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\t</span><span style="background-color: #fff0f0">&quot;</span>,a[i][j]);
+  }
+  <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">3</span>;i<span style="color: #333333">++</span>)
+      determinant <span style="color: #333333">=</span> determinant <span style="color: #333333">+</span> (a[<span style="color: #0000DD; font-weight: bold">0</span>][i]<span style="color: #333333">*</span>(a[<span style="color: #0000DD; font-weight: bold">1</span>][(i<span style="color: #333333">+</span><span style="color: #0000DD; font-weight: bold">1</span>)<span style="color: #333333">%</span><span style="color: #0000DD; font-weight: bold">3</span>]<span style="color: #333333">*</span>a[<span style="color: #0000DD; font-weight: bold">2</span>][(i<span style="color: #333333">+</span><span style="color: #0000DD; font-weight: bold">2</span>)<span style="color: #333333">%</span><span style="color: #0000DD; font-weight: bold">3</span>] <span style="color: #333333">-</span> a[<span style="color: #0000DD; font-weight: bold">1</span>][(i<span style="color: #333333">+</span><span style="color: #0000DD; font-weight: bold">2</span>)<span style="color: #333333">%</span><span style="color: #0000DD; font-weight: bold">3</span>]<span style="color: #333333">*</span>a[<span style="color: #0000DD; font-weight: bold">2</span>][(i<span style="color: #333333">+</span><span style="color: #0000DD; font-weight: bold">1</span>)<span style="color: #333333">%</span><span style="color: #0000DD; font-weight: bold">3</span>]));
+   printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">Inverse of matrix is: </span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>);
+   <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">3</span>;i<span style="color: #333333">++</span>){
+      <span style="color: #008800; font-weight: bold">for</span>(j<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;j<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">3</span>;j<span style="color: #333333">++</span>)
+           printf(<span style="background-color: #fff0f0">&quot;%.3f</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\t</span><span style="background-color: #fff0f0">&quot;</span>,((a[(i<span style="color: #333333">+</span><span style="color: #0000DD; font-weight: bold">1</span>)<span style="color: #333333">%</span><span style="color: #0000DD; font-weight: bold">3</span>][(j<span style="color: #333333">+</span><span style="color: #0000DD; font-weight: bold">1</span>)<span style="color: #333333">%</span><span style="color: #0000DD; font-weight: bold">3</span>] <span style="color: #333333">*</span> a[(i<span style="color: #333333">+</span><span style="color: #0000DD; font-weight: bold">2</span>)<span style="color: #333333">%</span><span style="color: #0000DD; font-weight: bold">3</span>][(j<span style="color: #333333">+</span><span style="color: #0000DD; font-weight: bold">2</span>)<span style="color: #333333">%</span><span style="color: #0000DD; font-weight: bold">3</span>]) <span style="color: #333333">-</span> (a[(i<span style="color: #333333">+</span><span style="color: #0000DD; font-weight: bold">1</span>)<span style="color: #333333">%</span><span style="color: #0000DD; font-weight: bold">3</span>][(j<span style="color: #333333">+</span><span style="color: #0000DD; font-weight: bold">2</span>)<span style="color: #333333">%</span><span style="color: #0000DD; font-weight: bold">3</span>]<span style="color: #333333">*</span>a[(i<span style="color: #333333">+</span><span style="color: #0000DD; font-weight: bold">2</span>)<span style="color: #333333">%</span><span style="color: #0000DD; font-weight: bold">3</span>][(j<span style="color: #333333">+</span><span style="color: #0000DD; font-weight: bold">1</span>)<span style="color: #333333">%</span><span style="color: #0000DD; font-weight: bold">3</span>]))<span style="color: #333333">/</span> determinant);
+       printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>);
+   }
+}
+</pre></div>
+
+<h3>Transpose of a matrix</h3>
+<div class="css3-shadow"style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/**/</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+main(){
+  <span style="color: #333399; font-weight: bold">int</span> a[<span style="color: #0000DD; font-weight: bold">10</span>][<span style="color: #0000DD; font-weight: bold">10</span>],b[<span style="color: #0000DD; font-weight: bold">10</span>][<span style="color: #0000DD; font-weight: bold">10</span>],i,j,k<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>,m,n;
+  printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">Enter the row and column of matrix&quot;</span>);
+  scanf(<span style="background-color: #fff0f0">&quot;%d %d&quot;</span>,<span style="color: #333333">&amp;</span>m,<span style="color: #333333">&amp;</span>n);
+  printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">Enter the First matrix: &quot;</span>);
+  <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span>m;i<span style="color: #333333">++</span>)
+      <span style="color: #008800; font-weight: bold">for</span>(j<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;j<span style="color: #333333">&lt;</span>n;j<span style="color: #333333">++</span>)
+           scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>a[i][j]);
+  printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">The matrix is</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>);
+  <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span>m;i<span style="color: #333333">++</span>){
+      printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>);
+      <span style="color: #008800; font-weight: bold">for</span>(j<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;j<span style="color: #333333">&lt;</span>m;j<span style="color: #333333">++</span>){
+           printf(<span style="background-color: #fff0f0">&quot;%d</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\t</span><span style="background-color: #fff0f0">&quot;</span>,a[i][j]);
+      }
+  }
+  <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span>m;i<span style="color: #333333">++</span>)
+      <span style="color: #008800; font-weight: bold">for</span>(j<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;j<span style="color: #333333">&lt;</span>n;j<span style="color: #333333">++</span>)
+           b[i][j]<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;
+  <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span>m;i<span style="color: #333333">++</span>){
+      <span style="color: #008800; font-weight: bold">for</span>(j<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;j<span style="color: #333333">&lt;</span>n;j<span style="color: #333333">++</span>){
+           b[i][j]<span style="color: #333333">=</span>a[j][i];
+           printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">%d&quot;</span>,b[i][j]);
+      }
+  }
+  printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">Traspose of a matrix is : </span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">“);</span>
+  <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span>m;i<span style="color: #333333">++</span>){
+      printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>);
+      <span style="color: #008800; font-weight: bold">for</span>(j<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;j<span style="color: #333333">&lt;</span>m;j<span style="color: #333333">++</span>){
+           printf(<span style="background-color: #fff0f0">&quot;%d</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\t</span><span style="background-color: #fff0f0">&quot;</span>,b[i][j]);
+      }
+  }
+}
+</pre></div>
+
+<hr>
+<p> &nbsp; </p>
+</html>

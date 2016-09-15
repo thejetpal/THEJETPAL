@@ -1,0 +1,70 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+
+<h3><strong>Array</strong></h3>
+<p class="css3-shadow">
+  It is the ability  to use a single variable to represent a collection of items and to refer an  item by using variable name and it&rsquo;s index.</p>
+<p class="css3-shadow"><strong>Declaration of 1-D Array:</strong><br>
+  data_type&nbsp;&nbsp;variable_name[ size ] ;<strong> </strong><br>
+<strong>Example : </strong>int arr [10] ;</p>
+<p class="css3-shadow"><strong>Initialization of 1-D Array</strong><br>
+  data_type&nbsp;&nbsp;variable_name [size] = { value_1, value_2...,value_size&nbsp;};<br>
+  <br>
+  <strong>Example : </strong>int arr [3]&nbsp;= { 1, 2, 3} ;<br>
+  int arr [ ]&nbsp;&nbsp;= { 1,2,3 };&nbsp; // a[0]=1&nbsp;,&nbsp;a[1]=2&nbsp;,&nbsp;a[2]=3<br>
+  char name [ ] = {  &lsquo;S&rsquo;,&rsquo;A&rsquo;,&rsquo;N&rsquo;,&rsquo;J&rsquo;,&rsquo;A&rsquo;,&rsquo;Y&rsquo;,&rsquo;\0&rsquo;};<br>
+  char name[ ] = &ldquo;Sanjay Sharma&rdquo;;<br>
+  int arr [4] = { 1,2 }; //  partially initialization , remaining initialized by 0 for int<br>
+  char name [10 ] = {  &lsquo;S&rsquo;,&rsquo;N&rsquo;,&rsquo;J&rsquo;,&rsquo;\0&rsquo;};&nbsp;//size is 10 but 4  are initialized. remaining are NULL for char </p>
+<p class="css3-shadow"><strong>Declaration of 2-D Array</strong><br>
+  data_type &nbsp;&nbsp;variable_name [row_size ] [column_size ];<br>
+  <br>
+  <strong>Example: </strong>int arr[4][4];<br>
+  <br><br>
+  <strong>Initialization of 2-D Array</strong><br>
+  Example: int  arr[2][2] = {1,2,3,4};<br>
+int arr[2][2]= { { 1,2 } ,{ 3,  4} };</p>
+<table border="1" cellspacing="0" cellpadding="0">
+  <tr>
+   <td width="41" valign="top"><p align="center">Row<br>Col</p></td>
+    <td width="34" valign="top"><p align="center">1th</p></td>
+    <td width="34" valign="top"><p align="center">2th</p></td>
+  </tr>
+  <tr>
+    <td width="41" valign="top"><p align="center">0th</p></td>
+    <td width="34" valign="top"><p align="center">1</p></td>
+    <td width="34" valign="top"><p align="center">2</p></td>
+  </tr>
+  <tr>
+    <td width="41" valign="top"><p align="center">1th</p></td>
+    <td width="34" valign="top"><p align="center">3</p></td>
+    <td width="34" valign="top"><p align="center">4</p></td>
+  </tr>
+</table>
+<p class="css3-shadow">
+  int num [ ][ 2 ] = { 1,2,3,4  }; // It is correct<br>
+int num [2][ ] = { 1,2,3,4 };  // It is not correct</p>
+<p>&nbsp;</p>
+<h3><strong>Character Array or String</strong></h3>
+<p class="css3-shadow">
+  <strong>Initializing and Declaring String</strong><br>
+  char string  [10] ;<br>
+  char name [  ] = { &lsquo;S&rsquo;,&rsquo;A&rsquo;,&rsquo;N&rsquo;,&rsquo;J&rsquo;,&rsquo;A&rsquo;,&rsquo;Y&rsquo;,&rsquo;\0&rsquo;};<br>
+  char name[ ]  = &ldquo;Sanjay Sharma&rdquo;;</p>
+<p class="css3-shadow"><strong><em>Note: </em></strong><br>
+  -&nbsp;If we have two variables char array type  means string char  s1[10] and char s2[10] we  cannot copy these char type array directly as&nbsp;s1=s2; </p>
+<p>- <strong>\0</strong> is null character. It should be last element  of character type array because it tells the compile that the string has come  to it&rsquo;s end because in C Language there is no array boundation.</p>
+<h3><strong>Reading String From User </strong></h3>
+<p class="css3-shadow">
+  scanf (&ldquo;%s&rdquo;,string);<br>
+  <em><strong>Note</strong></em>:&nbsp;scanf function terminates the input when  input is whitespace <br>
+  <strong>Example: </strong><br>
+  if user entered a name SANJAY  SHARMA<br>
+  and we print it using printf  (&ldquo;%s&rdquo;,string) then SANJAY will be printed.<br>
+The <strong>s</strong>olution is<strong> scanf  (&ldquo;%[^\n]&rdquo;,string);</strong> here <strong>[^\n] </strong>tells  the compiler to do not terminate the input till new line (<strong>\n</strong>) entered.</p>
+<p class="css3-shadow">Other  solution is gets function which can get a string with white space from user.  For using gets() we have to include string.h header file.<br>
+Exmaple:  gets (string);</p>
+<hr>
+<p>&nbsp;</p></html>

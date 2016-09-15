@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MyKitab Comp TE PU</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="features3">\n India\'s yearly output of engineering graduates is nearly 1.5 Million but 80% of them lack necessary skill and are hence  unemployable.\n\n The industry needs skilled labor, not book worms.Pratical training and hands-on experience is the need of the day.\n\n The college syllabus introduces a subject in great detail and often it cumbersome to study all such subjects in depth .The time is right to evolve,adapt and equip yourself with tools that satisfy the demands of today and have a bright career ahead.\n </string>
+    <string name="maintainence">Coming Soon!</string>
+    <string name="features">&quot;Knowledge is power.Information is liberating. Education is the premise of progress, in every society, in every family.&quot; \n \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t ~ Kofi Annan</string>
+    <string name="features4">\n&#8226; Mykitab consists of notes made from various reference books, thus saving you heaps of effort, energy and time which allows you to utilise that time to learn new and useful things beyond the traditional college syllabus.  \n\n &#8226; A specially designed step by step problem solving approach that MyKitab employs is exactly what you need to facilitate sound learning.\n\n &#8226; To add to this, you save plenty of data due to the app\'s low data usage.\n\n &#8226; It\'s portability allows you to learn on the go with just a touch of your finger.\n\n &#8226;You save paper by going digital. So it is literally success at your own fingertips without burning a hole in your pockets for extra tuitions.\n</string>
+</resources>

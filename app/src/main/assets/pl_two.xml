@@ -1,0 +1,98 @@
+<employees>
+ <site>
+  <name>***Note***</name>
+  <link> </link>
+  <about>Please confirm the writeup from your respected teachers before you write them.</about>
+ </site>
+
+<site>
+<name>Group A 1</name>
+<link>https://mykitab-te.firebaseapp.com/PL2/a1.pdf</link>
+<about>Implementation of following spoofing assignments using C++ multicore Programming a) IP Spoofing b) Web spoofing.</about>
+</site>
+<site>
+<name>Group A 2</name>
+<link>https://mykitab-te.firebaseapp.com/PL2/a2.pdf</link>
+<about>A fire is to be detected using relevant wireless sensor network installed in a remote location to communicate the data to the central server for the monitoring purpose and detection of the fire. Write a program to implement the system using WSN and Different data communication strategies/ algorithms (at least two) to compare the reliability of the data received and efficient timing. Use of Fort Forwarding/Tunneling Protocol is expected.</about>
+ </site>
+<site>
+<name>Group A 3</name>
+<link>https://mykitab-te.firebaseapp.com/PL2/a3.pdf</link>
+<about>Write a computer forensic application program in Java/Python/C++ for Recovering Deleted Files and Deleted Partitions.</about>
+</site>
+<site>
+<name>Group A 4</name>
+<link>https://mykitab-te.firebaseapp.com/PL2/a4.pdf</link>
+<about>A person on a nearby road is trying to enter into a WiFi network by trying to crack the Password to use the IP Printer resource; write a program in Java/Python/C++ to detect such attempt and prohibit the access. Develop the necessary scenario by Using an IEEE 802.11, configure a Wi-Fi adapter and Access Point.</about>
+ </site>
+ <site>
+<name>Group A 5</name>
+<link>https://mykitab-te.firebaseapp.com/PL2/a5.pdf</link>
+<about>Write a program to implement Pulse Code Modulation Technique to transfer the data to other computer.</about>
+ </site>
+ <site>
+<name>Group A 6</name>
+<link>https://mykitab-te.firebaseapp.com/PL2/a6.pdf</link>
+<about>Write a program in C++ /Python to analyze email header.</about>
+ </site>
+  <site>
+<name>Group B 1</name>
+<link>https://mykitab-te.firebaseapp.com/PL2/b1.pdf</link>
+<about>Develop a GUI and write a Java/Pythn/C++ program to monitor Network Forensics, Investigating Logs and Investigating Network Traffic.</about>
+ </site>
+  <site>
+<name>Group B 2</name>
+<link>https://mykitab-te.firebaseapp.com/PL2/b2.pdf</link>
+<about>Write a program in Python for Investigating Wireless Attacks using Multi-core programming.</about>
+ </site>
+  <site>
+<name>Group B 3</name>
+<link>https://mykitab-te.firebaseapp.com/PL2/b3.pdf</link>
+<about>Write a program in Python for Investigating Web Attacks. Finding originator's IP, Subnet Mask and Default gateway where a Web Server is connected using Optical Router.</about>
+ </site>
+  <site>
+<name>Group B 5</name>
+<link>https://mykitab-te.firebaseapp.com/PL2/b5.pdf</link>
+<about>Write a program in C++ for Tracking Emails and Investigating Email Crimes.</about>
+ </site>
+  <site>
+<name>Group B 6</name>
+<link>https://mykitab-te.firebaseapp.com/PL2/b6.pdf</link>
+<about>Install and use Android Mobile Forensics Open Source Tools.</about>
+ </site>
+ <site>
+  <name>Group B 7</name>
+  <link>https://mykitab-te.firebaseapp.com/PL2/b13.pdf</link>
+  <about>Write a program to Implement a packet sniffing tool in C++/Java/Python.</about>
+ </site>
+  <site>
+<name>Group B 8</name>
+<link>https://mykitab-te.firebaseapp.com/PL2/b8.pdf</link>
+<about>Write a program in C++ to implement to identify DOS attack on a wireless cluster of servers.</about>
+ </site>
+ <site>
+  <name>Group B 9</name>
+  <link>https://mykitab-te.firebaseapp.com/PL2/b9.pdf</link>
+  <about>Install and use open source tools to Identifying various types of WiFi attacks. Write a C++/ Java/Python program to identify atleast one such attack.</about>
+ </site>
+ <site>
+  <name>Group B 11</name>
+  <link>https://mykitab-te.firebaseapp.com/PL2/b11.pdf</link>
+  <about>Design and implementation of Honeypot.</about>
+ </site>
+ <site>
+  <name>Group B 13</name>
+  <link>https://mykitab-te.firebaseapp.com/PL2/b13.pdf</link>
+  <about>Write a program to Implement a packet sniffing tool in C++.</about>
+ </site>
+ <site>
+<name>Group C 1</name>
+<link>https://mykitab-te.firebaseapp.com/PL2/c1.pdf</link>
+<about>Implementation of Steganography program.</about>
+ </site>
+ <site>
+  <name>Group C 2</name>
+  <link>https://mykitab-te.firebaseapp.com/PL2/c2.pdf</link>
+  <about>Implement a program to generate and verify CAPTCHA image.</about>
+ </site>
+</employees> 

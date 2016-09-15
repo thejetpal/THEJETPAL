@@ -1,0 +1,746 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<h3>Program to find sum of two numbers. </h3>
+<div class="css3-shadow"style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/**/</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;	</span>
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>()
+{
+<span style="color: #333399; font-weight: bold">int</span> a,b,s;
+printf(<span style="background-color: #fff0f0">&quot;Enter two no: &quot;</span>);
+scanf(<span style="background-color: #fff0f0">&quot;%d%d&quot;</span>,<span style="color: #333333">&amp;</span>a,<span style="color: #333333">&amp;</span>b);
+s<span style="color: #333333">=</span>a<span style="color: #333333">+</span>b;
+printf(<span style="background-color: #fff0f0">&quot;sum=%d&quot;</span>,s);
+}
+<span style="color: #997700; font-weight: bold">Output:</span>
+Enter two no<span style="color: #333333">:</span> <span style="color: #0000DD; font-weight: bold">5</span>
+<span style="color: #0000DD; font-weight: bold">6</span>
+sum<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">11</span>
+</pre></div>
+<h3> Program to find area and circumference of circle.</h3>
+<div class="css3-shadow"style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/**/</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #557799">#include&lt;conio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>()
+{
+<span style="color: #333399; font-weight: bold">int</span> r;
+<span style="color: #333399; font-weight: bold">float</span> pi<span style="color: #333333">=</span><span style="color: #6600EE; font-weight: bold">3.14</span>,area,cu;
+printf(<span style="background-color: #fff0f0">&quot;enter radius of circle:&quot;</span>);
+scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>r);
+area<span style="color: #333333">=</span>pi<span style="color: #333333">*</span>r<span style="color: #333333">*</span>r;
+printf(<span style="background-color: #fff0f0">&quot;area of circle=%f&quot;</span>,area);
+cu<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">2</span><span style="color: #333333">*</span>pi<span style="color: #333333">*</span>r;
+printf(<span style="background-color: #fff0f0">&quot;circumference=%f&quot;</span>,cu);
+}
+<span style="color: #997700; font-weight: bold">Output:</span>
+enter radius of a circle<span style="color: #333333">:</span> <span style="color: #0000DD; font-weight: bold">5</span>
+area of circle<span style="color: #333333">=</span><span style="color: #6600EE; font-weight: bold">78.000</span>
+circumference<span style="color: #333333">=</span><span style="color: #6600EE; font-weight: bold">31.4</span>
+</pre></div>
+<h3> Program to find the simple interest. </h3>
+<div class="css3-shadow"style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/**/</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>()
+{
+<span style="color: #333399; font-weight: bold">int</span> p,r,t,si;
+printf(<span style="background-color: #fff0f0">&quot;enter principle, Rate of interest &amp; time to find simple interest&quot;</span>);
+scanf(<span style="background-color: #fff0f0">&quot;%d%d%d&quot;</span>,<span style="color: #333333">&amp;</span>p,<span style="color: #333333">&amp;</span>r,<span style="color: #333333">&amp;</span>t);
+si<span style="color: #333333">=</span>(p<span style="color: #333333">*</span>r<span style="color: #333333">*</span>t)<span style="color: #333333">/</span><span style="color: #0000DD; font-weight: bold">100</span>;
+printf(<span style="background-color: #fff0f0">&quot;simple intrest= %d&quot;</span>,si);
+}
+<span style="color: #997700; font-weight: bold">Output:</span>
+enter principle, rate of interest <span style="color: #333333">&amp;</span> time to find simple interest <span style="color: #0000DD; font-weight: bold">200</span>
+<span style="color: #0000DD; font-weight: bold">2</span>
+<span style="color: #0000DD; font-weight: bold">5</span>
+simple interest<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">20</span>
+</pre></div>
+<h3> Program to convert temperature from degree centigrade to Fahrenheit. </h3>
+<div class="css3-shadow"style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/**/</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>()
+{ 
+<span style="color: #333399; font-weight: bold">float</span> c,f;
+clrscr();
+printf(<span style="background-color: #fff0f0">&quot;Enter temp in centigrade: &quot;</span>);
+scanf(<span style="background-color: #fff0f0">&quot;%f&quot;</span>,<span style="color: #333333">&amp;</span>c);
+f<span style="color: #333333">=</span>(<span style="color: #6600EE; font-weight: bold">1.8</span><span style="color: #333333">*</span>c)<span style="color: #333333">+</span><span style="color: #0000DD; font-weight: bold">32</span>;
+printf(<span style="background-color: #fff0f0">&quot;temp in Fahrenheit=%f &quot;</span>,f);
+}
+<span style="color: #997700; font-weight: bold">Output:</span>
+enter temp in centigrade<span style="color: #333333">:</span> <span style="color: #0000DD; font-weight: bold">32</span>
+temp in Fahrenheit<span style="color: #333333">=</span><span style="color: #6600EE; font-weight: bold">89.59998</span>
+</pre></div>
+<h3> Program to find gross salary. </h3>
+<div class="css3-shadow"style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/**/</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>()
+{
+ <span style="color: #333399; font-weight: bold">int</span> gs,bs,da,ta;
+ printf(<span style="background-color: #fff0f0">&quot;enter basic salary:&quot;</span>);
+ scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>bs);
+ da<span style="color: #333333">=</span>(<span style="color: #0000DD; font-weight: bold">10</span><span style="color: #333333">*</span>bs)<span style="color: #333333">/</span><span style="color: #0000DD; font-weight: bold">100</span>;
+ ta<span style="color: #333333">=</span>(<span style="color: #0000DD; font-weight: bold">12</span><span style="color: #333333">*</span>bs)<span style="color: #333333">/</span><span style="color: #0000DD; font-weight: bold">100</span>;
+ gs<span style="color: #333333">=</span>bs<span style="color: #333333">+</span>da<span style="color: #333333">+</span>ta;
+ printf(<span style="background-color: #fff0f0">&quot;gross salary=%d&quot;</span>,gs);
+}
+</pre></div>
+<h3> Find whether given no. is even or odd.</h3>
+<div class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/**/</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>()
+{
+<span style="color: #333399; font-weight: bold">int</span> n;
+printf(<span style="background-color: #fff0f0">&quot;enter any no.:&quot;</span>);
+scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>n);
+<span style="color: #008800; font-weight: bold">if</span>(n<span style="color: #333333">%</span><span style="color: #0000DD; font-weight: bold">2</span><span style="color: #333333">==</span><span style="color: #0000DD; font-weight: bold">0</span>)
+<span style="color: #888888">// you can use if(n&amp;1==0)</span>
+printf(<span style="background-color: #fff0f0">&quot;no. is even&quot;</span>);
+<span style="color: #008800; font-weight: bold">else</span> 
+printf(<span style="background-color: #fff0f0">&quot;no. is odd&quot;</span>);
+}
+<span style="color: #997700; font-weight: bold">Output:</span>
+enter any no.<span style="color: #333333">:</span> <span style="color: #0000DD; font-weight: bold">7</span>
+no. is odd
+</pre></div>
+<h3> Simple calculator arithmetic operator using switch case. </h3>
+<div class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/**/</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>()
+{
+<span style="color: #333399; font-weight: bold">int</span> a,b,n,s,m,su,d;
+printf(<span style="background-color: #fff0f0">&quot;enter two no. : &quot;</span>);
+scanf(<span style="background-color: #fff0f0">&quot;%d%d&quot;</span>,<span style="color: #333333">&amp;</span>a,<span style="color: #333333">&amp;</span>b);
+printf(<span style="background-color: #fff0f0">&quot;enter 1 for sum, 2 for multiply, 3 for subtraction 4 for division:&quot;</span>);
+scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>n);
+<span style="color: #008800; font-weight: bold">switch</span>(n)
+{
+<span style="color: #008800; font-weight: bold">case</span> <span style="color: #0000DD; font-weight: bold">1</span>:
+s<span style="color: #333333">=</span>a<span style="color: #333333">+</span>b;
+printf(<span style="background-color: #fff0f0">&quot;sum=%d&quot;</span>,s);
+<span style="color: #008800; font-weight: bold">break</span>;
+<span style="color: #008800; font-weight: bold">case</span> <span style="color: #0000DD; font-weight: bold">2</span>:
+m<span style="color: #333333">=</span>a<span style="color: #333333">*</span>b;
+printf(<span style="background-color: #fff0f0">&quot;multiply=%d&quot;</span>,m);
+<span style="color: #008800; font-weight: bold">break</span>;
+<span style="color: #008800; font-weight: bold">case</span> <span style="color: #0000DD; font-weight: bold">3</span>:
+su<span style="color: #333333">=</span>a<span style="color: #333333">-</span>b;
+printf(<span style="background-color: #fff0f0">&quot;subtraction=%d&quot;</span>,su);
+<span style="color: #008800; font-weight: bold">break</span>;
+<span style="color: #008800; font-weight: bold">case</span> <span style="color: #0000DD; font-weight: bold">4</span>:
+d<span style="color: #333333">=</span>a<span style="color: #333333">/</span>b;
+printf(<span style="background-color: #fff0f0">&quot;divission=%d&quot;</span>,d);
+<span style="color: #008800; font-weight: bold">break</span>; 
+<span style="color: #997700; font-weight: bold">default:</span>
+printf(<span style="background-color: #fff0f0">&quot;wrong input&quot;</span>);
+<span style="color: #008800; font-weight: bold">break</span>;
+}
+}
+<span style="color: #997700; font-weight: bold">Output:</span>
+enter two no<span style="color: #333333">:</span> <span style="color: #0000DD; font-weight: bold">7</span>
+<span style="color: #0000DD; font-weight: bold">4</span>
+enter <span style="color: #0000DD; font-weight: bold">1</span> <span style="color: #008800; font-weight: bold">for</span> sum
+<span style="color: #0000DD; font-weight: bold">2</span> <span style="color: #008800; font-weight: bold">for</span> multiply
+<span style="color: #0000DD; font-weight: bold">3</span> <span style="color: #008800; font-weight: bold">for</span> subtraction
+<span style="color: #0000DD; font-weight: bold">4</span> <span style="color: #008800; font-weight: bold">for</span> division<span style="color: #333333">:</span> <span style="color: #0000DD; font-weight: bold">1</span>
+sum<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">11</span>
+</pre></div>
+<h3> Program to display first 10 natural no. &amp; their sum.</h3>
+<div class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/**/</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>()
+{
+<span style="color: #333399; font-weight: bold">int</span> i,sum<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;
+<span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">1</span>;i<span style="color: #333333">&lt;=</span><span style="color: #0000DD; font-weight: bold">10</span>;i<span style="color: #333333">++</span>)
+{
+printf(<span style="background-color: #fff0f0">&quot;%d no is= %d </span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0"> &quot;</span>,i,I);
+sum<span style="color: #333333">=</span>sum<span style="color: #333333">+</span>i;
+}
+printf(<span style="background-color: #fff0f0">&quot;sum =%d &quot;</span>,sum);
+}
+<span style="color: #997700; font-weight: bold">Output:</span>
+<span style="color: #0000DD; font-weight: bold">1</span> no is<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">1</span>
+<span style="color: #0000DD; font-weight: bold">2</span> no is<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">2</span>
+<span style="color: #0000DD; font-weight: bold">3</span> no is<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">3</span>
+<span style="color: #0000DD; font-weight: bold">4</span> no is<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">4</span>
+<span style="color: #0000DD; font-weight: bold">5</span> no is<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">5</span> 
+<span style="color: #0000DD; font-weight: bold">6</span> no is<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">6</span>
+<span style="color: #0000DD; font-weight: bold">7</span> no is<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">7</span>
+<span style="color: #0000DD; font-weight: bold">8</span> no is<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">8</span>
+<span style="color: #0000DD; font-weight: bold">9</span> no is<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">9</span>
+<span style="color: #0000DD; font-weight: bold">10</span> no is<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">10</span>
+sum<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">55</span>
+</pre></div>
+<h3> Read total seconds and convert it into hour, min and sec </h3>
+<div class="css3-shadow"style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/**/</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>()
+{
+  <span style="color: #333399; font-weight: bold">int</span> ts,h,m,s;
+  printf(<span style="background-color: #fff0f0">&quot; Enter total sec: &quot;</span>);
+  scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>ts); 
+  h<span style="color: #333333">=</span>ts<span style="color: #333333">/</span><span style="color: #0000DD; font-weight: bold">3600</span>;
+  ts<span style="color: #333333">=</span>ts<span style="color: #333333">%</span><span style="color: #0000DD; font-weight: bold">3600</span>;
+  m<span style="color: #333333">=</span>ts<span style="color: #333333">/</span><span style="color: #0000DD; font-weight: bold">60</span>;
+  s<span style="color: #333333">=</span>ts<span style="color: #333333">%</span><span style="color: #0000DD; font-weight: bold">60</span>; 
+   printf(<span style="background-color: #fff0f0">&quot;hour = %d  min = %d, sec= %d&quot;</span>,h,m,s);
+}
+</pre></div>
+<h3> Find maximum among three using conditional operator </h3>
+<div class="css3-shadow"style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/**/</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>()
+{
+     <span style="color: #333399; font-weight: bold">int</span> a,b,c;
+     printf(<span style="background-color: #fff0f0">&quot;Enter three numbers : &quot;</span>); 
+     scanf(<span style="background-color: #fff0f0">&quot;%d%d%d&quot;</span>,<span style="color: #333333">&amp;</span>a,<span style="color: #333333">&amp;</span>b,<span style="color: #333333">&amp;</span>c);
+    printf(<span style="background-color: #fff0f0">&quot;Max is: %d&quot;</span>,a<span style="color: #333333">&gt;</span>b<span style="color: #333333">?</span>a<span style="color: #333333">&gt;</span>c<span style="color: #333333">?</span>a<span style="color: #333333">:</span>c<span style="color: #333333">:</span>b<span style="color: #333333">&gt;</span>c<span style="color: #333333">?</span>b<span style="color: #333333">:</span>c);
+}
+</pre></div>
+<h3> Find input is number,character (Lower or upper) or other symbol </h3>
+<div class="css3-shadow"style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/**/</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>()
+{
+     <span style="color: #333399; font-weight: bold">char</span> n;
+     printf(<span style="background-color: #fff0f0">&quot;Enter a data: &quot;</span>); 
+     scanf(<span style="background-color: #fff0f0">&quot;%c&quot;</span>,<span style="color: #333333">&amp;</span>n);
+     <span style="color: #008800; font-weight: bold">if</span>(n<span style="color: #333333">&gt;=</span><span style="color: #0000DD; font-weight: bold">48</span><span style="color: #333333">&amp;&amp;</span>n<span style="color: #333333">&lt;=</span><span style="color: #0000DD; font-weight: bold">57</span>)<span style="color: #888888">//ASCII value of 0-9 is 48-57</span>
+     {
+     	printf(<span style="background-color: #fff0f0">&quot;Number&quot;</span>);
+     }
+     <span style="color: #008800; font-weight: bold">else</span> <span style="color: #008800; font-weight: bold">if</span>(n<span style="color: #333333">&gt;=</span><span style="color: #0000DD; font-weight: bold">65</span><span style="color: #333333">&amp;&amp;</span>n<span style="color: #333333">&lt;=</span><span style="color: #0000DD; font-weight: bold">90</span>)<span style="color: #888888">//ASCII value of A-Z is 65-90</span>
+     {
+     	printf(<span style="background-color: #fff0f0">&quot;Upper case&quot;</span>);
+     }
+     <span style="color: #008800; font-weight: bold">else</span> <span style="color: #008800; font-weight: bold">if</span>(n<span style="color: #333333">&gt;=</span><span style="color: #0000DD; font-weight: bold">97</span><span style="color: #333333">&amp;&amp;</span>n<span style="color: #333333">&lt;=</span><span style="color: #0000DD; font-weight: bold">122</span>)<span style="color: #888888">//ASCII value of a-z is 97-122</span>
+     {
+     	printf(<span style="background-color: #fff0f0">&quot;Lower case&quot;</span>);
+     }
+     <span style="color: #008800; font-weight: bold">else</span> 
+     {
+     	printf(<span style="background-color: #fff0f0">&quot;Other symbol&quot;</span>);
+     }
+}
+</pre></div>
+<h3> K.M. to meter, centimeter or mm </h3>
+<div class="css3-shadow"style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/**/</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">main</span>()
+{
+ <span style="color: #333399; font-weight: bold">float</span> km;
+ <span style="color: #333399; font-weight: bold">int</span> v;
+ <span style="color: #333399; font-weight: bold">float</span> ans;
+
+ printf(<span style="background-color: #fff0f0">&quot;Enter distance in K.M. : &quot;</span>);
+ scanf(<span style="background-color: #fff0f0">&quot;%f&quot;</span>,<span style="color: #333333">&amp;</span>km);
+ printf(<span style="background-color: #fff0f0">&quot;1 for meter 2 for centimeter 3 for mm : &quot;</span>);
+ fflush(stdin);
+ scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>v);
+ <span style="color: #008800; font-weight: bold">if</span>(v<span style="color: #333333">==</span><span style="color: #0000DD; font-weight: bold">1</span>)
+  ans<span style="color: #333333">=</span>km<span style="color: #333333">*</span><span style="color: #0000DD; font-weight: bold">1000</span>;
+ <span style="color: #008800; font-weight: bold">if</span>(v<span style="color: #333333">==</span><span style="color: #0000DD; font-weight: bold">2</span>)
+  ans<span style="color: #333333">=</span>km<span style="color: #333333">*</span><span style="color: #0000DD; font-weight: bold">100000</span>;
+ <span style="color: #008800; font-weight: bold">if</span>(v<span style="color: #333333">==</span><span style="color: #0000DD; font-weight: bold">3</span>)
+  ans<span style="color: #333333">=</span>km<span style="color: #333333">*</span><span style="color: #0000DD; font-weight: bold">1000000</span>;
+ printf(<span style="background-color: #fff0f0">&quot;Answer : %.2f&quot;</span>,ans);
+ <span style="color: #008800; font-weight: bold">return</span> <span style="color: #0000DD; font-weight: bold">0</span>;
+}
+</pre></div>
+<h3> Program to calculate power of a number </h3>
+<div class="css3-shadow"style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/**/</span> 
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>(){
+  <span style="color: #333399; font-weight: bold">int</span> pow,num,i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">1</span>;
+  <span style="color: #333399; font-weight: bold">long</span> <span style="color: #333399; font-weight: bold">int</span> sum<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">1</span>;
+  printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">Enter a number: &quot;</span>);
+  scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>num);
+  printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">Enter power: &quot;</span>);
+  scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>pow);
+  <span style="color: #008800; font-weight: bold">while</span>(i<span style="color: #333333">&lt;=</span>pow){
+            sum<span style="color: #333333">=</span>sum<span style="color: #333333">*</span>num;
+            i<span style="color: #333333">++</span>;
+  }
+  printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">%d to the power %d is: %ld&quot;</span>,num,pow,sum);
+}
+</pre></div>
+<h3> Program to find area of triangle using Heron&#39;s Formula </h3>
+<div class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;">
+  <pre style="margin: 0; line-height: 125%"><span style="color: #888888">/**/</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>()
+ {
+  <span style="color: #333399; font-weight: bold">int</span> x<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">10</span>,y<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">8</span>,z<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">7</span>;
+  <span style="color: #333399; font-weight: bold">float</span> s<span style="color: #333333">=</span><span style="color: #6600EE; font-weight: bold">0.0</span>;
+  <span style="color: #333399; font-weight: bold">double</span> area<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;
+  s<span style="color: #333333">=</span>(x<span style="color: #333333">+</span>y<span style="color: #333333">+</span>z)<span style="color: #333333">/</span><span style="color: #6600EE; font-weight: bold">2.0</span>;
+  area<span style="color: #333333">=</span>(s<span style="color: #333333">*</span>(s<span style="color: #333333">-</span>x)<span style="color: #333333">*</span>(s<span style="color: #333333">-</span>y)<span style="color: #333333">*</span>(s<span style="color: #333333">-</span>z));
+  printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">Area of triangle = %lf&quot;</span>,area);
+}
+</pre></div>
+<h3> Check Number is negative,positive or zero using conditional operator </h3>
+<div class="css3-shadow"style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/**/</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>()
+{
+     <span style="color: #333399; font-weight: bold">int</span> n;
+     printf(<span style="background-color: #fff0f0">&quot;Enter a number: &quot;</span>); 
+     scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>n);
+     printf(<span style="background-color: #fff0f0">&quot;%s&quot;</span>,n<span style="color: #333333">&gt;=</span><span style="color: #0000DD; font-weight: bold">0</span><span style="color: #333333">?</span>(n<span style="color: #333333">==</span><span style="color: #0000DD; font-weight: bold">0</span><span style="color: #333333">?</span><span style="background-color: #fff0f0">&quot;Zero&quot;</span><span style="color: #333333">:</span><span style="background-color: #fff0f0">&quot;Positive&quot;</span>)<span style="color: #333333">:</span><span style="background-color: #fff0f0">&quot;Negative&quot;</span>);
+     	
+}
+</pre></div>
+<h3> Program to Reverse any number</h3>
+<div class="css3-shadow"style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/**/</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">main</span>(){
+    <span style="color: #333399; font-weight: bold">int</span> num,r,reverse<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;
+    printf(<span style="background-color: #fff0f0">&quot;Enter any number: &quot;</span>);
+    scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>num);
+    <span style="color: #008800; font-weight: bold">while</span>(num){
+         r<span style="color: #333333">=</span>num<span style="color: #333333">%</span><span style="color: #0000DD; font-weight: bold">10</span>;
+         reverse<span style="color: #333333">=</span>reverse<span style="color: #333333">*</span><span style="color: #0000DD; font-weight: bold">10</span><span style="color: #333333">+</span>r;
+         num<span style="color: #333333">=</span>num<span style="color: #333333">/</span><span style="color: #0000DD; font-weight: bold">10</span>;
+    }
+    printf(<span style="background-color: #fff0f0">&quot;Reversed of number: %d&quot;</span>,reverse);
+    <span style="color: #008800; font-weight: bold">return</span> <span style="color: #0000DD; font-weight: bold">0</span>;
+}
+<span style="color: #997700; font-weight: bold">output:</span>
+Enter any number<span style="color: #333333">:</span> <span style="color: #0000DD; font-weight: bold">45</span>
+Reversed of number<span style="color: #333333">:</span> <span style="color: #0000DD; font-weight: bold">54</span>
+</pre></div>
+<h3> Program to subtract two numbers without using subtraction operator </h3>
+<div class="css3-shadow"style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/**/</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">main</span>(){
+    <span style="color: #333399; font-weight: bold">int</span> a,b,sum;
+    printf(<span style="background-color: #fff0f0">&quot;Enter any two integers: &quot;</span>);
+    scanf(<span style="background-color: #fff0f0">&quot;%d%d&quot;</span>,<span style="color: #333333">&amp;</span>a,<span style="color: #333333">&amp;</span>b);
+    sum <span style="color: #333333">=</span> a <span style="color: #333333">+</span> <span style="color: #333333">~</span>b <span style="color: #333333">+</span> <span style="color: #0000DD; font-weight: bold">1</span>;
+    printf(<span style="background-color: #fff0f0">&quot;Difference of two integers: %d&quot;</span>,sum);
+    <span style="color: #008800; font-weight: bold">return</span> <span style="color: #0000DD; font-weight: bold">0</span>;
+}
+<span style="color: #997700; font-weight: bold">Output:</span>
+Enter any two integers<span style="color: #333333">:</span> <span style="color: #0000DD; font-weight: bold">6</span> <span style="color: #0000DD; font-weight: bold">4</span>
+Difference of two integers<span style="color: #333333">:</span> <span style="color: #0000DD; font-weight: bold">2</span>
+</pre></div>
+<h3> Calculate roots of a quadratic equation </h3>
+<div class="css3-shadow"style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/**/</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #557799">#include&lt;math.h&gt;</span>
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">main</span>(){
+  <span style="color: #333399; font-weight: bold">float</span> a,b,c;
+  <span style="color: #333399; font-weight: bold">float</span> d,root1,root2; 
+  printf(<span style="background-color: #fff0f0">&quot;Enter a, b and c of quadratic equation: &quot;</span>); 
+  scanf(<span style="background-color: #fff0f0">&quot;%f%f%f&quot;</span>,<span style="color: #333333">&amp;</span>a,<span style="color: #333333">&amp;</span>b,<span style="color: #333333">&amp;</span>c);
+  d <span style="color: #333333">=</span> b <span style="color: #333333">*</span> b <span style="color: #333333">-</span> <span style="color: #0000DD; font-weight: bold">4</span> <span style="color: #333333">*</span> a <span style="color: #333333">*</span> c;
+  <span style="color: #008800; font-weight: bold">if</span>(d <span style="color: #333333">&lt;</span> <span style="color: #0000DD; font-weight: bold">0</span>){
+    printf(<span style="background-color: #fff0f0">&quot;Roots are complex number.</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>);
+    printf(<span style="background-color: #fff0f0">&quot;Roots of quadratic equation are: &quot;</span>);
+    printf(<span style="background-color: #fff0f0">&quot;%.3f%+.3fi&quot;</span>,<span style="color: #333333">-</span>b<span style="color: #333333">/</span>(<span style="color: #0000DD; font-weight: bold">2</span><span style="color: #333333">*</span>a),sqrt(<span style="color: #333333">-</span>d)<span style="color: #333333">/</span>(<span style="color: #0000DD; font-weight: bold">2</span><span style="color: #333333">*</span>a));
+    printf(<span style="background-color: #fff0f0">&quot;, %.3f%+.3fi&quot;</span>,<span style="color: #333333">-</span>b<span style="color: #333333">/</span>(<span style="color: #0000DD; font-weight: bold">2</span><span style="color: #333333">*</span>a),<span style="color: #333333">-</span>sqrt(<span style="color: #333333">-</span>d)<span style="color: #333333">/</span>(<span style="color: #0000DD; font-weight: bold">2</span><span style="color: #333333">*</span>a));
+    <span style="color: #008800; font-weight: bold">return</span> <span style="color: #0000DD; font-weight: bold">0</span>;  
+  }
+  <span style="color: #008800; font-weight: bold">else</span> <span style="color: #008800; font-weight: bold">if</span>(d<span style="color: #333333">==</span><span style="color: #0000DD; font-weight: bold">0</span>){
+   printf(<span style="background-color: #fff0f0">&quot;Both roots are equal.</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>);
+   root1 <span style="color: #333333">=</span> <span style="color: #333333">-</span>b <span style="color: #333333">/</span>(<span style="color: #0000DD; font-weight: bold">2</span><span style="color: #333333">*</span> a);
+   printf(<span style="background-color: #fff0f0">&quot;Root of quadratic equation is: %.3f &quot;</span>,root1); 
+   <span style="color: #008800; font-weight: bold">return</span> <span style="color: #0000DD; font-weight: bold">0</span>;
+  }
+  <span style="color: #008800; font-weight: bold">else</span>{
+   printf(<span style="background-color: #fff0f0">&quot;Roots are real numbers.</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>);
+   root1 <span style="color: #333333">=</span> ( <span style="color: #333333">-</span>b <span style="color: #333333">+</span> sqrt(d)) <span style="color: #333333">/</span> (<span style="color: #0000DD; font-weight: bold">2</span><span style="color: #333333">*</span> a);
+   root2 <span style="color: #333333">=</span> ( <span style="color: #333333">-</span>b <span style="color: #333333">-</span> sqrt(d)) <span style="color: #333333">/</span> (<span style="color: #0000DD; font-weight: bold">2</span><span style="color: #333333">*</span> a);
+   printf(<span style="background-color: #fff0f0">&quot;Roots of quadratic equation are: %.3f , %.3f&quot;</span>,root1,root2); 
+  }
+  <span style="color: #008800; font-weight: bold">return</span> <span style="color: #0000DD; font-weight: bold">0</span>;
+}
+<span style="color: #997700; font-weight: bold">output:</span>
+Enter a, b and c of quadratic equation<span style="color: #333333">:</span>  <span style="color: #0000DD; font-weight: bold">1</span> <span style="color: #0000DD; font-weight: bold">2</span> <span style="color: #0000DD; font-weight: bold">1</span>
+Roots are equal
+Roots of quadratic equation are<span style="color: #333333">:</span> <span style="color: #333333">-</span><span style="color: #6600EE; font-weight: bold">1.000</span>
+</pre></div>
+<h3> Factorial program using while loop --output cannot be greater than integer range </h3>
+<div class="css3-shadow"style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/**/</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>(){
+  <span style="color: #333399; font-weight: bold">int</span> i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">1</span>,f<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">1</span>,num;
+  printf(<span style="background-color: #fff0f0">&quot;Enter a number: &quot;</span>);
+  scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>num);
+  <span style="color: #008800; font-weight: bold">while</span>(i<span style="color: #333333">&lt;=</span>num){
+      f<span style="color: #333333">=</span>f<span style="color: #333333">*</span>i;
+      i<span style="color: #333333">++</span>;
+  }
+  printf(<span style="background-color: #fff0f0">&quot;Factorial of %d is: %d&quot;</span>,num,f);
+}
+<span style="color: #997700; font-weight: bold">output:</span>
+Enter a number<span style="color: #333333">:</span> <span style="color: #0000DD; font-weight: bold">5</span>
+Factorial of <span style="color: #0000DD; font-weight: bold">5</span> is<span style="color: #333333">:</span> <span style="color: #0000DD; font-weight: bold">120</span>
+</pre></div>
+<h3> Factorial program using for loop </h3>
+<div class="css3-shadow"style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;">
+  <pre style="margin: 0; line-height: 125%">/* */
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">int</span> main(){
+  <span style="color: #333399; font-weight: bold">int</span> i,f<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">1</span>,num;
+  printf(<span style="background-color: #fff0f0">&quot;Enter a number: &quot;</span>);
+  scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>num);
+  <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">1</span>;i<span style="color: #333333">&lt;=</span>num;i<span style="color: #333333">++</span>)
+      f<span style="color: #333333">=</span>f<span style="color: #333333">*</span>i;
+  printf(<span style="background-color: #fff0f0">&quot;Factorial of %d is: %d&quot;</span>,num,f);
+  <span style="color: #008800; font-weight: bold">return</span> <span style="color: #0000DD; font-weight: bold">0</span>;
+}
+</pre></div>
+<h3> Swapping of two no’s without using third variable four process. </h3>
+<div class="css3-shadow"style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;">
+  <pre style="margin: 0; line-height: 125%"><span style="color: #888888">/**/</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">void</span> main(){
+<span style="color: #333399; font-weight: bold">int</span> a<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">5</span>,b<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">10</span>;
+    <span style="color: #888888">//process one</span>
+    a<span style="color: #333333">=</span>b<span style="color: #333333">+</span>a;
+    b<span style="color: #333333">=</span>a<span style="color: #333333">-</span>b;
+    a<span style="color: #333333">=</span>a<span style="color: #333333">-</span>b;
+    printf(<span style="background-color: #fff0f0">&quot;a= %d  b=  %d&quot;</span>,a,b);
+    <span style="color: #888888">//process two</span>
+    a<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">5</span>;b<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">10</span>;
+    a<span style="color: #333333">=</span>a<span style="color: #333333">+</span>b<span style="color: #333333">-</span>(b<span style="color: #333333">=</span>a);
+    printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">a= %d  b=  %d&quot;</span>,a,b);
+    <span style="color: #888888">//process three</span>
+    a<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">5</span>;b<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">10</span>;
+    a<span style="color: #333333">=</span>a<span style="color: #333333">^</span>b;
+    b<span style="color: #333333">=</span>a<span style="color: #333333">^</span>b;
+    a<span style="color: #333333">=</span>b<span style="color: #333333">^</span>a;
+    printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">a= %d  b=  %d&quot;</span>,a,b);
+    <span style="color: #888888">//process four</span>
+    a<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">5</span>;b<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">10</span>;
+    a<span style="color: #333333">=</span>b<span style="color: #333333">-~</span>a<span style="color: #333333">-</span><span style="color: #0000DD; font-weight: bold">1</span>;
+    b<span style="color: #333333">=</span>a<span style="color: #333333">+~</span>b<span style="color: #333333">+</span><span style="color: #0000DD; font-weight: bold">1</span>;
+    a<span style="color: #333333">=</span>a<span style="color: #333333">+~</span>b<span style="color: #333333">+</span><span style="color: #0000DD; font-weight: bold">1</span>;
+    printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">a= %d  b=  %d&quot;</span>,a,b);
+}
+</pre></div>
+<h3> Shift inputed data by two bits to the left. </h3>
+<div class="css3-shadow"style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;">
+  <pre style="margin: 0; line-height: 125%"><span style="color: #888888">/**/</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>(){
+   <span style="color: #333399; font-weight: bold">int</span> x,y;
+   printf(<span style="background-color: #fff0f0">&quot;Read the integer from keyboard <span style="color: #333333">:-</span>&quot;</span>);
+   scanf(<span style="background-color: #fff0f0">&quot;%d<span style="color: #333333"></span>&quot;,&amp;x</span>);
+   x<span style="color: #333333">&lt;&lt;=</span><span style="color: #0000DD; font-weight: bold">2</span>;//left shift operator
+   y<span style="color: #333333">=</span>x;
+   printf(<span style="background-color: #fff0f0">&quot;\nThe left shifted data is <span style="color: #333333">=</span> <span style="color: #333333">%</span>d&quot;</span>,y);
+ }</pre></div>
+<h3> Area of Triangle </h3>
+ <div style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/**/</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">main</span>()
+{
+    floar r,area;
+    printf(<span style="background-color: #fff0f0">&quot;Enter radius of circle: &quot;</span>);
+    scanf(<span style="background-color: #fff0f0">&quot;%f&quot;</span>,<span style="color: #333333">&amp;</span>r);
+    area <span style="color: #333333">=</span> <span style="color: #6600EE; font-weight: bold">3.14</span> <span style="color: #333333">*</span> r <span style="color: #333333">*</span> r;
+    printf(<span style="background-color: #fff0f0">&quot;Area of circle is: %f&quot;</span>,area);
+    <span style="color: #008800; font-weight: bold">return</span> <span style="color: #0000DD; font-weight: bold">0</span>;
+}
+</pre></div>
+<h3> Print even number of the given range </h3>
+<div class="css3-shadow"style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/**/</span> 
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">main</span>()
+{
+    into min,max;
+    printf(<span style="background-color: #fff0f0">&quot;Enter min and max even numbers respectively: &quot;</span>);
+    scanf(<span style="background-color: #fff0f0">&quot;%d %d&quot;</span>,<span style="color: #333333">&amp;</span>min,<span style="color: #333333">&amp;</span>max);
+    <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span>min;i<span style="color: #333333">&lt;=</span>max;i<span style="color: #333333">=</span>i<span style="color: #333333">+</span><span style="color: #0000DD; font-weight: bold">2</span>)
+    {
+        printf(<span style="background-color: #fff0f0">&quot;%d &quot;</span>,i);
+    }
+    <span style="color: #008800; font-weight: bold">return</span> <span style="color: #0000DD; font-weight: bold">0</span>;
+}
+</pre></div>
+<h3>Square root of any Number</h3>
+<div class="css3-shadow"style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/**/</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #557799">#include&lt;math.h&gt;</span>
+
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">main</span>(){
+    <span style="color: #333399; font-weight: bold">int</span> num;
+    scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>num);
+
+    printf(<span style="background-color: #fff0f0">&quot;Square root: %f&quot;</span>,sqrt(num));
+    <span style="color: #008800; font-weight: bold">return</span> <span style="color: #0000DD; font-weight: bold">0</span>;
+}
+</pre></div>
+<h3>Find maximum number between two </h3>
+<div class="css3-shadow"style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/**/</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">main</span>(){
+    <span style="color: #333399; font-weight: bold">int</span> a,b,max;
+    scanf(<span style="background-color: #fff0f0">&quot;%d %d&quot;</span>,<span style="color: #333333">&amp;</span>a,<span style="color: #333333">&amp;</span>b);
+    <span style="color: #008800; font-weight: bold">if</span>(a <span style="color: #333333">&gt;</span> b)
+         max <span style="color: #333333">=</span> a;
+    <span style="color: #008800; font-weight: bold">else</span>
+         max <span style="color: #333333">=</span> b;
+    printf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,max));
+    <span style="color: #008800; font-weight: bold">return</span> <span style="color: #0000DD; font-weight: bold">0</span>;
+}
+</pre></div>
+<h3> ASCII value of given character </h3>
+<div class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/**/</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">int</span> main( 
+    <span style="color: #333399; font-weight: bold">char</span> c; 
+    printf(<span style="background-color: #fff0f0">&quot;Enter any character: &quot;</span>);
+    scanf(<span style="background-color: #fff0f0">&quot;%c&quot;</span>,<span style="color: #333333">&amp;</span>c); 
+    printf(<span style="background-color: #fff0f0">&quot;ASCII value of given character: %d&quot;</span>,c);
+    <span style="color: #008800; font-weight: bold">return</span> <span style="color: #0000DD; font-weight: bold">0</span>;
+}
+</pre></div>
+<h3>Print sum of individual digit of a number </h3>
+<div class="css3-shadow"style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/*</span>
+<span style="color: #888888"> example: 123 -&gt; 1+2+3=6</span>
+<span style="color: #888888">*/</span>
+
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>()
+{
+	<span style="color: #333399; font-weight: bold">int</span> num,sum<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>,a;
+	printf(<span style="background-color: #fff0f0">&quot;Enter a number: &quot;</span>);
+	scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>num);
+	<span style="color: #008800; font-weight: bold">while</span>(num<span style="color: #333333">!=</span><span style="color: #0000DD; font-weight: bold">0</span>)
+	{
+		a<span style="color: #333333">=</span>num<span style="color: #333333">%</span><span style="color: #0000DD; font-weight: bold">10</span>;
+		sum<span style="color: #333333">=</span>sum<span style="color: #333333">+</span>a;
+		num<span style="color: #333333">=</span>num<span style="color: #333333">/</span><span style="color: #0000DD; font-weight: bold">10</span>;
+	}
+ 	 printf(<span style="background-color: #fff0f0">&quot;Sum of individual digits: %d&quot;</span>,sum);
+ 
+}
+</pre></div>
+<h3> Convert any number to words </h3>
+<div class="css3-shadow"style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/**/</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #557799">#include&lt;math.h&gt;</span>
+<span style="color: #557799">#include&lt;stdlib.h&gt;</span>
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">checkRange</span>(<span style="color: #333399; font-weight: bold">int</span> num);
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">checkRange1</span>(<span style="color: #333399; font-weight: bold">int</span> num);
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">checkRange2</span>(<span style="color: #333399; font-weight: bold">int</span> num);
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">checkRange3</span>(<span style="color: #333399; font-weight: bold">int</span> num);
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">checkRange4</span>(<span style="color: #333399; font-weight: bold">int</span> num);
+
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">checkDigit1</span>(<span style="color: #333399; font-weight: bold">int</span> num);
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">checkDigit2</span>(<span style="color: #333399; font-weight: bold">int</span> num);
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">checkDigit3</span>(<span style="color: #333399; font-weight: bold">int</span> num1,<span style="color: #333399; font-weight: bold">int</span> num2);
+
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">main</span>()
+{
+
+ <span style="color: #333399; font-weight: bold">int</span> num;
+
+ printf(<span style="background-color: #fff0f0">&quot;Enter a number : &quot;</span>);
+ scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>num);
+ printf(<span style="background-color: #fff0f0">&quot;Entered number in words : &quot;</span>);
+ <span style="color: #008800; font-weight: bold">if</span>(num<span style="color: #333333">&lt;=</span><span style="color: #0000DD; font-weight: bold">100</span>)
+   checkRange1(num);
+ <span style="color: #008800; font-weight: bold">else</span> <span style="color: #008800; font-weight: bold">if</span>(num<span style="color: #333333">&gt;</span><span style="color: #0000DD; font-weight: bold">100</span> <span style="color: #333333">&amp;&amp;</span> num<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">1000</span>)
+   checkRange2(num);
+ <span style="color: #008800; font-weight: bold">else</span> <span style="color: #008800; font-weight: bold">if</span>(num<span style="color: #333333">&gt;=</span><span style="color: #0000DD; font-weight: bold">1000</span> <span style="color: #333333">&amp;&amp;</span> num<span style="color: #333333">&lt;=</span><span style="color: #0000DD; font-weight: bold">100000</span>)
+   checkRange3(num);
+ <span style="color: #008800; font-weight: bold">else</span> <span style="color: #008800; font-weight: bold">if</span>(num<span style="color: #333333">&gt;</span><span style="color: #0000DD; font-weight: bold">100000</span> <span style="color: #333333">&amp;&amp;</span> num<span style="color: #333333">&lt;=</span><span style="color: #0000DD; font-weight: bold">10000000</span>)
+   checkRange4(num);
+ <span style="color: #008800; font-weight: bold">else</span>
+   checkRange(num);
+ <span style="color: #008800; font-weight: bold">return</span> <span style="color: #0000DD; font-weight: bold">0</span>;
+}
+
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">checkRange</span>(num)
+{
+  printf(<span style="background-color: #fff0f0">&quot;Entered number should be between 0 to 10000000&quot;</span>);     
+}
+
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">checkRange1</span>(num)
+{
+ <span style="color: #333399; font-weight: bold">int</span> x,y,z;
+ <span style="color: #008800; font-weight: bold">if</span>(num<span style="color: #333333">&gt;=</span><span style="color: #0000DD; font-weight: bold">0</span> <span style="color: #333333">&amp;&amp;</span> num<span style="color: #333333">&lt;=</span><span style="color: #0000DD; font-weight: bold">10</span>)
+    checkDigit1(num);
+ <span style="color: #008800; font-weight: bold">else</span> <span style="color: #008800; font-weight: bold">if</span>(num<span style="color: #333333">&gt;</span><span style="color: #0000DD; font-weight: bold">10</span> <span style="color: #333333">&amp;&amp;</span> num<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">20</span>)
+ {
+    x<span style="color: #333333">=</span>num<span style="color: #333333">%</span><span style="color: #0000DD; font-weight: bold">10</span>;
+    checkDigit2(x);
+ }
+ <span style="color: #008800; font-weight: bold">else</span> <span style="color: #008800; font-weight: bold">if</span>(num<span style="color: #333333">&gt;=</span><span style="color: #0000DD; font-weight: bold">20</span> <span style="color: #333333">&amp;&amp;</span> num<span style="color: #333333">&lt;=</span><span style="color: #0000DD; font-weight: bold">100</span>)
+ {
+    y<span style="color: #333333">=</span>num<span style="color: #333333">/</span><span style="color: #0000DD; font-weight: bold">10</span>;
+    z<span style="color: #333333">=</span>num<span style="color: #333333">%</span><span style="color: #0000DD; font-weight: bold">10</span>;
+    checkDigit3(y,z);
+ }
+}
+
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">checkRange2</span>(<span style="color: #333399; font-weight: bold">int</span> num)
+{
+ <span style="color: #333399; font-weight: bold">int</span> x,y,z;
+ y<span style="color: #333333">=</span>num<span style="color: #333333">/</span><span style="color: #0000DD; font-weight: bold">100</span>;
+ checkDigit1(y);
+ printf(<span style="background-color: #fff0f0">&quot; Hundred &quot;</span>);
+ x<span style="color: #333333">=</span>num<span style="color: #333333">%</span><span style="color: #0000DD; font-weight: bold">100</span>;
+ checkRange1(x);
+}
+
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">checkRange3</span>(<span style="color: #333399; font-weight: bold">int</span> num)
+{
+ <span style="color: #333399; font-weight: bold">int</span> x,y,z;
+ <span style="color: #008800; font-weight: bold">if</span>(num<span style="color: #333333">==</span><span style="color: #0000DD; font-weight: bold">1000</span>)
+ {
+   printf(<span style="background-color: #fff0f0">&quot; Thousand &quot;</span>);
+   exit(<span style="color: #0000DD; font-weight: bold">0</span>);
+ }
+ <span style="color: #008800; font-weight: bold">else</span> <span style="color: #008800; font-weight: bold">if</span>(num<span style="color: #333333">==</span><span style="color: #0000DD; font-weight: bold">100000</span>)
+ {
+   printf(<span style="background-color: #fff0f0">&quot;Lakh&quot;</span>);
+   exit(<span style="color: #0000DD; font-weight: bold">0</span>);
+ }
+ <span style="color: #008800; font-weight: bold">else</span>
+ {
+   x<span style="color: #333333">=</span>num<span style="color: #333333">/</span><span style="color: #0000DD; font-weight: bold">1000</span>;
+   checkRange1(x);
+   printf(<span style="background-color: #fff0f0">&quot; Thousand &quot;</span>);
+   z<span style="color: #333333">=</span>num<span style="color: #333333">%</span><span style="color: #0000DD; font-weight: bold">1000</span>;
+   <span style="color: #008800; font-weight: bold">if</span>(z<span style="color: #333333">&lt;=</span><span style="color: #0000DD; font-weight: bold">99</span>)
+     checkRange1(z);
+   <span style="color: #008800; font-weight: bold">else</span>
+     checkRange2(z);
+ }
+}
+
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">checkRange4</span>(<span style="color: #333399; font-weight: bold">int</span> num)
+{
+ <span style="color: #333399; font-weight: bold">int</span> x,y;
+ <span style="color: #008800; font-weight: bold">if</span>(num<span style="color: #333333">==</span><span style="color: #0000DD; font-weight: bold">10000000</span>)
+ {
+   printf(<span style="background-color: #fff0f0">&quot;One Crore&quot;</span>);
+   exit(<span style="color: #0000DD; font-weight: bold">0</span>);
+ }
+ x<span style="color: #333333">=</span>num<span style="color: #333333">/</span><span style="color: #0000DD; font-weight: bold">100000</span>;
+ checkRange1(x);
+ printf(<span style="background-color: #fff0f0">&quot; Lakhs &quot;</span>);
+ y<span style="color: #333333">=</span>num<span style="color: #333333">%</span><span style="color: #0000DD; font-weight: bold">100000</span>;
+ <span style="color: #008800; font-weight: bold">if</span>(y<span style="color: #333333">==</span><span style="color: #0000DD; font-weight: bold">0</span>)
+   exit(<span style="color: #0000DD; font-weight: bold">0</span>);
+ <span style="color: #008800; font-weight: bold">else</span> <span style="color: #008800; font-weight: bold">if</span>(y<span style="color: #333333">&lt;=</span><span style="color: #0000DD; font-weight: bold">99</span>)
+   checkRange1(y);
+ <span style="color: #008800; font-weight: bold">else</span> <span style="color: #008800; font-weight: bold">if</span>(y<span style="color: #333333">&gt;</span><span style="color: #0000DD; font-weight: bold">99</span> <span style="color: #333333">&amp;&amp;</span> y<span style="color: #333333">&lt;=</span><span style="color: #0000DD; font-weight: bold">999</span>)
+   checkRange2(y);
+ <span style="color: #008800; font-weight: bold">else</span>
+   checkRange3(y);
+}
+
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">checkDigit1</span>(<span style="color: #333399; font-weight: bold">int</span> num)
+{
+ <span style="color: #008800; font-weight: bold">switch</span>(num)
+ {
+  <span style="color: #008800; font-weight: bold">case</span> <span style="color: #0000DD; font-weight: bold">0</span>: printf(<span style="background-color: #fff0f0">&quot;Zero&quot;</span>); <span style="color: #008800; font-weight: bold">break</span>;
+  <span style="color: #008800; font-weight: bold">case</span> <span style="color: #0000DD; font-weight: bold">1</span>: printf(<span style="background-color: #fff0f0">&quot;One&quot;</span>); <span style="color: #008800; font-weight: bold">break</span>;
+  <span style="color: #008800; font-weight: bold">case</span> <span style="color: #0000DD; font-weight: bold">2</span>: printf(<span style="background-color: #fff0f0">&quot;Two&quot;</span>); <span style="color: #008800; font-weight: bold">break</span>;
+  <span style="color: #008800; font-weight: bold">case</span> <span style="color: #0000DD; font-weight: bold">3</span>: printf(<span style="background-color: #fff0f0">&quot;Three&quot;</span>); <span style="color: #008800; font-weight: bold">break</span>;
+  <span style="color: #008800; font-weight: bold">case</span> <span style="color: #0000DD; font-weight: bold">4</span>: printf(<span style="background-color: #fff0f0">&quot;Four&quot;</span>); <span style="color: #008800; font-weight: bold">break</span>;
+  <span style="color: #008800; font-weight: bold">case</span> <span style="color: #0000DD; font-weight: bold">5</span>: printf(<span style="background-color: #fff0f0">&quot;Five&quot;</span>); <span style="color: #008800; font-weight: bold">break</span>;
+  <span style="color: #008800; font-weight: bold">case</span> <span style="color: #0000DD; font-weight: bold">6</span>: printf(<span style="background-color: #fff0f0">&quot;Six&quot;</span>); <span style="color: #008800; font-weight: bold">break</span>;
+  <span style="color: #008800; font-weight: bold">case</span> <span style="color: #0000DD; font-weight: bold">7</span>: printf(<span style="background-color: #fff0f0">&quot;Seven&quot;</span>); <span style="color: #008800; font-weight: bold">break</span>;
+  <span style="color: #008800; font-weight: bold">case</span> <span style="color: #0000DD; font-weight: bold">8</span>: printf(<span style="background-color: #fff0f0">&quot;Eight&quot;</span>); <span style="color: #008800; font-weight: bold">break</span>;
+  <span style="color: #008800; font-weight: bold">case</span> <span style="color: #0000DD; font-weight: bold">9</span>: printf(<span style="background-color: #fff0f0">&quot;Nine&quot;</span>); <span style="color: #008800; font-weight: bold">break</span>;
+  <span style="color: #008800; font-weight: bold">case</span> <span style="color: #0000DD; font-weight: bold">10</span>: printf(<span style="background-color: #fff0f0">&quot;Ten&quot;</span>); <span style="color: #008800; font-weight: bold">break</span>;
+  <span style="color: #997700; font-weight: bold">default:</span> printf(<span style="background-color: #fff0f0">&quot;&quot;</span>);
+ }
+}
+
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">checkDigit2</span>(<span style="color: #333399; font-weight: bold">int</span> num)
+{
+ <span style="color: #008800; font-weight: bold">switch</span>(num)
+ {
+  <span style="color: #008800; font-weight: bold">case</span> <span style="color: #0000DD; font-weight: bold">1</span>: printf(<span style="background-color: #fff0f0">&quot;Eleven&quot;</span>); <span style="color: #008800; font-weight: bold">break</span>;
+  <span style="color: #008800; font-weight: bold">case</span> <span style="color: #0000DD; font-weight: bold">2</span>: printf(<span style="background-color: #fff0f0">&quot;Twelve&quot;</span>); <span style="color: #008800; font-weight: bold">break</span>;
+  <span style="color: #008800; font-weight: bold">case</span> <span style="color: #0000DD; font-weight: bold">3</span>: printf(<span style="background-color: #fff0f0">&quot;Thirteen&quot;</span>); <span style="color: #008800; font-weight: bold">break</span>;
+  <span style="color: #008800; font-weight: bold">case</span> <span style="color: #0000DD; font-weight: bold">4</span>: printf(<span style="background-color: #fff0f0">&quot;Fourteen&quot;</span>); <span style="color: #008800; font-weight: bold">break</span>;
+  <span style="color: #008800; font-weight: bold">case</span> <span style="color: #0000DD; font-weight: bold">5</span>: printf(<span style="background-color: #fff0f0">&quot;Fifteen&quot;</span>); <span style="color: #008800; font-weight: bold">break</span>;
+  <span style="color: #008800; font-weight: bold">case</span> <span style="color: #0000DD; font-weight: bold">6</span>: printf(<span style="background-color: #fff0f0">&quot;Sixteen&quot;</span>); <span style="color: #008800; font-weight: bold">break</span>;
+  <span style="color: #008800; font-weight: bold">case</span> <span style="color: #0000DD; font-weight: bold">7</span>: printf(<span style="background-color: #fff0f0">&quot;Seventeen&quot;</span>); <span style="color: #008800; font-weight: bold">break</span>;
+  <span style="color: #008800; font-weight: bold">case</span> <span style="color: #0000DD; font-weight: bold">8</span>: printf(<span style="background-color: #fff0f0">&quot;Eighteen&quot;</span>); <span style="color: #008800; font-weight: bold">break</span>;
+  <span style="color: #008800; font-weight: bold">case</span> <span style="color: #0000DD; font-weight: bold">9</span>: printf(<span style="background-color: #fff0f0">&quot;Nineteen&quot;</span>); <span style="color: #008800; font-weight: bold">break</span>;
+  <span style="color: #997700; font-weight: bold">default:</span> printf(<span style="background-color: #fff0f0">&quot;&quot;</span>);
+
+ }
+}
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">checkDigit3</span>(<span style="color: #333399; font-weight: bold">int</span> num1,<span style="color: #333399; font-weight: bold">int</span> num2)
+{
+ <span style="color: #008800; font-weight: bold">switch</span>(num1)
+ {
+  <span style="color: #008800; font-weight: bold">case</span> <span style="color: #0000DD; font-weight: bold">2</span>: printf(<span style="background-color: #fff0f0">&quot;Twenty &quot;</span>); <span style="color: #008800; font-weight: bold">break</span>;
+  <span style="color: #008800; font-weight: bold">case</span> <span style="color: #0000DD; font-weight: bold">3</span>: printf(<span style="background-color: #fff0f0">&quot;Thirty &quot;</span>); <span style="color: #008800; font-weight: bold">break</span>;
+  <span style="color: #008800; font-weight: bold">case</span> <span style="color: #0000DD; font-weight: bold">4</span>: printf(<span style="background-color: #fff0f0">&quot;Forty &quot;</span>); <span style="color: #008800; font-weight: bold">break</span>;
+  <span style="color: #008800; font-weight: bold">case</span> <span style="color: #0000DD; font-weight: bold">5</span>: printf(<span style="background-color: #fff0f0">&quot;Fifty &quot;</span>); <span style="color: #008800; font-weight: bold">break</span>;
+  <span style="color: #008800; font-weight: bold">case</span> <span style="color: #0000DD; font-weight: bold">6</span>: printf(<span style="background-color: #fff0f0">&quot;Sixty &quot;</span>); <span style="color: #008800; font-weight: bold">break</span>;
+  <span style="color: #008800; font-weight: bold">case</span> <span style="color: #0000DD; font-weight: bold">7</span>: printf(<span style="background-color: #fff0f0">&quot;Seventy &quot;</span>); <span style="color: #008800; font-weight: bold">break</span>;
+  <span style="color: #008800; font-weight: bold">case</span> <span style="color: #0000DD; font-weight: bold">8</span>: printf(<span style="background-color: #fff0f0">&quot;Eighty &quot;</span>); <span style="color: #008800; font-weight: bold">break</span>;
+  <span style="color: #008800; font-weight: bold">case</span> <span style="color: #0000DD; font-weight: bold">9</span>: printf(<span style="background-color: #fff0f0">&quot;Ninety &quot;</span>); <span style="color: #008800; font-weight: bold">break</span>;
+  <span style="color: #008800; font-weight: bold">case</span> <span style="color: #0000DD; font-weight: bold">10</span>: printf(<span style="background-color: #fff0f0">&quot;Hundred&quot;</span>); <span style="color: #008800; font-weight: bold">break</span>;
+  <span style="color: #997700; font-weight: bold">default:</span> printf(<span style="background-color: #fff0f0">&quot;&quot;</span>);
+ }
+ checkDigit1(num2);
+
+}
+</pre></div>
+<h3>Find LCM and GCD of two number </h3>
+<div class="css3-shadow"style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/*  */</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">main</span>()
+{
+	<span style="color: #333399; font-weight: bold">int</span> a,b,t1,t2,lcm,gcd;
+	printf(<span style="background-color: #fff0f0">&quot;Enter two number: &quot;</span>);
+	scanf(<span style="background-color: #fff0f0">&quot;%d%d&quot;</span>,<span style="color: #333333">&amp;</span>a,<span style="color: #333333">&amp;</span>b);
+	t1<span style="color: #333333">=</span>a;
+	t2<span style="color: #333333">=</span>b;
+	<span style="color: #008800; font-weight: bold">while</span>(t1<span style="color: #333333">!=</span>t2)
+	{
+		<span style="color: #008800; font-weight: bold">if</span>(t1<span style="color: #333333">&gt;</span>t2)
+		{
+			t1<span style="color: #333333">=</span>t1<span style="color: #333333">-</span>t2;
+		}
+		<span style="color: #008800; font-weight: bold">else</span>
+		{
+			t2<span style="color: #333333">=</span>t2<span style="color: #333333">-</span>t1;
+		}
+	}
+	gcd<span style="color: #333333">=</span>t1;
+	lcm<span style="color: #333333">=</span>(a<span style="color: #333333">*</span>b)<span style="color: #333333">/</span>gcd;
+	printf(<span style="background-color: #fff0f0">&quot;LCM = %d , GCD= %d&quot;</span>,lcm,gcd);
+	<span style="color: #008800; font-weight: bold">return</span> <span style="color: #0000DD; font-weight: bold">0</span>;
+}
+</pre></div>
+<h3> Check whether given year is leap or not</h3>
+<div class="css3-shadow"style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;">
+  <pre style="margin: 0; line-height: 125%"><span style="color: #888888">/**/</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">LeapYear</span>(<span style="color: #333399; font-weight: bold">int</span>);
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>()
+{
+    <span style="color: #333399; font-weight: bold">int</span> yr,rem1,rem2;
+    printf(<span style="background-color: #fff0f0">&quot;Enter year : &quot;</span>);
+    scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>yr);
+    rem1 <span style="color: #333333">=</span> yr<span style="color: #333333">%</span><span style="color: #0000DD; font-weight: bold">4</span> ; <span style="color: #888888">//rem1 = 0 for leap year</span>
+    rem2 <span style="color: #333333">=</span> yr<span style="color: #333333">%</span><span style="color: #0000DD; font-weight: bold">100</span>; <span style="color: #888888">//rem2! = 0 for leap year</span>
+    <span style="color: #008800; font-weight: bold">if</span>((rem1 <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">0</span>) <span style="color: #333333">&amp;&amp;</span> (rem2<span style="color: #333333">!=</span><span style="color: #0000DD; font-weight: bold">0</span>) <span style="color: #333333">||</span> yr<span style="color: #333333">%</span><span style="color: #0000DD; font-weight: bold">400</span> <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">0</span>)
+    {
+        printf(<span style="background-color: #fff0f0">&quot;The given year %d is Leap Year.&quot;</span>,yr);
+    }
+    <span style="color: #008800; font-weight: bold">else</span>
+    {
+        printf(<span style="background-color: #fff0f0">&quot;The given year %d is Not Leap Year.&quot;</span>,yr);
+    }
+}
+</pre></div>
+
+<hr>
+<p> &nbsp; </p>
+</html>

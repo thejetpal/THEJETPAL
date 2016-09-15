@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.inmobi.ads"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/indigo400"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="70dp"
+        android:background="@color/blue800"
+        android:orientation="vertical"
+        android:paddingBottom="25dp">
+
+        <TextView
+            android:id="@+id/support"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/bluegrey700"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="left"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="Mykitab wants to hear from you.\n\nUse the below button to Mail us your feedback.\nWe read all feedback carefully."
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/mail"
+
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/mail" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

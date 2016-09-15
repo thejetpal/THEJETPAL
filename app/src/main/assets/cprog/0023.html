@@ -1,0 +1,46 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+
+<h3>Dynamic  Memory Allocation</h3>
+<p class="css3-shadow">
+  Allocate the  memory at run time is called Dynamic memory allocation. <br>
+  Although, C language inherently does not  has any technique to allocated memory dynamically, there are 4 library  functions under&nbsp;&quot;stdlib.h&quot;&nbsp;for dynamic memory allocation.</p>
+<p class="css3-shadow"> <strong>malloc () :</strong>&nbsp;&nbsp;Allocates requested size of  bytes and returns a pointer first byte of allocated space<br>
+  <strong>calloc()</strong>:&nbsp;&nbsp;Allocates space for an array elements, initializes to  zero and then returns a pointer to memory<br>
+  <strong>free ()</strong>:&nbsp;&nbsp;free or dellocate the previously allocated space<br>
+  <strong>realloc () :&nbsp;&nbsp;</strong>Reallocate or change the  size of previously allocated space</p>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/*read n numbers and find their sum*/</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>() 
+{
+ <span style="color: #333399; font-weight: bold">int</span> <span style="color: #333333">*</span>x, n, i, sum<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;
+ printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0"> Enter number of numbers&quot;</span>);
+ scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>, <span style="color: #333333">&amp;</span>n);
+ x<span style="color: #333333">=</span>(<span style="color: #333399; font-weight: bold">int</span> <span style="color: #333333">*</span>)malloc(n <span style="color: #333333">*</span> <span style="color: #008800; font-weight: bold">sizeof</span>(<span style="color: #333399; font-weight: bold">int</span>));
+ <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">1</span>;i<span style="color: #333333">&lt;=</span>n,<span style="color: #333333">++</span>i)
+ {
+   scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>, x<span style="color: #333333">+</span>i);
+   sum <span style="color: #333333">+=*</span>(x<span style="color: #333333">+</span>i);
+ }
+   printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">The sum is %d &quot;</span>, sum); 
+}
+</pre></td></tr></table></div>
+<hr>
+<p>&nbsp; </p>
+</html>

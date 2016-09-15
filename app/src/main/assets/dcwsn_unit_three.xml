@@ -1,0 +1,27 @@
+<employees>
+<site>
+<name>Question 1</name>
+<link>https://mykitab-te.firebaseapp.com/DCWSN/DC3/dcwsn_u3_1.html</link>
+<about>Sensor Network Technology</about>
+</site>
+<site>
+<name>Question 2</name>
+<link>https://mykitab-te.firebaseapp.com/DCWSN/DC3/dcwsn_u3_2.html</link>
+<about>Applications of Sensor Network Technology</about>
+ </site>
+<site>
+<name>Question 3</name>
+<link>https://mykitab-te.firebaseapp.com/DCWSN/DC3/dcwsn_u3_3.html</link>
+<about>WSN Architecture</about>
+</site>
+<site>
+<name>Question 4</name>
+<link>https://mykitab-te.firebaseapp.com/DCWSN/DC3/dcwsn_u3_4.html</link>
+<about>RFID based communication</about>
+ </site>
+<site>
+<name>Question 5</name>
+<link>https://mykitab-te.firebaseapp.com/DCWSN/DC3/dcwsn_u3_5.html</link>
+<about>RFID Architecture</about>
+ </site>
+</employees>

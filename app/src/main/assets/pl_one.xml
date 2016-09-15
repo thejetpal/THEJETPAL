@@ -1,0 +1,73 @@
+<employees>
+ <site>
+  <name>***Note***</name>
+  <link> </link>
+  <about>Please confirm the writeup from your respected teachers before you write them.</about>
+ </site>
+
+<site>
+<name>Group A 1</name>
+<link>https://mykitab-te.firebaseapp.com/PL1/a1.pdf</link>
+<about>DBMS using connections(Client-Data sever, two tier) Oracle/MySQL (ODBC/JDBC), SQL prompt to create data base tables insert, update data values, delete table, use table, select queries with/without where clause. ,demonstrate use of stored procedure / function (create procedure at the data side and make use of it on the client side)</about>
+</site>
+<site>
+<name>Group A 2</name>
+<link>https://mykitab-te.firebaseapp.com/PL1/a2.pdf</link>
+<about>DBMS using connections(Client-application server-Data sever, three tier) Oracle/MySQL (ODBC/JDBC), SQL Joints, prompt.</about>
+ </site>
+<site>
+<name>Group A 3</name>
+<link>https://mykitab-te.firebaseapp.com/PL1/a3.pdf</link>
+<about>Design and Develop SQL DDL statements which demonstrate the use of SQL objects such as Table, View , Index using Client-Data sever(two tier).</about>
+</site>
+<site>
+<name>Group A 4</name>
+<link>https://mykitab-te.firebaseapp.com/PL1/a4.pdf</link>
+<about>Write a program in Python/C++ to read display the i-node information for a given text file, image file.</about>
+ </site>
+ <site>
+<name>Group A 5</name>
+<link>https://mykitab-te.firebaseapp.com/PL1/a5.pdf</link>
+<about>Write an IPC program using pipe. Process A accepts a character string and Process B inverses the string. Pipe is used to establish communication between A and B processes using Python or C++.</about>
+ </site>
+ <site>
+<name>Group A 6</name>
+<link>https://mykitab-te.firebaseapp.com/PL1/a6.pdf</link>
+<about>Use Python for Socket Programming to connect two or more PCs to share a text file.</about>
+ </site>
+  <site>
+<name>Group B 11</name>
+<link>https://mykitab-te.firebaseapp.com/PL1/b11.pdf</link>
+<about>Write a python program for creating virtual file system on Linux environment.</about>
+ </site>
+  <site>
+<name>Group B 12</name>
+<link>https://mykitab-te.firebaseapp.com/PL1/b12.pdf</link>
+<about> Write a program in C++ to make USB Device Bootable by installing required system files</about>
+ </site>
+  <site>
+<name>Group B 13</name>
+<link>https://mykitab-te.firebaseapp.com/PL1/b13.pdf</link>
+<about>Write a program in python for USB Device File Management. Check usefulness of command e2fsck for different file systems mounted on computer.</about>
+ </site>
+  <site>
+<name>Group B 14</name>
+<link>https://mykitab-te.firebaseapp.com/PL1/b14.pdf</link>
+<about>Aggregation and indexing with suitable example using Cassendra and RdfID based employees attendance system.</about>
+ </site>
+  <site>
+<name>Group B 15</name>
+<link>https://mykitab-te.firebaseapp.com/PL1/b15.pdf</link>
+<about>Aggregation and indexing with suitable example using MongoDB.</about>
+ </site>
+  <site>
+<name>Group B 16</name>
+<link>https://mykitab-te.firebaseapp.com/PL1/b16.pdf</link>
+<about> Map reduce operation with suitable example using MongoDB.</about>
+ </site>
+  <site>
+<name>Group C 1</name>
+<link>https://mykitab-te.firebaseapp.com/PL1/c1.pdf</link>
+<about>BIG DATA applications using Hadoop.</about>
+ </site>
+</employees> 

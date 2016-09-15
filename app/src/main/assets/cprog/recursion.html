@@ -1,0 +1,182 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<h3> Factorial using Recursion </h3>
+<div class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/*
+*/</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">fact</span>(<span style="color: #333399; font-weight: bold">int</span>);
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">main</span>(){
+  <span style="color: #333399; font-weight: bold">int</span> num,f;
+  printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">Enter a number: &quot;</span>);
+  scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>num);
+  f<span style="color: #333333">=</span>fact(num);
+  printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">Factorial of %d is: %d&quot;</span>,num,f);
+  <span style="color: #008800; font-weight: bold">return</span> <span style="color: #0000DD; font-weight: bold">0</span>;
+}
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">fact</span>(<span style="color: #333399; font-weight: bold">int</span> n){
+   <span style="color: #008800; font-weight: bold">if</span>(n<span style="color: #333333">==</span><span style="color: #0000DD; font-weight: bold">1</span>)
+       <span style="color: #008800; font-weight: bold">return</span> <span style="color: #0000DD; font-weight: bold">1</span>;
+   <span style="color: #008800; font-weight: bold">else</span>
+       <span style="color: #008800; font-weight: bold">return</span> (n<span style="color: #333333">*</span>fact(n<span style="color: #333333">-</span><span style="color: #0000DD; font-weight: bold">1</span>));
+ }
+</pre></div>
+<h3> Sum of N  numbers by recursion </h3>
+<div class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/**/</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">main</span>(){
+    <span style="color: #333399; font-weight: bold">int</span> n,sum;
+    printf(<span style="background-color: #fff0f0">&quot;Enter the value of n: &quot;</span>);
+    scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>n);
+    sum <span style="color: #333333">=</span> getsum(n);
+    printf(<span style="background-color: #fff0f0">&quot;Sum of n numbers: %d&quot;</span>,sum);
+    <span style="color: #008800; font-weight: bold">return</span> <span style="color: #0000DD; font-weight: bold">0</span>;
+}
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">getsum</span>(n){
+    <span style="color: #008800; font-weight: bold">static</span> <span style="color: #333399; font-weight: bold">int</span> sum<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;
+    <span style="color: #008800; font-weight: bold">if</span>(n<span style="color: #333333">&gt;</span><span style="color: #0000DD; font-weight: bold">0</span>){
+         sum <span style="color: #333333">=</span> sum <span style="color: #333333">+</span> n;
+         getsum(n<span style="color: #333333">-</span><span style="color: #0000DD; font-weight: bold">1</span>);
+    }
+    <span style="color: #008800; font-weight: bold">return</span> sum;
+}
+</pre></div>
+<h3> Multiply using Recursion </h3>
+<div class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/**/</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">multiply</span>(<span style="color: #333399; font-weight: bold">int</span>,<span style="color: #333399; font-weight: bold">int</span>);
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">main</span>(){
+    <span style="color: #333399; font-weight: bold">int</span> a,b,p;
+    printf(<span style="background-color: #fff0f0">&quot;Enter any two integers: &quot;</span>);
+    scanf(<span style="background-color: #fff0f0">&quot;%d%d&quot;</span>,<span style="color: #333333">&amp;</span>a,<span style="color: #333333">&amp;</span>b);
+    p <span style="color: #333333">=</span> multiply(a,b);
+    printf(<span style="background-color: #fff0f0">&quot;Multiplication of two integers is %d&quot;</span>,p);
+    <span style="color: #008800; font-weight: bold">return</span> <span style="color: #0000DD; font-weight: bold">0</span>;
+}
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">multiply</span>(<span style="color: #333399; font-weight: bold">int</span> a,<span style="color: #333399; font-weight: bold">int</span> b){
+    <span style="color: #008800; font-weight: bold">static</span> <span style="color: #333399; font-weight: bold">int</span> p<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>,i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;
+    <span style="color: #008800; font-weight: bold">if</span>(i <span style="color: #333333">&lt;</span> a){
+         p <span style="color: #333333">=</span> p<span style="color: #333333">+</span> b;
+         i<span style="color: #333333">++</span>;
+         multiply(a,b);
+    }
+    <span style="color: #008800; font-weight: bold">return</span> p;
+}
+</pre></div>
+<h3>LCM of two numbers by recursion </h3>
+<div class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/**/</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">findlcm</span>(<span style="color: #333399; font-weight: bold">int</span>,<span style="color: #333399; font-weight: bold">int</span>);
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">main</span>()
+{
+    <span style="color: #333399; font-weight: bold">int</span> a,b,l;
+    printf(<span style="background-color: #fff0f0">&quot;Enter any two number &quot;</span>);
+    scanf(<span style="background-color: #fff0f0">&quot;%d%d&quot;</span>,<span style="color: #333333">&amp;</span>a,<span style="color: #333333">&amp;</span>b);
+    <span style="color: #008800; font-weight: bold">if</span>(a<span style="color: #333333">&gt;</span>b)
+       l <span style="color: #333333">=</span> findlcm(a,b);
+    <span style="color: #008800; font-weight: bold">else</span>
+        l <span style="color: #333333">=</span>findlcm(b,a);
+    printf(<span style="background-color: #fff0f0">&quot;LCM of two number is %d&quot;</span>,l);
+    <span style="color: #008800; font-weight: bold">return</span> <span style="color: #0000DD; font-weight: bold">0</span>;
+}
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">findlcm</span>(<span style="color: #333399; font-weight: bold">int</span> a,<span style="color: #333399; font-weight: bold">int</span> b){
+   <span style="color: #008800; font-weight: bold">static</span> <span style="color: #333399; font-weight: bold">int</span> temp <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">1</span>;
+    <span style="color: #008800; font-weight: bold">if</span>(temp <span style="color: #333333">%</span> b <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">0</span> <span style="color: #333333">&amp;&amp;</span> temp <span style="color: #333333">%</span> a <span style="color: #333333">==</span> <span style="color: #0000DD; font-weight: bold">0</span>)
+         <span style="color: #008800; font-weight: bold">return</span> temp;
+    temp<span style="color: #333333">++</span>;
+    findlcm(a,b);
+   <span style="color: #008800; font-weight: bold">return</span> temp;
+}
+</pre></div>
+<h3>Reverse a number using recursion </h3>
+<div class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/**/</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">main</span>(){
+    <span style="color: #333399; font-weight: bold">int</span> num,reverse;
+    printf(<span style="background-color: #fff0f0">&quot;Enter any number: &quot;</span>);
+    scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>num);
+    reverse<span style="color: #333333">=</span>rev(num);
+    printf(<span style="background-color: #fff0f0">&quot;Reverse of number: %d&quot;</span>,reverse);
+    <span style="color: #008800; font-weight: bold">return</span> <span style="color: #0000DD; font-weight: bold">0</span>;
+}
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">rev</span>(<span style="color: #333399; font-weight: bold">int</span> num){
+    <span style="color: #008800; font-weight: bold">static</span> sum,r;
+    <span style="color: #008800; font-weight: bold">if</span>(num){
+         r<span style="color: #333333">=</span>num<span style="color: #333333">%</span><span style="color: #0000DD; font-weight: bold">10</span>;
+         sum<span style="color: #333333">=</span>sum<span style="color: #333333">*</span><span style="color: #0000DD; font-weight: bold">10</span><span style="color: #333333">+</span>r;
+         rev(num<span style="color: #333333">/</span><span style="color: #0000DD; font-weight: bold">10</span>);
+    }
+    <span style="color: #008800; font-weight: bold">else</span> 
+         <span style="color: #008800; font-weight: bold">return</span> <span style="color: #0000DD; font-weight: bold">0</span>;
+    <span style="color: #008800; font-weight: bold">return</span> sum;
+}
+Sample output<span style="color: #333333">:</span>
+Enter any number<span style="color: #333333">:</span> <span style="color: #0000DD; font-weight: bold">784</span>
+Reverse of number<span style="color: #333333">:</span> <span style="color: #0000DD; font-weight: bold">487</span>
+</pre></div>
+<h3>Largest Number of array using recursion </h3>
+<div class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/**/</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">getmax</span>(<span style="color: #333399; font-weight: bold">int</span> []);
+<span style="color: #333399; font-weight: bold">int</span> size;
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">main</span>()
+{
+    <span style="color: #333399; font-weight: bold">int</span> arr[<span style="color: #0000DD; font-weight: bold">100</span>],max,i;
+    printf(<span style="background-color: #fff0f0">&quot;Enter the size of the array: &quot;</span>);
+    scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>size);
+    printf(<span style="background-color: #fff0f0">&quot;Enter %d elements of array: &quot;</span>, size);
+    <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span>size;i<span style="color: #333333">++</span>)
+      scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>arr[i]);
+    max<span style="color: #333333">=</span>getmax(arr);
+    printf(<span style="background-color: #fff0f0">&quot;Largest element of array is: %d&quot;</span>,max);
+    <span style="color: #008800; font-weight: bold">return</span> <span style="color: #0000DD; font-weight: bold">0</span>;
+}
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">getmax</span>(<span style="color: #333399; font-weight: bold">int</span> arr[])
+{
+    <span style="color: #008800; font-weight: bold">static</span> <span style="color: #333399; font-weight: bold">int</span> i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>,max <span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;
+    <span style="color: #008800; font-weight: bold">if</span>(i <span style="color: #333333">&lt;</span> size)
+	{
+         <span style="color: #008800; font-weight: bold">if</span>(max<span style="color: #333333">&lt;</span>arr[i])
+           max<span style="color: #333333">=</span>arr[i];
+      i<span style="color: #333333">++</span>;
+      getmax(arr);
+    }
+    <span style="color: #008800; font-weight: bold">return</span> max;
+}
+</pre></div>
+<h3>Check Prime using Recursion </h3>
+<div class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/**/</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">checkprime</span>(<span style="color: #333399; font-weight: bold">int</span>,<span style="color: #333399; font-weight: bold">int</span>);
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">main</span>(){
+    <span style="color: #333399; font-weight: bold">int</span> num,prime;
+    printf(<span style="background-color: #fff0f0">&quot;Enter a number: &quot;</span>);
+    scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>num);
+    prime <span style="color: #333333">=</span> checkprime(num,num<span style="color: #333333">/</span><span style="color: #0000DD; font-weight: bold">2</span>);
+   <span style="color: #008800; font-weight: bold">if</span>(prime<span style="color: #333333">==</span><span style="color: #0000DD; font-weight: bold">1</span>)
+        printf(<span style="background-color: #fff0f0">&quot;%d is a prime number&quot;</span>,num);
+   <span style="color: #008800; font-weight: bold">else</span>
+      printf(<span style="background-color: #fff0f0">&quot;%d is not a prime number&quot;</span>,num);
+   <span style="color: #008800; font-weight: bold">return</span> <span style="color: #0000DD; font-weight: bold">0</span>;
+}
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">checkprime</span>(<span style="color: #333399; font-weight: bold">int</span> num,<span style="color: #333399; font-weight: bold">int</span> i)
+{
+
+    <span style="color: #008800; font-weight: bold">if</span>(i<span style="color: #333333">==</span><span style="color: #0000DD; font-weight: bold">1</span>) 
+   {
+        <span style="color: #008800; font-weight: bold">return</span> <span style="color: #0000DD; font-weight: bold">1</span>;
+    }
+    <span style="color: #008800; font-weight: bold">else</span>	
+   { 
+     <span style="color: #008800; font-weight: bold">if</span>(num<span style="color: #333333">%</span>i<span style="color: #333333">==</span><span style="color: #0000DD; font-weight: bold">0</span>)
+        <span style="color: #008800; font-weight: bold">return</span> <span style="color: #0000DD; font-weight: bold">0</span>;
+     <span style="color: #008800; font-weight: bold">else</span>
+        checkprime(num,i<span style="color: #333333">-</span><span style="color: #0000DD; font-weight: bold">1</span>);
+    }
+}
+</pre></div>
+
+<hr>
+<p> &nbsp; </p>
+</html>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/nav_item_inbox"
+        android:icon="@drawable/select"
+        android:title="Select Semester" />
+
+    <item
+        android:id="@+id/nav_item_sent"
+        android:icon="@drawable/syllabus"
+        android:title="Syllabus" />
+
+   <!-- <item
+        android:id="@+id/nav_item_draft"
+        android:icon="@drawable/previous"
+        android:title="Previous Question Papers" />-->
+
+
+    <item android:title="Others">
+        <menu>
+            <item
+                android:id="@+id/references"
+                android:icon="@drawable/ref"
+                android:title="References" />
+            <item
+                android:id="@+id/share"
+                android:icon="@drawable/share"
+                android:title="Share App" />
+            <item
+                android:id="@+id/contactus"
+                android:icon="@drawable/contact"
+                android:title="Contact Us" />
+        </menu>
+    </item>
+
+    <group android:id="@+id/group_settings_id">
+
+        <item
+            android:id="@+id/help"
+            android:icon="@drawable/features"
+            android:title="Features" />
+        <item
+            android:id="@+id/aboutus"
+            android:icon="@drawable/about"
+            android:title="About Us" />
+    </group>
+
+
+</menu>

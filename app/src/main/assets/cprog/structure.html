@@ -1,0 +1,154 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<h3> Structure as Argument </h3>
+<div class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/**/</span>
+<span style="color: #888888">/*Write a program to read information of a book and display the information.*/</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #557799">#include&lt;string.h&gt;</span>
+<span style="color: #008800; font-weight: bold">struct</span> book
+{
+	<span style="color: #333399; font-weight: bold">int</span> bno;
+	<span style="color: #333399; font-weight: bold">char</span> name[<span style="color: #0000DD; font-weight: bold">40</span>];
+};
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">display</span>(<span style="color: #008800; font-weight: bold">struct</span> book);
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>()
+{
+	<span style="color: #008800; font-weight: bold">struct</span> book b;
+	printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">Enter book no: &quot;</span>);
+	scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>b.bno);
+	printf(<span style="background-color: #fff0f0">&quot;Enter book name: &quot;</span>);
+	scanf(<span style="background-color: #fff0f0">&quot;%s&quot;</span>,b.name);
+	display(b);
+}
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">display</span>(<span style="color: #008800; font-weight: bold">struct</span> book b)
+{
+	printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0"> details are: &quot;</span>);
+	printf(<span style="background-color: #fff0f0">&quot;Book number=%d&quot;</span>,b.bno);
+	printf(<span style="background-color: #fff0f0">&quot;Book name=%s&quot;</span>,b.name);
+
+}
+</pre></div>
+<h3> Pointer to Structure as argument </h3>
+<div class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/**/</span>
+<span style="color: #888888">/*Write a program to read information of a book and display the information.*/</span>
+
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #008800; font-weight: bold">struct</span> book
+{
+	<span style="color: #333399; font-weight: bold">int</span> bno;
+	<span style="color: #333399; font-weight: bold">char</span> name[<span style="color: #0000DD; font-weight: bold">40</span>];
+};
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">display</span>(<span style="color: #008800; font-weight: bold">struct</span> book<span style="color: #333333">*</span>);
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>()
+{
+	<span style="color: #008800; font-weight: bold">struct</span> book b;
+	printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">Enter book no: &quot;</span>);
+	scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>b.bno);
+	printf(<span style="background-color: #fff0f0">&quot;Enter book name: &quot;</span>);
+	scanf(<span style="background-color: #fff0f0">&quot;%s&quot;</span>,b.name);
+	display(<span style="color: #333333">&amp;</span>b);
+}
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">display</span>(<span style="color: #008800; font-weight: bold">struct</span> book <span style="color: #333333">*</span>b)
+{
+	printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">Details are: &quot;</span>);
+	printf(<span style="background-color: #fff0f0">&quot;Book number= %d </span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>,b<span style="color: #333333">-&gt;</span>bno);
+	printf(<span style="background-color: #fff0f0">&quot;Book name= %s&quot;</span>,b<span style="color: #333333">-&gt;</span>name);
+
+}
+</pre></div>
+<h3> Passing Array of Structure as function Argument </h3>
+<div class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/*/</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #008800; font-weight: bold">struct</span> student{
+	<span style="color: #333399; font-weight: bold">char</span> name[<span style="color: #0000DD; font-weight: bold">40</span>];
+	<span style="color: #333399; font-weight: bold">int</span> marks;
+};
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">display</span>(<span style="color: #008800; font-weight: bold">struct</span> student[],<span style="color: #333399; font-weight: bold">int</span>);
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>()
+{
+	<span style="color: #008800; font-weight: bold">struct</span> student s[<span style="color: #0000DD; font-weight: bold">3</span>];
+	<span style="color: #333399; font-weight: bold">int</span> i;
+	printf(<span style="background-color: #fff0f0">&quot;enter information of 3 students</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>);
+	<span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">3</span>;i<span style="color: #333333">++</span>)
+	{
+		printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">Enter name&quot;</span>);
+		scanf(<span style="background-color: #fff0f0">&quot;%30[^</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">]%*c&quot;</span>,s[i].name);<span style="color: #888888">//you can use gets() </span>
+		printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">Enter marks&quot;</span>);
+		scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>s[i].marks);
+	}
+	display(s,<span style="color: #0000DD; font-weight: bold">3</span>);
+}
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">display</span> (<span style="color: #008800; font-weight: bold">struct</span> student s[], <span style="color: #333399; font-weight: bold">int</span> n)
+{
+	<span style="color: #333399; font-weight: bold">int</span> i,count<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;
+	<span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span>n;i<span style="color: #333333">++</span>)
+	{
+		<span style="color: #008800; font-weight: bold">if</span>(s[i].marks<span style="color: #333333">&gt;=</span><span style="color: #0000DD; font-weight: bold">100</span>)
+		{   printf(<span style="background-color: #fff0f0">&quot;Required details are</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>);
+			printf(<span style="background-color: #fff0f0">&quot;student name= %s&quot;</span>,s[i].name);
+			printf(<span style="background-color: #fff0f0">&quot; student marks=%d</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>,s[i].marks);
+			count<span style="color: #333333">++</span>;
+		}
+	}
+	<span style="color: #008800; font-weight: bold">if</span>(count<span style="color: #333333">==</span><span style="color: #0000DD; font-weight: bold">0</span>)
+	{
+		printf(<span style="background-color: #fff0f0">&quot;No details available for marks&gt;100&quot;</span>);
+	}
+}
+</pre></div>
+<h3> Nesting of Structure</h3>
+<div class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/**/</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #008800; font-weight: bold">struct</span> detail
+{
+   <span style="color: #333399; font-weight: bold">char</span> name[<span style="color: #0000DD; font-weight: bold">10</span>];
+   <span style="color: #333399; font-weight: bold">float</span> price;	
+};
+<span style="color: #008800; font-weight: bold">struct</span> item
+{
+    <span style="color: #333399; font-weight: bold">int</span> id;
+	<span style="color: #008800; font-weight: bold">struct</span> detail d;	
+};
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>()
+{
+	<span style="color: #008800; font-weight: bold">struct</span> item itm;
+	printf(<span style="background-color: #fff0f0">&quot;Enter item name, id and price &quot;</span>);
+	scanf(<span style="background-color: #fff0f0">&quot;%s%d%f&quot;</span>,itm.d.name,<span style="color: #333333">&amp;</span>itm.id,<span style="color: #333333">&amp;</span>itm.d.price);
+	printf(<span style="background-color: #fff0f0">&quot;Entered details are:</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>);
+	printf(<span style="background-color: #fff0f0">&quot;Id: %d</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">Name: %s  Price: %f&quot;</span>, itm.id , itm.d.name, itm.d.price);
+}
+</pre></div>
+<h3> Structure as Return type of a function </h3>
+<div class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/**/</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #008800; font-weight: bold">struct</span> book
+{
+	<span style="color: #333399; font-weight: bold">int</span> id;
+	<span style="color: #333399; font-weight: bold">char</span> name[<span style="color: #0000DD; font-weight: bold">40</span>];
+};
+<span style="color: #008800; font-weight: bold">struct</span> book <span style="color: #0066BB; font-weight: bold">getdata</span>()
+{   <span style="color: #008800; font-weight: bold">struct</span> book b;
+	printf(<span style="background-color: #fff0f0">&quot;Enter book name and id&quot;</span>);
+	scanf(<span style="background-color: #fff0f0">&quot;%s%d&quot;</span>,<span style="color: #333333">&amp;</span>b.name,<span style="color: #333333">&amp;</span>b.id);
+	<span style="color: #008800; font-weight: bold">return</span> b;
+}
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">display</span>(<span style="color: #008800; font-weight: bold">struct</span> book b)
+{
+	printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">Details are:</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>);
+	printf(<span style="background-color: #fff0f0">&quot;Book id = %d</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>,b.id);
+	printf(<span style="background-color: #fff0f0">&quot;Book name= %s&quot;</span>,b.name);
+}
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>()
+{
+	<span style="color: #008800; font-weight: bold">struct</span> book b;
+              b<span style="color: #333333">=</span>getdata();
+	display(b);
+	
+}
+</pre></div>
+
+<hr>
+<p> &nbsp; </p>
+</html>

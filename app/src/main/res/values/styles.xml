@@ -1,0 +1,28 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here.-->
+        <item name="colorPrimary">@color/indigo500</item>
+        <item name="colorPrimaryDark">@color/indigo600</item>
+
+
+    </style>
+
+    <style name="WebViewAct" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/bluePrimary</item>
+        <item name="colorPrimaryDark">@color/blackPrimaryDark</item>
+    </style>
+    <style name="Questions" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/redPrimaryLight</item>
+        <item name="colorPrimaryDark">@color/redPrimaryDark</item>
+    </style>
+
+    <style name="TabLayoutTextStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">10dp</item>
+    </style>
+</resources>

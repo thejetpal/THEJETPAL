@@ -1,0 +1,32 @@
+<employees>
+<site>
+<name>Question 1</name>
+<link>https://mykitab-te.firebaseapp.com/DCWSN/DC5/dcwsn_u5_1.html</link>
+<about>Design Issues in WSN?</about>
+</site>
+<site>
+<name>Question 2</name>
+<link>https://mykitab-te.firebaseapp.com/DCWSN/DC5/dcwsn_u5_2.html</link>
+<about>Routing strategies in WSN?</about>
+ </site>
+<site>
+<name>Question 3</name>
+<link>https://mykitab-te.firebaseapp.com/DCWSN/DC5/dcwsn_u5_3.html</link> 
+<about>Routing Techniques in WSN?</about>
+</site>
+<site>
+<name>Question 4</name>
+<link>https://mykitab-te.firebaseapp.com/DCWSN/DC5/dcwsn_u5_4.html</link>
+<about>LEACH Protocol?</about>
+ </site>
+<site>
+<name>Question 5</name>
+<link>https://mykitab-te.firebaseapp.com/DCWSN/DC5/dcwsn_u5_5.html</link>
+<about>Infrastructure establishment?</about>
+ </site>
+ <site>
+<name>Question 6</name>
+<link>https://mykitab-te.firebaseapp.com/DCWSN/DC5/dcwsn_u5_6.html</link>
+<about>PICONET</about>
+ </site>
+</employees>

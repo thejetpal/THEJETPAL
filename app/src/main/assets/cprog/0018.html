@@ -1,0 +1,96 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+
+<h2><strong>Looping</strong></h2>
+<h3><strong>For loop</strong></h3>
+<p class="css3-shadow">
+  It is an  entry control loop .<br>
+  for (  initialization&nbsp;<strong>;</strong>&nbsp;&nbsp;test_condition <strong>; </strong>&nbsp;&nbsp;increment/decrement&nbsp;&nbsp;)<br>
+  {<br>
+  body_of_loop;<br>
+  }</p>
+<p><strong><em>Example:</em></strong></p>
+<p><br>
+  for ( i = 1  <strong>;</strong> i &lt;= 3 <strong>;</strong> i++ )<br>
+  {<br>
+  printf(&ldquo;%d &ldquo;,i ) ;<br>
+}</p>
+<p><em>Output</em>: 1  2  3</p>
+<p><br>
+  <strong>Step 1 :</strong>&nbsp;&nbsp;i is integer and it is initialized by 1<br>
+  <strong>Step 2 :&nbsp;&nbsp;</strong>Controllers of compiler now check the condition if i&lt;=3 then it  will come to the body of loop then it will print value of&nbsp;&quot;i &ldquo;&nbsp;&nbsp;i.e.&nbsp;&nbsp;1  and then controllers will come to the part of increment and will increase the  value of &ldquo;i&rdquo; . Here i++ means i=i+1 . We can also use i=i+5 or i=i*2 or  whatever we want.<br>
+  <strong>Step 3 :&nbsp;&nbsp;</strong>Now the value of i = 1+1= 2 and it will check the condition that i&lt;=3 <br>
+  <strong>Step 4 :&nbsp;&nbsp;</strong>Condition is true again and it will print the value of &ldquo;i&rdquo; i.e. 2  and it will now go to the increment part again and increase the value of &ldquo;i&rdquo;  and again check the condition.<br>
+  <strong>Step 5 :&nbsp;&nbsp;</strong>3&lt;=3<strong></strong>&nbsp;&nbsp;the condition is again true and it will print  the value of  &nbsp;&nbsp;&ldquo;i&rdquo;&nbsp;&nbsp;i.e.&nbsp;&nbsp;3 and then it will  again increase the value of &ldquo;i&rdquo;<br>
+  <strong>Step 6 :&nbsp;&nbsp;</strong>4&lt;=3 the condition is false now and the loop will terminate.</p>
+<h3><strong>Nested for loop</strong></h3>
+<p class="css3-shadow">
+  for (  initialization&nbsp;&nbsp;<strong>;</strong>&nbsp;&nbsp;test_condition <strong>;</strong>&nbsp;&nbsp;&nbsp;increment/decrement&nbsp;&nbsp;)<br>
+  {<br>
+  for  (&nbsp;&nbsp;initialization&nbsp;<strong>;</strong>&nbsp;&nbsp;test_condition <strong>;</strong>&nbsp;&nbsp;increment/decrement&nbsp;)<br>
+ &nbsp;&nbsp;{<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//body_of_loop<br>
+  &nbsp;&nbsp;}<br>
+//statements;<br>
+}</p>
+<p ><em><strong>Try it :</strong></em></p>
+<p><strong>1.</strong></p>
+<p class="css3-shadow"> for (<strong> i=0 ;&nbsp;&nbsp;;&nbsp;&nbsp;i++</strong> )<br>
+  {<br>
+&nbsp;&nbsp;printf (&quot; Hello &quot;);<br>
+&nbsp;&nbsp;if ( i &gt; 4)<br>
+&nbsp;&nbsp;&nbsp;break;<br>
+  }<br>
+</p>
+<p><strong>2. </strong></p>
+<p class="css3-shadow">for (<strong> i = 0 ;&nbsp;&nbsp;;</strong>&nbsp;)<br>
+  {<br>
+&nbsp;&nbsp;printf (&quot; Hello &quot; );<br>&nbsp;&nbsp;i++;<br>&nbsp;&nbsp;if(i&gt;4)<br>&nbsp;&nbsp;break;<br>
+}</p>
+<p><strong>3.</strong></p>
+<p class="css3-shadow">for ( <strong>;&nbsp;&nbsp;;&nbsp;&nbsp;</strong>)<br>
+  {<br>
+&nbsp;&nbsp;printf (&quot; Hello&quot;);<br>
+}</p>
+<p>&nbsp;</p>
+<h3><strong>While loop</strong></h3>
+<p class="css3-shadow">
+  It is exit  control loop.<br>
+  <strong>Syntax:</strong><br>
+  while (  test_condition )<br>
+  {<br>
+ &nbsp;&nbsp;body of loop;<br>
+  }</p>
+<p class="css3-shadow">
+  <strong><em>How it is used:</em></strong><br>
+  initialization;<br>
+  while (  test_condition )<br>
+  {<br>
+ &nbsp;&nbsp;&nbsp;body of loop;<br>
+  &nbsp;&nbsp;&nbsp;increment/decrement/other_change;<br>
+  }</p>
+<p><strong>Try it</strong></p>
+<p><strong>1.</strong></p>
+<p class="css3-shadow">while ( 0 )<br>
+  {<br>
+ &nbsp;&nbsp;&nbsp;printf ( &quot;Hello World &quot;)<strong>;</strong><br>
+  }</p>
+<p><strong>2.</strong></p>
+<p class="css3-shadow">while ( 1 )<br>
+  {<br>
+ &nbsp;&nbsp;&nbsp; printf ( &quot;Hello World &quot; )<strong>;</strong><br>
+}</p>
+<p>&nbsp;</p>
+<h3><strong>Do While loop</strong></h3>
+<p class="css3-shadow">
+  <strong>Syntax:</strong><br>
+  do<br>
+  {<br>
+  &nbsp;&nbsp;&nbsp;body of loop<strong>;</strong><br>
+  } while (  test_condition )<strong> ;</strong></p>
+<p>Note :&nbsp;&nbsp;Semicolon must be there after while (&nbsp;&nbsp; test _condition )</p>
+<hr>
+<p>&nbsp; </p>
+</html>

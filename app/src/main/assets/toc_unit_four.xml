@@ -1,0 +1,32 @@
+<stack-sites>
+<site>
+<name>Question 1</name>
+<link>https://mykitab-te.firebaseapp.com/TOC/TOC4/toc_u4_1.html</link>
+<about>What is TM? Give formal definition of TM?</about>
+</site>
+<site>
+<name>Question 2</name>
+<link>https://mykitab-te.firebaseapp.com/TOC/TOC4/toc_u4_2.html</link>
+<about>Types of TM:-DTM and NTM</about>
+ </site>
+<site>
+<name>Question 3</name>
+<link>https://mykitab-te.firebaseapp.com/TOC/TOC4/toc_u4_3.html</link>
+<about>Extensions to Basic TM?</about>
+</site>
+<site>
+<name>Question 4</name>
+<link>https://mykitab-te.firebaseapp.com/TOC/TOC4/toc_u4_4.html</link>
+<about>What is post machine? Give formal definition?</about>
+ </site>
+<site>
+<name>Question 5</name>
+<link>https://mykitab-te.firebaseapp.com/TOC/TOC4/toc_u4_5.html</link>
+<about>Write an short note on Recursively Enumerable Language?</about>
+ </site>
+ <site>
+<name>Question 6</name>
+<link>https://mykitab-te.firebaseapp.com/TOC/TOC4/toc_u4_6.html</link>
+<about>Write an short note on Halting Problem of Turing Machine?</about>
+ </site>
+</stack-sites>

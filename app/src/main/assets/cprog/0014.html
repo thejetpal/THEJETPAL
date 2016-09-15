@@ -1,0 +1,112 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+
+<h2><strong>Storage Class</strong><strong> </strong></h2>
+<p class="css3-shadow">A storage  class is an attribute that tells us where the variable would be stored,<br/>what  will be the initial value of the variable if no value is assigned to that  variable,<br/>life time of the variable and scope of the variable.<br>
+  <strong>Scope:</strong>-&nbsp;&nbsp;Scope of variable tells compiler the  visibility of variable in the block<br>
+There are  four storage classes in C:<br>
+  <em>1) Automatic storage class<br>
+  2) Register storage class<br>
+  3) Static storage class<br>
+4) External storage class</em>
+<h3><strong>Automatic storage class:</strong></h3>
+<p class="css3-shadow">
+  <strong><em>keyword -</em></strong> &lsquo;auto&rsquo;.<br>
+  variable  declared stored in the memory.<br>
+  <em><strong>Default -</strong></em> garbage value.<br>
+  <em><strong>Scope -</strong></em> local to the block in which the  variable is defined.<br>
+Variable is alive till the control remains  within the block in which the variable id defined.</p>
+<p class="css3-shadow"><strong>Example</strong>
+<pre style="margin: 0; line-height: 125%"><span style="color: #557799">#include&lt;conio.h&gt;</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>(){
+<span style="color: #008800; font-weight: bold">auto</span> num <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">10</span>;
+{ <span style="color: #008800; font-weight: bold">auto</span> num <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">60</span>;
+printf(“<span style="color: #111111">%</span>d",num);</span>
+}
+printf(“\</span>n<span style="color: #111111">%</span>d",num);
+}
+<span style="color: #997700; font-weight: bold">Output:</span>
+<span style="color: #0000DD; font-weight: bold">60</span>
+<span style="color: #0000DD; font-weight: bold">10</span>
+</pre>
+</div>
+
+<h3><strong>Register storage class:</strong></h3>
+<p class="css3-shadow">
+  <em><strong>keyword </strong></em>-&lsquo;register&rsquo;.<br>
+  Variable declared stored in the CPU register.<br>
+  <em><strong>Default -</strong></em> garbage value.<br>
+<em><strong>Scope of   variable -</strong></em> local to the block <br/><br/>
+  - The variable  is stored in CPU register, it takes very less time to access that variable.  Hence it becomes very time efficient.<br>
+  - It is not necessary that variable declared as  register would be stored in CPU registers. The number of CPU registers is  limited. If the CPU register is busy doing some other task then variable might  act as automatic variable<br>
+  - Unary  operator[&amp;] is not associated with it because value is not stored in ram.<br>
+- If we store  same variable in the register memory than we can access that memory location  directly without using the Address operator</p>
+<p class="css3-shadow">
+<strong>Example</strong></p>
+<pre style="margin: 0; line-height: 125%"><span style="color: #557799">#include&lt;conio.h&gt;</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>(){
+<span style="color: #008800; font-weight: bold">register</span> <span style="color: #333399; font-weight: bold">int</span> a;
+printf(“<span style="color: #111111">%</span>d",a);</span>
+}
+<span style="color: #997700; font-weight: bold">Output:</span>
+<span style="color: #0000DD; font-weight: bold">7247</span>
+<span style="color: #888888">//the output is garbage value.</span>
+</pre></div>
+</p>
+<h3><strong>Static storage class:</strong></h3>
+<p class="css3-shadow" ><br>
+  <em><strong>keyword -</strong></em> &lsquo;static&rsquo;.<br>
+  variable  declared stored in the memory.<br>
+  <em><strong>Default</strong></em> - zero.<br>
+  <em><strong>Scope</strong></em>- local to the block in which the  variable is defined.<br>
+Life of variable persists between different  function calls.</p>
+<p class="css3-shadow"><strong>Example</strong></p>
+<pre style="margin: 0; line-height: 125%"><span style="color: #557799">#include &lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">Check</span>();
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">main</span>(){
+Check();
+Check();
+Check();
+}
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">Check</span>(){
+<span style="color: #008800; font-weight: bold">static</span> <span style="color: #333399; font-weight: bold">int</span> c<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;
+printf(<span style="background-color: #fff0f0">&quot;%d</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\t</span><span style="background-color: #fff0f0">&quot;</span>,c);
+c<span style="color: #333333">+=</span><span style="color: #0000DD; font-weight: bold">5</span>;
+}
+Output<span style="color: #333333">-</span> <span style="color: #0000DD; font-weight: bold">0</span> <span style="color: #0000DD; font-weight: bold">5</span> <span style="color: #0000DD; font-weight: bold">10</span>
+</pre></div>
+<h3><strong>External storage class:</strong></h3>
+<p class="css3-shadow">
+  <em><strong>keyword -</strong></em> &lsquo;extern&rsquo;.<br>
+  Variable declared stored in the memory.<br>
+  <em><strong>Default -</strong></em> zero.<br>
+  <em><strong>Scope -</strong></em> global.<br>
+  -Variable is alive as long as the program&rsquo;s  execution doesn&rsquo;t come to an end.<br>
+  -External  variable can be declared outside all the functions or inside function using  &lsquo;extern&rsquo; keyword.</p>
+<p class="css3-shadow">
+  <strong>Example</strong><br>
+</p>
+<pre style="margin: 0; line-height: 125%"><span style="color: #557799">#include &lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">Check</span>();
+<span style="color: #008800; font-weight: bold">extern</span> <span style="color: #333399; font-weight: bold">int</span> a<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">5</span>;<span style="color: #FF0000; background-color: #FFAAAA"></span>
+<span style="color: #888888">/* a is global variable because it is outside every function */</span>
+<span style="color: #333399; font-weight: bold">int</span> main(){
+a<span style="color: #333333">+=</span><span style="color: #0000DD; font-weight: bold">4</span>;
+Check();
+<span style="color: #008800; font-weight: bold">return</span> <span style="color: #0000DD; font-weight: bold">0</span>;
+}
+<span style="color: #333399; font-weight: bold">void</span> Check(){
+<span style="color: #333333">++</span>a;
+<span style="color: #888888">/* ----- Variable a is not declared in this function but,<br/> works in any function as they are global variable ------- */</span>
+printf(<span style="background-color: #fff0f0">&quot;a=%d</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>,a);
+}
+
+Output <span style="color: #333333">:</span> 
+a<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">10</span>
+</pre></div><hr>
+<p>&nbsp;</p>
+</html>

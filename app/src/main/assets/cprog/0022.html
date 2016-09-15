@@ -1,0 +1,202 @@
+<html>
+<style>
+
+h4{color: #067;}
+
+ul{color: #66C;}
+
+</style>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<h2><strong>Pointer</strong></h2>
+<p class="css3-shadow">  Pointer is a  user defined data type which creates special types of variables which can hold  the address of primitive data type<br>like char, int, float, double or user  defined data type like function, pointer etc. or derived data type like array, structure, union, enum.<br>
+Pointers are  used in C program to access the memory and manipulate the address</p>
+<p class="css3-shadow"><strong>Declaration of Pointer</strong><br>
+  Dereference  operator(*) are used to identify an operator as a pointer.<br>
+  <strong>Syntax:</strong><br>
+  data_type&nbsp;&nbsp;* pointer_variable_name;<br>
+  Example:&nbsp;&nbsp;int&nbsp;&nbsp;*ptr;<br>
+  <strong>Explanation :</strong><br>
+  int a=5;<br>
+
+int&nbsp;&nbsp;*ptr;<br>
+ptr=&amp;a;<br>
+ptr is a pointer which is storing the  address of &ldquo;a&rdquo; variable.<p>
+<h4><strong>Pointer to Pointer</strong>
+</h4>
+<p class="css3-shadow">
+  int&nbsp;&nbsp;*ptr1;<br>
+int&nbsp;&nbsp;**ptr2;<br>
+
+ptr1=&amp;a;<br>
+ptr2=&amp;pt1;</p>
+<p class="css3-shadow"><strong><em>Notes:</em></strong></p>
+<ul>
+  <li>* is known as indirection operator which gives content of any variable.</li>
+  <li>&amp; is known as reference operator which gives  address where variable has stored in memory.</li>
+  <li>* and &amp; operators always cancel to each other i.e.&nbsp;*&amp;p=p</li>
+  <li>But it is not right to write: &amp;*p=p.</li>
+  <li>The value of null pointer is 0.</li>
+  <li>If pointer is assigned to NULL, it means it is  pointing to nothing.</li>
+</ul>
+<h3><strong>Generic pointer</strong></h3>
+<p class="css3-shadow"> void  pointer in c is known as generic pointer. Literal meaning of generic pointer is a pointer which can point type of data.<br>
+  <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #997700; font-weight: bold">Example:</span>  <span style="color: #333399; font-weight: bold">void</span>  <span style="color: #333333">*</span>ptr;
+
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">main</span>()
+{
+ <span style="color: #333399; font-weight: bold">char</span> c<span style="color: #333333">=</span><span style="color: #0044DD">&#39;A&#39;</span>;
+ <span style="color: #333399; font-weight: bold">int</span> i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">4</span>;
+ <span style="color: #333399; font-weight: bold">void</span> <span style="color: #333333">*</span>p;
+ <span style="color: #333399; font-weight: bold">char</span> <span style="color: #333333">*</span>q<span style="color: #333333">=&amp;</span>c;
+ <span style="color: #333399; font-weight: bold">int</span> <span style="color: #333333">*</span>r<span style="color: #333333">=&amp;</span>i;
+ p<span style="color: #333333">=</span>q;
+ printf(<span style="background-color: #fff0f0">&quot;%c&quot;</span>,<span style="color: #333333">*</span>(<span style="color: #333399; font-weight: bold">char</span> <span style="color: #333333">*</span>)p);
+ p<span style="color: #333333">=</span>r;
+ printf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">*</span>(<span style="color: #333399; font-weight: bold">int</span> <span style="color: #333333">*</span>)p);
+ <span style="color: #008800; font-weight: bold">return</span> <span style="color: #0000DD; font-weight: bold">0</span>;
+}
+</pre></td></tr></table></div>
+
+<h3><strong>Wild pointer:</strong></h3>
+<p class="css3-shadow">
+
+  A pointer in  c which has not been initialized is known as wild pointer.<br></p>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #333333">*</span><span style="color: #0066BB; font-weight: bold">callme</span>();
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>()
+{
+ <span style="color: #333399; font-weight: bold">int</span> <span style="color: #333333">*</span>ptr;
+ ptr<span style="color: #333333">=</span>callme();
+ fflush(stdin);
+ printf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">*</span>ptr);
+}
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #333333">*</span> <span style="color: #0066BB; font-weight: bold">callme</span>()
+{
+ <span style="color: #333399; font-weight: bold">int</span> x<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">5</span>;
+ <span style="color: #333333">++</span>x;
+ <span style="color: #008800; font-weight: bold">return</span> <span style="color: #333333">&amp;</span>x;
+}
+<span style="color: #997700; font-weight: bold">Output:</span> Garbage value
+<span style="color: #997700; font-weight: bold">Note:</span> In some compiler you may get warning message returning address of local variable or temporary
+</pre></td></tr></table></div>
+
+<h3> <strong>Dangling pointer:</strong></h3>
+<p class="css3-shadow">
+If any  pointer is pointing the memory address of any variable but variable has deleted  from that memory location while pointer<br> is still pointing such memory location.  Such pointer is known as dangling pointer and this problem is known as dangling  pointer <br>problem. In other word we can say a pointer whose pointing object has  been deleted is called dangling pointer.</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #997700; font-weight: bold">Explanation:</span> Variable x is local variable. Its scope and lifetime is within the function call hence after returning address of x variable 
+x became dead and pointer is still pointing ptr is still pointing to that location.
+Solution of this problem<span style="color: #333333">:</span> Make the variable x is as <span style="color: #008800; font-weight: bold">static</span> variable.
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #333333">*</span>callme();
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>(){
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #333333">*</span>ptr;
+ptr <span style="color: #333333">=</span> callme();
+fflush(stdin);
+printf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">*</span>ptr);
+}
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #333333">*</span> <span style="color: #0066BB; font-weight: bold">call</span>(){
+<span style="color: #008800; font-weight: bold">static</span> <span style="color: #333399; font-weight: bold">int</span> x<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">5</span>;
+<span style="color: #333333">++</span>x;
+<span style="color: #008800; font-weight: bold">return</span> <span style="color: #333333">&amp;</span>x;
+}
+<span style="color: #997700; font-weight: bold">Output:</span> <span style="color: #0000DD; font-weight: bold">6</span>
+</pre></td></tr></table></div>
+
+<h3><strong>NULL pointer:</strong></h3>
+<p class="css3-shadow">Literal  meaning of NULL pointer is a pointer which is pointing to nothing. NULL pointer  points the base address of segment.<br>
+  NULL is  macro constant which has been defined in the heard file stdio.h, alloc.h,  mem.h, stddef.h and stdlib.h as<br>
+  #define NULL  0</p>
+<p class="css3-shadow">
+  <strong>Examples of NULL pointer:</strong></p>
+<p>1. int&nbsp;&nbsp;*ptr=(char *)0;<br>
+  2.  float&nbsp;&nbsp;*ptr=(float *)0;<br>
+  3. char&nbsp;&nbsp;*ptr=(char *)0;<br>
+  4.  double&nbsp;&nbsp;*ptr=(double *)0;<br>
+  5. char&nbsp;&nbsp;*ptr=&rsquo;\0&rsquo;;<br>
+6. int&nbsp;&nbsp;*ptr=NULL;</p>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #997700; font-weight: bold">Example:</span>
+
+<span style="color: #557799">#include &lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">main</span>()
+{
+ <span style="color: #008800; font-weight: bold">if</span>(<span style="color: #333333">!</span><span style="color: #007020">NULL</span>)
+   printf(<span style="background-color: #fff0f0">&quot;In if part&quot;</span>);
+ <span style="color: #008800; font-weight: bold">else</span>
+  printf(<span style="background-color: #fff0f0">&quot;In else part&quot;</span>);
+ <span style="color: #008800; font-weight: bold">return</span> <span style="color: #0000DD; font-weight: bold">0</span>;
+}
+
+<span style="color: #997700; font-weight: bold">Output:</span> In <span style="color: #008800; font-weight: bold">if</span> part
+<span style="color: #997700; font-weight: bold">Explanation:</span>
+<span style="color: #333333">!</span><span style="color: #007020">NULL</span> <span style="color: #333333">=</span> <span style="color: #333333">!</span><span style="color: #0000DD; font-weight: bold">0</span> <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">1</span>
+In <span style="color: #008800; font-weight: bold">if</span> condition any non zero number mean <span style="color: #007020">true</span>.
+</pre></td></tr></table></div>
+<hr>
+<p>&nbsp;</p>
+</html>

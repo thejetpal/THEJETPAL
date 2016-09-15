@@ -1,0 +1,83 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+
+<h3><strong>Call by value vs Call by reference</strong></h3>
+<p class="css3-shadow">
+  <strong><em>Call  by value: </em></strong>This method copies the actual value of an argument into the  formal parameter of the function. In this case, changes made to the parameter  inside the function have no effect on the argument.</p>
+<p class="css3-shadow"><strong><em>Call  by reference:</em></strong> This method copies  the address of an argument into the formal parameter. Inside the function, the  address is used to access the actual argument used in the call. This means that  changes made to the parameter affect the argument.</p>
+<h3><strong>Types of Function</strong> </h3>
+<p class="css3-shadow"><strong><em>1. No argument No return type</em></strong></p>
+<p class="css3-shadow">void printdata ( )<br>
+  {<br>
+  printf (&ldquo;  Hello &rdquo;);<br>
+}</p>
+<p class="css3-shadow"><strong><em>2. With Argument No Return Value</em></strong></p>
+<p class="css3-shadow">void printdata (int i)<br>
+  {<br>
+  printf (&ldquo;%d&rdquo;,i);<br>
+}</p>
+<p class="css3-shadow"><strong><em>3. No Argument With Return Value</em></strong></p>
+<p class="css3-shadow">int checkdata ( ) <br>
+  {<br>
+  return 2;<br>
+}</p>
+<p class="css3-shadow"><strong><em>4. Argument With Return Value</em></strong></p>
+<p class="css3-shadow">int sendvalue( int i)<br>
+  {<br>
+  return i;<br>
+}</p>
+<p>&nbsp;</p>
+<h3><strong>Recursion</strong>:</h3>
+<p class="css3-shadow">It is the process of&nbsp;calling a function by itself , until some specified condition is satisfied. It is used for repetitive&nbsp;computation (&nbsp;like finding factorial of a number) in which each action is stated in term of previous  result.</p>
+<p class="css3-shadow">
+  return type Function  ()<br>
+  {<br>
+  //body<br>
+  Function()<br>
+  }</p>
+<p><strong>Example</strong>:</p>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #997700; font-weight: bold">Example:</span>
+
+<span style="color: #557799">#include&lt;stdio.h&gt; </span>
+<span style="color: #333399; font-weight: bold">long</span> <span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">factorial</span>(<span style="color: #333399; font-weight: bold">int</span> n); 
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>()
+{
+<span style="color: #333399; font-weight: bold">int</span> n;
+<span style="color: #333399; font-weight: bold">long</span> <span style="color: #333399; font-weight: bold">int</span> m;
+scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>n);
+m<span style="color: #333333">=</span>factorial(n);
+printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0"> factorial is %d&quot;</span>, m);
+} 
+<span style="color: #333399; font-weight: bold">long</span> <span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">factorial</span>(<span style="color: #333399; font-weight: bold">int</span> n) 
+{
+<span style="color: #008800; font-weight: bold">if</span> (n<span style="color: #333333">&lt;=</span><span style="color: #0000DD; font-weight: bold">1</span>)
+<span style="color: #008800; font-weight: bold">return</span>(<span style="color: #0000DD; font-weight: bold">1</span>);
+<span style="color: #008800; font-weight: bold">else</span>
+<span style="color: #008800; font-weight: bold">return</span> (n<span style="color: #333333">*</span>factorial(n<span style="color: #333333">-</span><span style="color: #0000DD; font-weight: bold">1</span>)); 
+}
+</pre></td></tr></table></div>
+<hr>
+<p> &nbsp; </p>
+
+
+</html>

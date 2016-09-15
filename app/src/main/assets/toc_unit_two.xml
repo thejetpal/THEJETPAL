@@ -1,0 +1,52 @@
+<employees>
+<site>
+<name>Question 1</name>
+<link>https://mykitab-te.firebaseapp.com/TOC/TOC2/toc_u2_1.html</link>
+<about>Explain  Є-NFA: Definition and description of NFA with Examples?</about>
+</site>
+<site>
+<name>Question 2</name>
+<link>https://mykitab-te.firebaseapp.com/TOC/TOC2/toc_u2_2.html</link>
+<about>Mealy Machine</about>
+ </site>
+<site>
+<name>Question 3</name>
+<link>https://mykitab-te.firebaseapp.com/TOC/TOC2/toc_u2_3.html</link>
+<about>Moore Machine</about>
+</site>
+<site>
+<name>Question 4</name>
+<link>https://mykitab-te.firebaseapp.com/TOC/TOC2/toc_u2_4.html</link>
+<about>Properties of Regular Language:Closure and Decision?</about>
+ </site>
+<site>
+<name>Question 5</name>
+<link>https://mykitab-te.firebaseapp.com/TOC/TOC2/toc_u2_5.html</link>
+<about>Construct Mealy Machine to find 2's complement of given binary number?</about>
+ </site>
+ <site>
+<name>Question 6</name>
+<link>https://mykitab-te.firebaseapp.com/TOC/TOC2/toc_u2_6.html</link>
+<about>Conversion of NFA with ε to NFA without ε</about>
+ </site>
+ <site>
+<name>Question 7</name>
+<link>https://mykitab-te.firebaseapp.com/TOC/TOC2/toc_u2_7.html</link>
+<about>Convert the given NFA with ε to its equivalent DFA</about>
+ </site>
+  <site>
+<name>Question 8</name>
+<link>https://mykitab-te.firebaseapp.com/TOC/TOC2/toc_u2_8.html</link>
+<about>Difference between Mealy Machine and Moore Machine</about>
+ </site>
+  <site>
+<name>Question 9</name>
+<link>https://mykitab-te.firebaseapp.com/TOC/TOC2/toc_u2_9.html</link>
+<about>Moore Machine To Mealy Machine</about>
+ </site>
+   <site>
+<name>Question 10</name>
+<link>https://mykitab-te.firebaseapp.com/TOC/TOC2/toc_u2_10.html</link>
+<about>Mealy Machine To Moore Machine</about>
+ </site>
+</employees>

@@ -1,0 +1,184 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<h3>C program to open a file and store data in it </h3>
+<div class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888"></span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>(){
+  <span style="color: #333399; font-weight: bold">FILE</span> <span style="color: #333333">*</span>fp;
+  <span style="color: #333399; font-weight: bold">char</span> ch;
+  fp<span style="color: #333333">=</span>fopen(<span style="background-color: #fff0f0">&quot;file.txt&quot;</span>,<span style="background-color: #fff0f0">&quot;w&quot;</span>);
+  printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">Enter data to be stored in to the file: &quot;</span>);
+  <span style="color: #008800; font-weight: bold">while</span>((ch<span style="color: #333333">=</span>getchar())<span style="color: #333333">!=</span>EOF)
+  putc(ch,fp);
+  fclose(fp);
+}
+</pre></div>
+<h3>Copy data from one file to other</h3>
+<div class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888"></span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+ <span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>(){
+  <span style="color: #333399; font-weight: bold">FILE</span> <span style="color: #333333">*</span>p,<span style="color: #333333">*</span>q;
+  <span style="color: #333399; font-weight: bold">char</span> file1[<span style="color: #0000DD; font-weight: bold">20</span>],file2[<span style="color: #0000DD; font-weight: bold">20</span>];
+  <span style="color: #333399; font-weight: bold">char</span> ch;
+  printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">Enter the source file name to be copied: &quot;</span>);
+  gets(file1);
+  p<span style="color: #333333">=</span>fopen(file1,<span style="background-color: #fff0f0">&quot;r&quot;</span>);
+  <span style="color: #008800; font-weight: bold">if</span>(p<span style="color: #333333">==</span><span style="color: #007020">NULL</span>){
+      printf(<span style="background-color: #fff0f0">&quot;cannot open %s&quot;</span>,file1);
+      exit(<span style="color: #0000DD; font-weight: bold">0</span>);
+  }
+  printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">Enter the destination file name: &quot;</span>);
+  gets(file2);
+  q<span style="color: #333333">=</span>fopen(file2,<span style="background-color: #fff0f0">&quot;w&quot;</span>);
+  <span style="color: #008800; font-weight: bold">if</span>(q<span style="color: #333333">==</span><span style="color: #007020">NULL</span>){
+      printf(<span style="background-color: #fff0f0">&quot;cannot open %s&quot;</span>,file2);
+      exit(<span style="color: #0000DD; font-weight: bold">0</span>);
+  }
+  <span style="color: #008800; font-weight: bold">while</span>((ch<span style="color: #333333">=</span>getc(p))<span style="color: #333333">!=</span>EOF)
+      putc(ch,q);
+  printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">COMPLETED&quot;</span>);
+  fclose(p);
+  fclose(q);
+}
+</pre></div>
+<h3>Program which produces its own source code as its output</h3>
+<div class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888"></span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>(){
+    <span style="color: #333399; font-weight: bold">FILE</span> <span style="color: #333333">*</span>fp;
+    <span style="color: #333399; font-weight: bold">char</span> c;
+    fp <span style="color: #333333">=</span> fopen(__FILE__,<span style="background-color: #fff0f0">&quot;r&quot;</span>);
+    <span style="color: #008800; font-weight: bold">do</span>{
+         c<span style="color: #333333">=</span> getc(fp);
+         putchar(c);
+    }
+    <span style="color: #008800; font-weight: bold">while</span>(c<span style="color: #333333">!=</span>EOF);
+    fclose(fp);    
+}
+</pre></div>
+<h3> Know the last date of modification of any file </h3>
+<div class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;">
+  <pre style="margin: 0; line-height: 125%"><span style="color: #888888"></span>
+<span style="color: #557799">#include &lt;stdio.h&gt;</span>
+<span style="color: #557799">#include &lt;time.h&gt;</span>
+<span style="color: #557799">#include &lt;sys\stat.h&gt;</span>
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">main</span>(){
+    <span style="color: #008800; font-weight: bold">struct</span> stat s;
+    <span style="color: #333399; font-weight: bold">FILE</span> <span style="color: #333333">*</span>fp;
+    fp<span style="color: #333333">=</span>fopen(<span style="background-color: #fff0f0">&quot;exmple.txt&quot;</span>,<span style="background-color: #fff0f0">&quot;r&quot;</span>);
+    fstat(fileno(fp),<span style="color: #333333">&amp;</span>s);
+    printf(<span style="background-color: #fff0f0">&quot;Last date of modification : %s&quot;</span>,ctime(<span style="color: #333333">&amp;</span>s.st_ctime));
+    <span style="color: #008800; font-weight: bold">return</span> <span style="color: #0000DD; font-weight: bold">0</span>;
+}
+</pre></div>
+<h3>Read a text file by c program</h3>
+<div class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888"></span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>(){
+  <span style="color: #333399; font-weight: bold">char</span> str[<span style="color: #0000DD; font-weight: bold">50</span>];
+  <span style="color: #333399; font-weight: bold">FILE</span> <span style="color: #333333">*</span>p;
+  <span style="color: #008800; font-weight: bold">if</span>((p<span style="color: #333333">=</span>fopen(<span style="background-color: #fff0f0">&quot;demofile.txt&quot;</span>,<span style="background-color: #fff0f0">&quot;r&quot;</span>))<span style="color: #333333">==</span><span style="color: #007020">NULL</span>){ 
+     printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">Unable t open file demofile.txt&quot;</span>);
+     exit(<span style="color: #0000DD; font-weight: bold">1</span>);
+  }
+  <span style="color: #008800; font-weight: bold">while</span>(fgets(str,<span style="color: #0000DD; font-weight: bold">50</span>,p)<span style="color: #333333">!=</span><span style="color: #007020">NULL</span>)
+      puts(str);
+  fclose(p);
+}
+</pre></div>
+<h3>Write entire array to a file </h3>
+<div class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;">
+  <pre style="margin: 0; line-height: 125%"><span style="color: #888888"></span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #557799">#include&lt;stdlib.h&gt;</span>
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">main</span>(){
+  <span style="color: #333399; font-weight: bold">FILE</span> <span style="color: #333333">*</span>p;
+  <span style="color: #333399; font-weight: bold">int</span> i,arr[<span style="color: #0000DD; font-weight: bold">10</span>];
+  <span style="color: #008800; font-weight: bold">if</span>((p<span style="color: #333333">=</span>fopen(<span style="background-color: #fff0f0">&quot;demofile.txt&quot;</span>, <span style="background-color: #fff0f0">&quot;wb&quot;</span>))<span style="color: #333333">==</span><span style="color: #007020">NULL</span>){
+      printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">Unable to open file demofile.txt&quot;</span>);
+      exit(<span style="color: #0000DD; font-weight: bold">1</span>);
+  }
+  printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">Enter ten values</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>);
+  <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">10</span>;i<span style="color: #333333">++</span>)
+      scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>arr[i]);
+  fwrite(arr,<span style="color: #008800; font-weight: bold">sizeof</span>(arr),<span style="color: #0000DD; font-weight: bold">1</span>,p);
+  fclose(p);
+  <span style="color: #008800; font-weight: bold">return</span> <span style="color: #0000DD; font-weight: bold">0</span>;
+}
+</pre></div>
+<h3>Write biodata of student created using nested structure in a file </h3>
+<div  class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888"></span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #008800; font-weight: bold">typedef</span> <span style="color: #008800; font-weight: bold">struct</span>
+{
+   <span style="color: #333399; font-weight: bold">int</span> day;
+   <span style="color: #333399; font-weight: bold">int</span> month;
+   <span style="color: #333399; font-weight: bold">int</span> year;
+}date;
+<span style="color: #008800; font-weight: bold">typedef</span> <span style="color: #008800; font-weight: bold">struct</span>
+{
+    <span style="color: #333399; font-weight: bold">char</span> name[<span style="color: #0000DD; font-weight: bold">30</span>];
+    <span style="color: #333399; font-weight: bold">char</span> place[<span style="color: #0000DD; font-weight: bold">30</span>];
+    <span style="color: #333399; font-weight: bold">int</span> age;
+    date birthdate;
+}biodata;
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>()
+{
+    <span style="color: #333399; font-weight: bold">FILE</span> <span style="color: #333333">*</span>fp;
+    biodata student;
+	<span style="color: #333399; font-weight: bold">int</span> i;
+    fp<span style="color: #333333">=</span>fopen(<span style="background-color: #fff0f0">&quot;st.dat&quot;</span>,<span style="background-color: #fff0f0">&quot;w&quot;</span>);
+    printf(<span style="background-color: #fff0f0">&quot;Enter name: &quot;</span>);
+    scanf(<span style="background-color: #fff0f0">&quot; %30[^</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">]%*c&quot;</span>,student.name); 
+    printf(<span style="background-color: #fff0f0">&quot;Enter place: &quot;</span>);
+    scanf(<span style="background-color: #fff0f0">&quot; %30[^</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">]%*c&quot;</span>,student.place);
+    printf(<span style="background-color: #fff0f0">&quot;Enter age: &quot;</span>);
+    scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>student.age);
+    printf(<span style="background-color: #fff0f0">&quot;Enter birth date dd mm yy : &quot;</span>);
+    scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>student.birthdate.day);
+    scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>student.birthdate.month);
+    scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>student.birthdate.year);
+    i <span style="color: #333333">=</span>fprintf(fp,<span style="background-color: #fff0f0">&quot;Name :%s</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">Place: %s</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">Age: %d </span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">DOB %d/%d/%d&quot;</span>,student.name,student.place,student.age,student.birthdate.day, student.birthdate.month,
+student.birthdate.year);
+    <span style="color: #008800; font-weight: bold">if</span>(i<span style="color: #333333">!=</span><span style="color: #0000DD; font-weight: bold">0</span>)
+      printf(<span style="background-color: #fff0f0">&quot;Data stored&quot;</span>);
+    <span style="color: #008800; font-weight: bold">else</span>
+      printf(<span style="background-color: #fff0f0">&quot;failed&quot;</span>);
+    fclose(fp);
+}
+</pre></div>
+<h3>Count total number of character and word in a file </h3>
+<div class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888"></span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #557799">#include&lt;stdlib.h&gt;</span>
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>()
+{
+    <span style="color: #333399; font-weight: bold">FILE</span> <span style="color: #333333">*</span>fp;
+    <span style="color: #333399; font-weight: bold">char</span> ch;
+    <span style="color: #333399; font-weight: bold">int</span> tc<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>,tw<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">1</span>;
+    fp<span style="color: #333333">=</span>fopen(<span style="background-color: #fff0f0">&quot;file.txt&quot;</span>,<span style="background-color: #fff0f0">&quot;r&quot;</span>);
+    <span style="color: #008800; font-weight: bold">if</span>(fp<span style="color: #333333">==</span><span style="color: #007020">NULL</span>)
+    {
+    	printf(<span style="background-color: #fff0f0">&quot;File doesn&#39;t exist</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>);
+    	exit(<span style="color: #0000DD; font-weight: bold">1</span>);
+    }
+    <span style="color: #008800; font-weight: bold">while</span>(<span style="color: #333333">!</span>feof(fp))
+    {
+    	ch<span style="color: #333333">=</span>getc(fp);
+    	tc<span style="color: #333333">++</span>;
+    	<span style="color: #008800; font-weight: bold">if</span>(ch<span style="color: #333333">==</span><span style="color: #0044DD">&#39; &#39;</span>)
+    	{
+    		tw<span style="color: #333333">++</span>;
+    	}
+    }
+    printf(<span style="background-color: #fff0f0">&quot;Total character: %d </span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">Total words: %d&quot;</span>,tc,tw);
+
+}
+</pre></div>
+
+<hr>
+<p> &nbsp; </p>
+</html>

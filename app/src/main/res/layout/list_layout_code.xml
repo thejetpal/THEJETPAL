@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:background="#FAFAFA"
+    android:paddingBottom="8dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="8dp">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        android:background="@drawable/shape"
+        android:orientation="horizontal"
+        android:padding="5dip">
+
+        <!--  ListRow Left sied Thumbnail image -->
+        <LinearLayout
+            android:id="@+id/thumbnail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/pink500"
+            android:padding="5dip">
+
+            <ImageView
+                android:id="@+id/list_image"
+                android:layout_width="65dip"
+                android:layout_height="65dip" />
+
+        </LinearLayout>
+
+        <!-- Title Of Subject-->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/imageView"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:textColor="@color/blue800"
+            android:textSize="19dip"
+            android:textStyle="bold" />
+
+
+        <!-- Rightend Arrow -->
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/arrow" />
+
+    </RelativeLayout>
+</LinearLayout>

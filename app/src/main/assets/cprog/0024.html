@@ -1,0 +1,60 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+
+<h2>File  Handling</h2>
+<p class="css3-shadow">
+  Data Files  are used to store data on the memory device permanently and to access whenever is  required. There are two types of data files <br>
+  <strong>1. Stream Oriented data files&nbsp;&nbsp;</strong>&nbsp;&nbsp;:  Stream oriented data files are either text files or unformatted files. <br>
+  <strong>2. System Oriented data files</strong>&nbsp;&nbsp;:&nbsp;&nbsp;System oriented data files are more closely  related to computer&rsquo;s operating system and more complicated to work with. </p>
+<p class="css3-shadow"><strong>&nbsp;Opening and Closing data files</strong>&nbsp;<br>
+  The first step is to create a buffer  area where information is stored temporarily before passing to computer memory.  It is done by writing.<br>
+  FILE *fp;</p>
+<p class="css3-shadow">- Here <strong>fp</strong> is  the pointer variable  to indicate  the beginning of the buffer area and called stream pointer <br>
+  - The next  step is to open a data file specifying the type or mode i.e. read only file , write  only file , read /write file. This is done by using the library function fopen.<br>
+  The syntax  is<br>
+  fp&nbsp;=&nbsp;fopen(&nbsp;filename&nbsp;,&nbsp;mode&nbsp;)  ; <br>
+the mode can be--</p>
+<ol>
+  <li>&lsquo;r&rsquo; ( to open an existing file for reading only) </li>
+  <li>&lsquo;w&rsquo; ( to open a new file for writing only. If file with filename exists, it will be  destroyed and a new file is created in its place) </li>
+  <li>&lsquo;a&rsquo; ( to open an existing file for appending. If the file name does not exist a new file  with that file name will be created) </li>
+  <li>&lsquo;r+&rsquo; ( to open an existing file for both reading and writing)</li>
+  <li>&lsquo;w+&rsquo; ( to open a new  file for reading and writing. If the file  exists with that name, it will be destroyed and a new one will be created with  that name) </li>
+  <li>&lsquo;a+&rsquo; ( to open an existing file for reading and  writing. If the file does not exist a new file will be created).</li>
+</ol>
+<p class="css3-shadow">For writing formatted data to a file we use the function <strong>fprintf</strong>. <br>
+  The syntax is <em><strong>fprintf(&nbsp;fp,&rdquo;conversion string&rdquo;, value&nbsp;); </strong></em><br>
+  <strong>Example</strong> to write the name &ldquo;Sanjay&rdquo; to the file named &lsquo;st.dat&rsquo;</p>
+<p class="css3-shadow">
+  <em><strong>FILE *fp; <br>
+  fp=fopen(&quot;st.dat&quot;,&quot;w&quot;); </strong></em><br>
+  <em><strong>fprintf(fp,&rdquo;%[^\n]&rdquo;,&rdquo;Sanjay&rdquo;); </strong></em><strong></strong></p>
+<p class="css3-shadow">The last step is to close the file  after the desired manipulation. This is done by the library function fclose.  Syntax is:<br>
+<em><strong>fclose(fp);</strong></em><strong></strong></p>
+<h2><strong><em> functions:</em></strong></h2>
+<ul>
+<li>
+  <p><strong>fclose (ptr) ;</strong></p>
+    <p> fclose( ) function returns zero on success, or EOF if there is an error in closing the file.</p>
+    <h3><strong>Reading from a File</strong>
+    </h3>
+    <p>Once the file has been opened for reading using fopen( ), as we have seen, the file&rsquo;s contents are brought into buffer and a pointer is set up that points to the first character in the buffer.</p>
+    <p>To read the file&rsquo;s contents from memory there exists a function called <strong>fgetc ( )</strong>. This can be used in our program as-</p>
+    <p class="css3-shadow"><strong>ch = fgetc ( fp ) ;</strong><br>
+    The fgetc ( ) function reads a character from the input file referenced by fp.</p>
+    <p>str=<strong>fgets( )</strong> it allows  to read a string from a stream.</p>
+    <p class="css3-shadow"><strong>fscanf (FILE *fp, const char *format, ...)</strong><br>function to read strings from a file but it stops reading after the first space character encounters.<br>
+    example: fscanf(fp,&quot;%s&quot;,str)</p>
+    <h3><strong>Writing a file</strong>
+    </h3>
+    <p class="css3-shadow"><strong>fputc ( argument_char , fp ) ;</strong></p>
+    <p>fputc() writes the character value of the argument to the output stream referenced by ptr. </p>
+    <p class="css3-shadow"> <strong>fputs( argument_string, fp );</strong></p>
+    <p> fputs() writes the string in argument to the output stream referenced by ptr.</p>
+</li>
+</ul><hr>
+<p> &nbsp; </p>
+
+</html>

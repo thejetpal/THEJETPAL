@@ -1,0 +1,199 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<h3>Pointer to structure </h3>
+<div class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/**/</span>
+<span style="color: #888888">/* A pointer which is pointing to a structure is know as pointer to structure. */</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #008800; font-weight: bold">struct</span> book{
+   <span style="color: #333399; font-weight: bold">char</span> <span style="color: #333333">*</span>name;
+   <span style="color: #333399; font-weight: bold">char</span> author[<span style="color: #0000DD; font-weight: bold">10</span>];
+   <span style="color: #333399; font-weight: bold">int</span> id;
+}bk<span style="color: #333333">=</span>{<span style="background-color: #fff0f0">&quot;Learn&quot;</span>,<span style="background-color: #fff0f0">&quot;snj&quot;</span>,<span style="color: #0000DD; font-weight: bold">1</span>};
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>(){
+   <span style="color: #008800; font-weight: bold">struct</span> book <span style="color: #333333">*</span>b<span style="color: #333333">=&amp;</span>bk;
+   printf(<span style="background-color: #fff0f0">&quot;Name: %s,  Author: %s , Id: %d&quot;</span>,b<span style="color: #333333">-&gt;</span>name,(<span style="color: #333333">*</span>b).author,b<span style="color: #333333">-&gt;</span>id);
+}
+<span style="color: #888888">/*Explanation:</span>
+<span style="color: #888888">p is pointer to structure address.</span>
+<span style="color: #888888">-&gt; and (*). Both are same thing. */</span>
+</pre></div>
+<h3> Pointer to Pointer or multiple pointer </h3>
+<div class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/* */</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>(){
+  <span style="color: #333399; font-weight: bold">int</span> a<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">5</span>,<span style="color: #333333">*</span>ptr3<span style="color: #333333">=&amp;</span>a,<span style="color: #333333">**</span>ptr2<span style="color: #333333">=&amp;</span>ptr3,<span style="color: #333333">***</span>ptr1<span style="color: #333333">=&amp;</span>ptr2;
+   printf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,ptr1[<span style="color: #0000DD; font-weight: bold">0</span>][<span style="color: #0000DD; font-weight: bold">0</span>][<span style="color: #0000DD; font-weight: bold">0</span>]);
+	
+}
+<span style="color: #997700; font-weight: bold">Output:</span> <span style="color: #0000DD; font-weight: bold">5</span>
+
+<span style="color: #888888">/*</span>
+<span style="color: #888888">Explanation: </span>
+<span style="color: #888888">ptr[i] =*(ptr+i)</span>
+<span style="color: #888888">So,</span>
+<span style="color: #888888">ptr1[0][0][0]=*(ptr1[0][0]+0)=**ptr1[0]=***ptr1</span>
+<span style="color: #888888">Another rule is: *&amp;i=i but &amp;*i is wrong</span>
+<span style="color: #888888">So,</span>
+<span style="color: #888888">***ptr1=***(&amp;ptr2) =**ptr2=**(&amp;ptr2) =*ptr3= *(&amp;a)= a=5</span>
+<span style="color: #888888">                 */</span>
+</pre></div>
+<h3> Reading an Array using pointer and sorting it </h3>
+<div class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/**/</span>
+
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">main</span>(){
+   <span style="color: #333399; font-weight: bold">int</span>  i,j,temp1,temp2;
+   <span style="color: #333399; font-weight: bold">int</span> arr[<span style="color: #0000DD; font-weight: bold">10</span>];
+   <span style="color: #333399; font-weight: bold">int</span> <span style="color: #333333">*</span>ptr;
+   ptr<span style="color: #333333">=&amp;</span>arr;
+   printf(<span style="background-color: #fff0f0">&quot;Enter 10 Elements &quot;</span>);
+   <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">10</span>;i<span style="color: #333333">++</span>)
+   { 
+   	  scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,ptr);
+		 ptr<span style="color: #333333">++</span>; 
+   }
+   <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">10</span>;i<span style="color: #333333">++</span>){
+      <span style="color: #008800; font-weight: bold">for</span>(j<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;j<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">10</span><span style="color: #333333">-</span>i;j<span style="color: #333333">++</span>){
+         <span style="color: #008800; font-weight: bold">if</span>(<span style="color: #333333">*</span>(arr<span style="color: #333333">+</span>j)<span style="color: #333333">&gt;*</span>(arr<span style="color: #333333">+</span>j<span style="color: #333333">+</span><span style="color: #0000DD; font-weight: bold">1</span>)){
+            ptr<span style="color: #333333">=</span>arr<span style="color: #333333">+</span>j;
+            temp1<span style="color: #333333">=*</span>ptr<span style="color: #333333">++</span>;
+            temp2<span style="color: #333333">=*</span>ptr;
+            <span style="color: #333333">*</span>ptr<span style="color: #333333">--=</span>temp1;
+            <span style="color: #333333">*</span>ptr<span style="color: #333333">=</span>temp2;
+         }
+      }
+   }
+
+   <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">10</span>;i<span style="color: #333333">++</span>)
+      printf(<span style="background-color: #fff0f0">&quot; %d&quot;</span>,arr[i]);
+}
+</pre></div>
+<h3> Factorial program using pointer </h3>
+<div class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/*  */</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">findFactorial</span>(<span style="color: #333399; font-weight: bold">int</span>,<span style="color: #333399; font-weight: bold">int</span> <span style="color: #333333">*</span>);
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">main</span>(){
+  <span style="color: #333399; font-weight: bold">int</span> i,factorial,num;
+  printf(<span style="background-color: #fff0f0">&quot;Enter number: &quot;</span>);
+  scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>num);
+  findFactorial(num,<span style="color: #333333">&amp;</span>factorial);
+  printf(<span style="background-color: #fff0f0">&quot;Factorial of %d is: %d&quot;</span>,num,<span style="color: #333333">*</span>factorial);
+  <span style="color: #008800; font-weight: bold">return</span> <span style="color: #0000DD; font-weight: bold">0</span>;
+}
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">findFactorial</span>(<span style="color: #333399; font-weight: bold">int</span> num,<span style="color: #333399; font-weight: bold">int</span> <span style="color: #333333">*</span>factorial){
+    <span style="color: #333399; font-weight: bold">int</span> i;
+    <span style="color: #333333">*</span>factorial <span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">1</span>;
+
+    <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">1</span>;i<span style="color: #333333">&lt;=</span>num;i<span style="color: #333333">++</span>)
+      <span style="color: #333333">*</span>factorial<span style="color: #333333">=*</span>factorial<span style="color: #333333">*</span>i;
+}
+</pre></div>
+<h3> Swapping array by pointers </h3>
+<div class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/**/</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">swap</span>(<span style="color: #333399; font-weight: bold">int</span> <span style="color: #333333">*</span>, <span style="color: #333399; font-weight: bold">int</span> <span style="color: #333333">*</span>);
+main()
+{
+ <span style="color: #333399; font-weight: bold">int</span> a[<span style="color: #0000DD; font-weight: bold">10</span>],b[<span style="color: #0000DD; font-weight: bold">10</span>],i;
+ printf(<span style="background-color: #fff0f0">&quot;Enter First array: &quot;</span>);
+<span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">10</span>;i<span style="color: #333333">++</span>)
+ scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>a[i]);
+ printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">Enter Second array: &quot;</span>);
+<span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">10</span>;i<span style="color: #333333">++</span>)
+ scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>b[i]);
+ <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">10</span>;i<span style="color: #333333">++</span>)
+ swap(<span style="color: #333333">&amp;</span>a[i], <span style="color: #333333">&amp;</span>b[i]);
+
+ printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">Arrays after swapping&quot;</span>);
+ printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">First array: &quot;</span>);
+<span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">10</span>;i<span style="color: #333333">++</span>)
+ printf(<span style="background-color: #fff0f0">&quot;%d &quot;</span>,a[i]);
+
+ printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">Second array:  &quot;</span>);
+<span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">10</span>;i<span style="color: #333333">++</span>)
+ printf(<span style="background-color: #fff0f0">&quot;%d &quot;</span>,b[i]);
+}
+<span style="color: #333399; font-weight: bold">void</span> swap(<span style="color: #333399; font-weight: bold">int</span> <span style="color: #333333">*</span>arr1, <span style="color: #333399; font-weight: bold">int</span> <span style="color: #333333">*</span>arr2)
+{
+ <span style="color: #333399; font-weight: bold">int</span> temp;
+ temp <span style="color: #333333">=</span> <span style="color: #333333">*</span>arr1;
+ <span style="color: #333333">*</span>arr1 <span style="color: #333333">=</span> <span style="color: #333333">*</span>arr2;
+ <span style="color: #333333">*</span>arr2 <span style="color: #333333">=</span> temp;
+}
+</pre></div>
+<h3> Area and Perimeter of Rectangle using pointer </h3>
+<div class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/**/</span>
+<span style="color: #557799">#include &lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">rectangle</span>(<span style="color: #333399; font-weight: bold">int</span> a, <span style="color: #333399; font-weight: bold">int</span> b, <span style="color: #333399; font-weight: bold">int</span> <span style="color: #333333">*</span> area, <span style="color: #333399; font-weight: bold">int</span> <span style="color: #333333">*</span> perim);
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>()
+{
+  <span style="color: #333399; font-weight: bold">int</span> x, y;
+  <span style="color: #333399; font-weight: bold">int</span> area, perim;
+  printf(<span style="background-color: #fff0f0">&quot;Enter two values separated by space: &quot;</span> );
+  scanf(<span style="background-color: #fff0f0">&quot;%d %d&quot;</span>, <span style="color: #333333">&amp;</span>x, <span style="color: #333333">&amp;</span>y);
+  rectangle(x, y, <span style="color: #333333">&amp;</span>area, <span style="color: #333333">&amp;</span>perim);
+  printf(<span style="background-color: #fff0f0">&quot;Area is %d Perimeter is %d</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>, area, perim);
+}
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">rectangle</span>(<span style="color: #333399; font-weight: bold">int</span> a, <span style="color: #333399; font-weight: bold">int</span> b, <span style="color: #333399; font-weight: bold">int</span> <span style="color: #333333">*</span> area,<span style="color: #333399; font-weight: bold">int</span> <span style="color: #333333">*</span> perim)
+{
+  <span style="color: #333333">*</span>area <span style="color: #333333">=</span> a <span style="color: #333333">*</span> b;
+  <span style="color: #333333">*</span>perim <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">2</span> <span style="color: #333333">*</span> (a <span style="color: #333333">+</span> b);
+}
+</pre></div>
+<h3> Concatenate two string using pointer </h3>
+<div class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">/**/</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">main</span>(){
+  <span style="color: #333399; font-weight: bold">int</span> i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>,j<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;
+  <span style="color: #333399; font-weight: bold">char</span> <span style="color: #333333">*</span>str1,<span style="color: #333333">*</span>str2,<span style="color: #333333">*</span>str3;
+  puts(<span style="background-color: #fff0f0">&quot;Enter first string&quot;</span>);
+  gets(str1);
+  puts(<span style="background-color: #fff0f0">&quot;Enter second string&quot;</span>);
+  gets(str2);
+  printf(<span style="background-color: #fff0f0">&quot;Before concatenation the strings are</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>);
+  puts(str1);
+  puts(str2);
+  <span style="color: #008800; font-weight: bold">while</span>(<span style="color: #333333">*</span>str1){
+      str3[i<span style="color: #333333">++</span>]<span style="color: #333333">=*</span>str1<span style="color: #333333">++</span>;
+  }
+  <span style="color: #008800; font-weight: bold">while</span>(<span style="color: #333333">*</span>str2){
+      str3[i<span style="color: #333333">++</span>]<span style="color: #333333">=*</span>str2<span style="color: #333333">++</span>;
+  }
+  str3[i]<span style="color: #333333">=</span><span style="color: #0044DD">&#39;\0&#39;</span>;
+  printf(<span style="background-color: #fff0f0">&quot;After concatenation the strings are</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>);
+  puts(str3);
+  <span style="color: #008800; font-weight: bold">return</span> <span style="color: #0000DD; font-weight: bold">0</span>;
+}
+</pre></div>
+<h3> Reading array using pointer and print it using pointer </h3>
+<div class="css3-shadow"style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;">
+  <pre style="margin: 0; line-height: 125%"><span style="color: #888888">/**/</span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">main</span>(){
+   <span style="color: #333399; font-weight: bold">int</span>  i;
+   <span style="color: #333399; font-weight: bold">int</span> arr[<span style="color: #0000DD; font-weight: bold">10</span>];
+   <span style="color: #333399; font-weight: bold">int</span> <span style="color: #333333">*</span>ptr;
+   ptr<span style="color: #333333">=</span>arr;
+   printf(<span style="background-color: #fff0f0">&quot;Enter 10 Elements &quot;</span>);
+   <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">10</span>;i<span style="color: #333333">++</span>)
+   { 
+   	  scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,ptr);
+		 ptr<span style="color: #333333">++</span>; 
+   }
+   ptr<span style="color: #333333">=</span>arr;<span style="color: #888888">//Again initializing base address of array otherwise</span>
+            <span style="color: #888888">// pointer will point to the next address after reading </span>
+			<span style="color: #888888">//and print garbage value</span>
+    printf(<span style="background-color: #fff0f0">&quot;Entered Numbers:</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>);
+    <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">10</span>;i<span style="color: #333333">++</span>)
+   { 
+   	  printf(<span style="background-color: #fff0f0">&quot;%d</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>,<span style="color: #333333">*</span>ptr);
+		 ptr<span style="color: #333333">++</span>; 
+   }
+}
+</pre></div>
+
+<hr>
+<p> &nbsp; </p>
+</html>

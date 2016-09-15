@@ -1,0 +1,66 @@
+<code>
+    <site>
+        <link>file:///android_asset/cprog/array.html</link>
+        <about>Array</about>
+    </site>
+    <site>
+        <link>file:///android_asset/cprog/conversion.html</link>
+        <about>Conversion</about>
+    </site>
+    <site>
+        <link>file:///android_asset/cprog/filehandling.html</link>
+        <about>File Handling</about>
+    </site>
+    <site>
+        <link>file:///android_asset/cprog/function.html</link>
+        <about>Function</about>
+    </site>
+    <site>
+        <link>file:///android_asset/cprog/matrix.html</link>
+        <about>Matrix</about>
+    </site>
+    <site>
+        <link>file:///android_asset/cprog/number.html</link>
+        <about>Number</about>
+    </site>
+    <site>
+        <link>file:///android_asset/cprog/pointer.html</link>
+        <about>Pointer</about>
+    </site>
+    <site>
+        <link>file:///android_asset/cprog/recursion.html</link>
+        <about>Recursion</about>
+    </site>
+    <site>
+        <link>file:///android_asset/cprog/series.html</link>
+        <about>Series</about>
+    </site>
+    <site>
+        <link>file:///android_asset/cprog/simple.html</link>
+        <about>Simple</about>
+    </site>
+    <site>
+        <link>file:///android_asset/cprog/string.html</link>
+        <about>String</about>
+    </site>
+    <site>
+        <link>file:///android_asset/cprog/structure.html</link>
+        <about>Structure</about>
+    </site>
+    <site>
+        <link>file:///android_asset/cprog/patternone.html</link>
+        <about>Pattern 1</about>
+    </site>
+    <site>
+        <link>file:///android_asset/cprog/patterntwo.html</link>
+        <about>Pattern 2</about>
+    </site>
+    <site>
+        <link>file:///android_asset/cprog/patternthree.html</link>
+        <about>Pattern 3</about>
+    </site>
+    <site>
+        <link>file:///android_asset/cprog/patternthree.html</link>
+        <about>Pattern 4</about>
+    </site>
+</code> 

@@ -1,0 +1,98 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<h3> binary to decimal conversion:</h3>
+<div class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888"></span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>(){
+    <span style="color: #333399; font-weight: bold">long</span> <span style="color: #333399; font-weight: bold">int</span> bn,dn<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>,j<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">1</span>,remainder;
+    printf(<span style="background-color: #fff0f0">&quot;Enter any number any binary number: &quot;</span>);
+    scanf(<span style="background-color: #fff0f0">&quot;%ld&quot;</span>,<span style="color: #333333">&amp;</span>bn);
+    <span style="color: #008800; font-weight: bold">while</span>(bn<span style="color: #333333">!=</span><span style="color: #0000DD; font-weight: bold">0</span>){
+         remainder<span style="color: #333333">=</span>bn<span style="color: #333333">%</span><span style="color: #0000DD; font-weight: bold">10</span>;
+        dn<span style="color: #333333">=</span>dn<span style="color: #333333">+</span>remainder<span style="color: #333333">*</span>j;
+        j<span style="color: #333333">=</span>j<span style="color: #333333">*</span><span style="color: #0000DD; font-weight: bold">2</span>;
+        bn<span style="color: #333333">=</span>bn<span style="color: #333333">/</span><span style="color: #0000DD; font-weight: bold">10</span>;
+    }
+    printf(<span style="background-color: #fff0f0">&quot;Equivalent decimal value: %ld&quot;</span>,dn); 
+}
+</pre></div>
+<h3>decimal to octal converter</h3>
+<div  class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888"></span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">void</span>  <span style="color: #0066BB; font-weight: bold">main</span>(){
+  <span style="color: #333399; font-weight: bold">long</span> <span style="color: #333399; font-weight: bold">int</span> dn,remainder,q;
+  <span style="color: #333399; font-weight: bold">int</span> on[<span style="color: #0000DD; font-weight: bold">100</span>],i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">1</span>,j;
+  printf(<span style="background-color: #fff0f0">&quot;Enter any decimal number&quot;</span>);
+  scanf(<span style="background-color: #fff0f0">&quot;%ld&quot;</span>,<span style="color: #333333">&amp;</span>dn);
+  q <span style="color: #333333">=</span> dn;
+  <span style="color: #008800; font-weight: bold">while</span>(q<span style="color: #333333">!=</span><span style="color: #0000DD; font-weight: bold">0</span>){
+      on[i<span style="color: #333333">++</span>]<span style="color: #333333">=</span> q <span style="color: #333333">%</span> <span style="color: #0000DD; font-weight: bold">8</span>;
+      q <span style="color: #333333">=</span> q<span style="color: #333333">/</span> <span style="color: #0000DD; font-weight: bold">8</span>;
+  }
+  printf(<span style="background-color: #fff0f0">&quot;Equivalent octal value  %d: &quot;</span>,dn);
+  <span style="color: #008800; font-weight: bold">for</span>(j <span style="color: #333333">=</span> i <span style="color: #333333">-</span><span style="color: #0000DD; font-weight: bold">1</span> ;j<span style="color: #333333">&gt;</span> <span style="color: #0000DD; font-weight: bold">0</span>;j<span style="color: #333333">--</span>)
+      printf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,on[j]);
+}
+</pre></div>
+<h3>Decimal to hexadecimal</h3>
+<div class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888"></span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>(){
+    <span style="color: #333399; font-weight: bold">long</span> <span style="color: #333399; font-weight: bold">int</span> dn,remainder,q;
+    <span style="color: #333399; font-weight: bold">int</span> i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">1</span>,j,temp;
+    <span style="color: #333399; font-weight: bold">char</span> hn[<span style="color: #0000DD; font-weight: bold">100</span>];
+    printf(<span style="background-color: #fff0f0">&quot;Enter any decimal number: &quot;</span>);
+    scanf(<span style="background-color: #fff0f0">&quot;%ld&quot;</span>,<span style="color: #333333">&amp;</span>dn);
+    q<span style="color: #333333">=</span> dn;
+    <span style="color: #008800; font-weight: bold">while</span>(q<span style="color: #333333">!=</span><span style="color: #0000DD; font-weight: bold">0</span>){
+         temp <span style="color: #333333">=</span> q <span style="color: #333333">%</span> <span style="color: #0000DD; font-weight: bold">16</span>;
+      <span style="color: #008800; font-weight: bold">if</span>( temp <span style="color: #333333">&lt;</span> <span style="color: #0000DD; font-weight: bold">10</span>)
+            temp <span style="color: #333333">=</span>temp <span style="color: #333333">+</span> <span style="color: #0000DD; font-weight: bold">48</span>;
+      <span style="color: #008800; font-weight: bold">else</span>
+         temp <span style="color: #333333">=</span> temp <span style="color: #333333">+</span> <span style="color: #0000DD; font-weight: bold">55</span>;
+      hn [i<span style="color: #333333">++</span>]<span style="color: #333333">=</span> temp;
+      q <span style="color: #333333">=</span> q<span style="color: #333333">/</span> <span style="color: #0000DD; font-weight: bold">16</span>;
+  }
+    printf(<span style="background-color: #fff0f0">&quot;Equivalent hexadecimal value of decimal number %d: &quot;</span>,d); 
+    <span style="color: #008800; font-weight: bold">for</span>(j <span style="color: #333333">=</span> i <span style="color: #333333">-</span><span style="color: #0000DD; font-weight: bold">1</span> ;j<span style="color: #333333">&gt;</span> <span style="color: #0000DD; font-weight: bold">0</span>;j<span style="color: #333333">--</span>) 
+      printf(<span style="background-color: #fff0f0">&quot;%c&quot;</span>,hn[j]);
+}
+</pre></div>
+<h3>Binary to decimal conversion</h3>
+<div class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888"></span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>(){
+    <span style="color: #333399; font-weight: bold">long</span> <span style="color: #333399; font-weight: bold">int</span> bn,dn<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>,j<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">1</span>,remainder;
+    printf(<span style="background-color: #fff0f0">&quot;Enter any number any binary number: &quot;</span>);
+     scanf(<span style="background-color: #fff0f0">&quot;%ld&quot;</span>,<span style="color: #333333">&amp;</span>bn);
+    <span style="color: #008800; font-weight: bold">while</span>(bn<span style="color: #333333">!=</span><span style="color: #0000DD; font-weight: bold">0</span>){
+         remainder<span style="color: #333333">=</span>bn<span style="color: #333333">%</span><span style="color: #0000DD; font-weight: bold">10</span>;
+        dn<span style="color: #333333">=</span>dn<span style="color: #333333">+</span>remainder<span style="color: #333333">*</span>j;
+         j<span style="color: #333333">=</span>j<span style="color: #333333">*</span><span style="color: #0000DD; font-weight: bold">2</span>;
+         bn<span style="color: #333333">=</span>bn<span style="color: #333333">/</span><span style="color: #0000DD; font-weight: bold">10</span>;
+    }
+    printf(<span style="background-color: #fff0f0">&quot;Equivalent decimal value: %ld&quot;</span>,dn);
+}
+</pre></div>
+<h3>Octal number to decimal number</h3>
+<div class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888"></span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #557799">#include&lt;math.h&gt;</span>
+main()
+    <span style="color: #333399; font-weight: bold">long</span> <span style="color: #333399; font-weight: bold">int</span> on,dn <span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;
+    <span style="color: #333399; font-weight: bold">int</span> i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;
+    printf(<span style="background-color: #fff0f0">&quot;Enter any octal number: &quot;</span>);
+    scanf(<span style="background-color: #fff0f0">&quot;%ld&quot;</span>,<span style="color: #333333">&amp;</span>on);
+    <span style="color: #008800; font-weight: bold">while</span>(on<span style="color: #333333">!=</span><span style="color: #0000DD; font-weight: bold">0</span>){
+         dn <span style="color: #333333">=</span> dn <span style="color: #333333">+</span> (on <span style="color: #333333">%</span> <span style="color: #0000DD; font-weight: bold">10</span>) <span style="color: #333333">*</span> pow(<span style="color: #0000DD; font-weight: bold">8</span>,i<span style="color: #333333">++</span>);
+         onl <span style="color: #333333">=</span> on<span style="color: #333333">/</span><span style="color: #0000DD; font-weight: bold">10</span>;
+    }
+    printf(<span style="background-color: #fff0f0">&quot;decimal value: %ld&quot;</span>,dn);
+}
+</pre></div>
+
+<hr>
+<p> &nbsp; </p>
+</html>

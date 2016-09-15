@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "283699812937",
+    "firebase_url": "https://mykitab-te.firebaseio.com",
+    "project_id": "mykitab-te",
+    "storage_bucket": "mykitab-te.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:283699812937:android:676521b9198ea052",
+        "android_client_info": {
+          "package_name": "mykitab.mykitabcomptepu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "283699812937-p4gjf7adf0uel7ei1ms6qknirc7dmc0o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDH0vzGwO-AHdz-ajI1NssuO-7cPiSsApE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

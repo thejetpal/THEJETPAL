@@ -1,0 +1,32 @@
+<employees>
+<site>
+<name>Question 1</name>
+<link>https://mykitab-te.firebaseapp.com/DCWSN/DC1/dcwsn_u2_1.html</link>
+<about>Wireless Transmission</about>
+</site>
+<site>
+<name>Question 2</name>
+<link>https://mykitab-te.firebaseapp.com/DCWSN/DC1/dcwsn_u2_2.html</link>
+<about>Switching Techniques</about>
+ </site>
+<site>
+<name>Question 3</name>
+<link>https://mykitab-te.firebaseapp.com/DCWSN/DC2/dcwsn_u2_3.html</link>
+<about>Data link layer design issues.</about>
+</site>
+<site>
+<name>Question 4</name>
+<link>https://mykitab-te.firebaseapp.com/DCWSN/DC2/dcwsn_u2_4.html</link>
+<about>Channel Allocation</about>
+ </site>
+<site>
+<name>Question 5</name>
+<link>https://mykitab-te.firebaseapp.com/DCWSN/DC2/dcwsn_u2_5.html</link>
+<about>Hardware Components</about>
+ </site>
+ <site>
+<name>Question 6</name>
+<link>https://mykitab-te.firebaseapp.com/DCWSN/DC2/dcwsn_u2_6.html</link>
+<about>Multiple Access Protocols.</about>
+ </site>
+</employees>

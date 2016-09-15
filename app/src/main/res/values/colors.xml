@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- CYAN -->
+    <!-- dark -->
+    <color name="md_cyan_500_primary">#00BCD4</color>
+    <!-- light -->
+    <color name="md_cyan_50">#E0F7FA</color>
+    <color name="md_cyan_100">#B2EBF2</color>
+    <color name="md_cyan_200">#80DEEA</color>
+    <color name="md_cyan_300">#4DD0E1</color>
+    <color name="md_cyan_400">#26C6DA</color>
+    <!-- dark -->
+    <color name="md_cyan_600">#00ACC1</color>
+    <color name="md_cyan_700">#0097A7</color>
+    <color name="md_cyan_800">#00838F</color>
+    <color name="md_cyan_900">#006064</color>
+
+    <!-- light -->
+    <color name="md_cyan_A100">#84FFFF</color>
+    <color name="md_cyan_A200">#18FFFF</color>
+    <color name="md_cyan_A400">#00E5FF</color>
+    <color name="md_cyan_A700">#00B8D4</color>
+
+    <color name="black">#000</color>
+    <color name="orange">#FA0</color>
+    <color name="white">#FFF</color>
+    <color name="bluegrey700">#455A64</color>
+    <color name="blue800">#0277BD</color>
+
+    <color name="teal100">#B2DFDB</color>
+    <color name="teal200">#80CBC4</color>
+    <color name="teal300">#80CBC4</color>
+    <color name="teal400">#26A69A</color>
+    <color name="teal600">#00897B</color>
+    <color name="teal800">#00695C</color>
+    <color name="pink400">#EC407A</color>
+    <color name="pink500">#E91E63</color>
+    <color name="accent">#FFEB3B</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#727272</color>
+
+    <color name="icons">#212121</color>
+    <color name="divider">#B6B6B6</color>
+
+    <color name="indigo400">#5C6BC0</color>
+    <color name="indigo500">#3F51B5</color>
+    <color name="indigo600">#3949AB</color>
+    <color name="indigo800">#283593</color>
+    <color name="indigo900">#1A237E</color>
+
+    <color name="redPrimaryDark">#DD3131</color>
+    <color name="redPrimary">#FF5E5E</color>
+    <color name="redPrimaryLight">#FFC9C9</color>
+
+    <color name="bluePrimaryDark">#048BFE</color>
+    <color name="bluePrimary">#2199FF</color>
+    <color name="bluePrimaryLight">#BADFFF</color>
+
+    <color name="blackPrimaryDark">#282828</color>
+    <color name="blackPrimary">#2E2E2E</color>
+    <color name="blackPrimaryLight">#8F8F8F</color>
+
+    <color name="feed_bg">#d3d6db</color>
+    <color name="feed_item_bg">#ffffff</color>
+    <color name="feed_item_border">#c2c3c8</color>
+    <color name="link">#0a80d1</color>
+    <color name="timestamp">#a0a3a7</color>
+</resources>

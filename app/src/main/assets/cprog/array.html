@@ -1,0 +1,323 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<h3>Program to show sum of 10 elements of array &amp; show the average.</h3>
+<div class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888"></span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">int</span> <span style="color: #0066BB; font-weight: bold">main</span>()
+{
+    <span style="color: #333399; font-weight: bold">int</span> a[<span style="color: #0000DD; font-weight: bold">10</span>],i,sum<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;
+    <span style="color: #333399; font-weight: bold">float</span> av;
+    printf(<span style="background-color: #fff0f0">&quot;enter elements of an aaray: &quot;</span>);
+    <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">10</span>;i<span style="color: #333333">++</span>)
+     scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>a[i]); 
+    <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">10</span>;i<span style="color: #333333">++</span>)
+      sum<span style="color: #333333">=</span>sum<span style="color: #333333">+</span>a[i];
+    printf(<span style="background-color: #fff0f0">&quot;sum=%d&quot;</span>,sum);
+    av<span style="color: #333333">=</span>sum<span style="color: #333333">/</span><span style="color: #0000DD; font-weight: bold">10</span>;
+    printf(<span style="background-color: #fff0f0">&quot;average=%.2f&quot;</span>,av);
+    <span style="color: #008800; font-weight: bold">return</span> <span style="color: #0000DD; font-weight: bold">0</span>;
+}
+<span style="color: #997700; font-weight: bold">Output:</span>
+enter elements of an array<span style="color: #333333">:</span> <span style="color: #0000DD; font-weight: bold">4</span>
+<span style="color: #0000DD; font-weight: bold">4</span>
+<span style="color: #0000DD; font-weight: bold">4</span>
+<span style="color: #0000DD; font-weight: bold">4</span>
+<span style="color: #0000DD; font-weight: bold">4</span>
+<span style="color: #0000DD; font-weight: bold">4</span>
+<span style="color: #0000DD; font-weight: bold">4</span>
+<span style="color: #0000DD; font-weight: bold">4</span>
+<span style="color: #0000DD; font-weight: bold">4</span>
+<span style="color: #0000DD; font-weight: bold">4</span>
+sum<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">40</span>
+average<span style="color: #333333">=</span><span style="color: #6600EE; font-weight: bold">4.00</span>
+</pre></div>
+<h3>Program to find the maximum no. in an array.</h3>
+<div  class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888"></span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>()
+{
+<span style="color: #333399; font-weight: bold">int</span> a[<span style="color: #0000DD; font-weight: bold">5</span>],max,i;
+printf(<span style="background-color: #fff0f0">&quot;enter element for the array: &quot;</span>);
+<span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">5</span>;i<span style="color: #333333">++</span>)
+scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>a[i]);
+max<span style="color: #333333">=</span>a[<span style="color: #0000DD; font-weight: bold">0</span>];
+<span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">1</span>;i<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">5</span>;i<span style="color: #333333">++</span>)
+{
+<span style="color: #008800; font-weight: bold">if</span>(max<span style="color: #333333">&lt;</span>a[i])
+max<span style="color: #333333">=</span>a[i]; 
+}
+printf(<span style="background-color: #fff0f0">&quot;maximum no= %d&quot;</span>,max);
+}
+
+<span style="color: #997700; font-weight: bold">Output:</span>
+enter elements <span style="color: #008800; font-weight: bold">for</span> array<span style="color: #333333">:</span> <span style="color: #0000DD; font-weight: bold">5</span>
+<span style="color: #0000DD; font-weight: bold">4</span>
+<span style="color: #0000DD; font-weight: bold">7</span>
+<span style="color: #0000DD; font-weight: bold">1</span>
+<span style="color: #0000DD; font-weight: bold">2</span>
+maximum no<span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">7</span>
+</pre></div>
+<h3>Swapping of two arrays</h3>
+<div  class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888"></span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>(){
+  <span style="color: #333399; font-weight: bold">int</span> a[<span style="color: #0000DD; font-weight: bold">10</span>],b[<span style="color: #0000DD; font-weight: bold">10</span>],c[<span style="color: #0000DD; font-weight: bold">10</span>],i;
+  printf(<span style="background-color: #fff0f0">&quot;Enter First array-&gt;&quot;</span>);
+  <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">10</span>;i<span style="color: #333333">++</span>)
+  scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>a[i]);
+  printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">Enter Second array-&gt;&quot;</span>);
+  <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">10</span>;i<span style="color: #333333">++</span>)
+            scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>b[i]);
+  printf(<span style="background-color: #fff0f0">&quot;Arrays before swapping&quot;</span>);
+  printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">First array-&gt;&quot;</span>);
+  <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">10</span>;i<span style="color: #333333">++</span>){
+            printf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,a[i]);
+  }
+  printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">Second array-&gt;&quot;</span>);
+  <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">10</span>;i<span style="color: #333333">++</span>){
+            printf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,b[i]);
+  }
+  <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">10</span>;i<span style="color: #333333">++</span>){
+            <span style="color: #888888">//write any swapping technique</span>
+            c[i]<span style="color: #333333">=</span>a[i];
+            a[i]<span style="color: #333333">=</span>b[i];
+            b[i]<span style="color: #333333">=</span>c[i];
+  }
+  printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">Arrays after swapping&quot;</span>);
+  printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">First array-&gt;&quot;</span>);
+  <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">10</span>;i<span style="color: #333333">++</span>){
+            printf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,a[i]);
+  }
+  printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">Second array-&gt;&quot;</span>);
+  <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span><span style="color: #0000DD; font-weight: bold">10</span>;i<span style="color: #333333">++</span>){
+            printf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,b[i]);
+  }
+}
+</pre></div>
+<h3>Print odd and even numbers of  an array separately</h3>
+<div class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888"></span>
+<span style="color: #557799">#include&lt;stdio.h&gt;	</span>
+<span style="color: #557799">#define MAX 100</span>
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>()
+{
+     <span style="color: #333399; font-weight: bold">int</span> arr[MAX],n,i;
+     printf(<span style="background-color: #fff0f0">&quot;Enter size of Array: &quot;</span>); 
+     scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>n);
+     printf(<span style="background-color: #fff0f0">&quot;Enter %d positive elements</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>,n);
+     <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span>n;i<span style="color: #333333">++</span>)
+     {
+     	scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>arr[i]);
+     }
+     printf(<span style="background-color: #fff0f0">&quot;Even numbers: &quot;</span>);
+     
+	 <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span>n;i<span style="color: #333333">++</span>)
+     {
+     	<span style="color: #008800; font-weight: bold">if</span>(arr[i]<span style="color: #333333">%</span><span style="color: #0000DD; font-weight: bold">2</span><span style="color: #333333">==</span><span style="color: #0000DD; font-weight: bold">0</span>)
+     	{
+     		printf(<span style="background-color: #fff0f0">&quot;%d  &quot;</span>,arr[i]);
+     	}
+     }
+     printf(<span style="background-color: #fff0f0">&quot;</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">Odd numbers: &quot;</span>);
+     <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span>n;i<span style="color: #333333">++</span>)
+     {
+     	<span style="color: #008800; font-weight: bold">if</span>(arr[i]<span style="color: #333333">%</span><span style="color: #0000DD; font-weight: bold">2</span><span style="color: #333333">!=</span><span style="color: #0000DD; font-weight: bold">0</span>)
+     	{
+     		printf(<span style="background-color: #fff0f0">&quot;%d  &quot;</span>,arr[i]);
+     	}
+     }
+}
+</pre></div>
+<h3>Find maximum and second maximum in an array</h3>
+<div class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888"></span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #557799">#define MAX 100</span>
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>()
+{
+     <span style="color: #333399; font-weight: bold">int</span> arr[MAX],n,i,max,smax;
+     printf(<span style="background-color: #fff0f0">&quot;Enter size of Array: &quot;</span>); 
+     scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>n);
+     printf(<span style="background-color: #fff0f0">&quot;Enter %d elements</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>,n);
+     <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span>n;i<span style="color: #333333">++</span>)
+     {
+     	scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>arr[i]);
+     }
+     max<span style="color: #333333">=</span>arr[<span style="color: #0000DD; font-weight: bold">0</span>];
+     <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">1</span>;i<span style="color: #333333">&lt;</span>n;i<span style="color: #333333">++</span>)
+     {
+     	<span style="color: #008800; font-weight: bold">if</span>(arr[i]<span style="color: #333333">&gt;</span>max)
+     	{
+     		smax<span style="color: #333333">=</span>max;
+     		max<span style="color: #333333">=</span>arr[i];
+     	}
+     }
+     printf(<span style="background-color: #fff0f0">&quot;Maximum : %d  Second Maximum:%d &quot;</span>,max,smax);
+}
+</pre></div>
+<h3>Addition of all elements of array</h3>
+<div class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888"></span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #557799">#define MAX 100</span>
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>()
+{
+     <span style="color: #333399; font-weight: bold">int</span> arr[MAX],n,i,sum<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;
+     printf(<span style="background-color: #fff0f0">&quot;Enter size of Array: &quot;</span>); 
+     scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>n);
+     printf(<span style="background-color: #fff0f0">&quot;Enter %d elements</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>,n);
+     <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span>n;i<span style="color: #333333">++</span>)
+     {
+     	scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>arr[i]);
+     }
+     <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span>n;i<span style="color: #333333">++</span>)
+     {
+     sum<span style="color: #333333">=</span> sum<span style="color: #333333">+</span>arr[i];
+     }
+     printf(<span style="background-color: #fff0f0">&quot;Sum of array : %d &quot;</span>,sum);
+}
+</pre></div>
+<h3>Reverse an array</h3>
+<div  class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888"></span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #557799">#define MAX 100</span>
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>()
+{
+     <span style="color: #333399; font-weight: bold">int</span> arr[MAX],n,i,temp;
+     printf(<span style="background-color: #fff0f0">&quot;Enter size of Array: &quot;</span>); 
+     scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>n);
+     printf(<span style="background-color: #fff0f0">&quot;Enter %d elements</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>,n);
+     <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span>n;i<span style="color: #333333">++</span>)
+     {
+     	scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>arr[i]);
+     }
+     <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span>n<span style="color: #333333">/</span><span style="color: #0000DD; font-weight: bold">2</span>;i<span style="color: #333333">++</span>)
+     {
+      temp<span style="color: #333333">=</span>arr[i];
+      arr[i]<span style="color: #333333">=</span>arr[n<span style="color: #333333">-</span>i<span style="color: #333333">-</span><span style="color: #0000DD; font-weight: bold">1</span>];
+      arr[n<span style="color: #333333">-</span>i<span style="color: #333333">-</span><span style="color: #0000DD; font-weight: bold">1</span>]<span style="color: #333333">=</span>temp;
+     }
+     printf(<span style="background-color: #fff0f0">&quot;Array after reversing : &quot;</span>);
+     <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span>n;i<span style="color: #333333">++</span>)
+     {
+     	printf(<span style="background-color: #fff0f0">&quot;%d</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\t\n</span><span style="background-color: #fff0f0">&quot;</span>,arr[i]);;
+     }
+}
+</pre></div>
+<h3>Sorting of array (Selection sort)</h3>
+<div class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888"></span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #557799">#define MAX 100</span>
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>()
+{
+     <span style="color: #333399; font-weight: bold">int</span> arr[MAX],n,i,j,temp;
+     printf(<span style="background-color: #fff0f0">&quot;Enter size of Array: &quot;</span>); 
+     scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>n);
+     printf(<span style="background-color: #fff0f0">&quot;Enter %d elements</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>,n);
+     <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span>n;i<span style="color: #333333">++</span>)
+     {
+     	scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>arr[i]);
+     }
+     <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span>n;i<span style="color: #333333">++</span>)
+     {
+     	<span style="color: #008800; font-weight: bold">for</span>(j<span style="color: #333333">=</span>i<span style="color: #333333">+</span><span style="color: #0000DD; font-weight: bold">1</span>;j<span style="color: #333333">&lt;</span>n;j<span style="color: #333333">++</span>)
+     	{   <span style="color: #008800; font-weight: bold">if</span>(arr[i]<span style="color: #333333">&gt;</span>arr[j]) <span style="color: #888888">// for reverse order sorting change the sign &gt; to &lt;</span>
+     		{
+     		 temp<span style="color: #333333">=</span>arr[i];
+      		 arr[i]<span style="color: #333333">=</span>arr[j];
+      		 arr[j]<span style="color: #333333">=</span>temp;
+         	}
+     	}
+     
+     }
+     printf(<span style="background-color: #fff0f0">&quot;Array Sorting : &quot;</span>);
+     <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span>n;i<span style="color: #333333">++</span>)
+     {
+     	printf(<span style="background-color: #fff0f0">&quot;%d</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>,arr[i]);;
+     }
+}
+</pre></div>
+<h3>Find how many times a number present in array</h3>
+<div class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888"></span> 
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #557799">#define MAX 100</span>
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>()
+{
+     <span style="color: #333399; font-weight: bold">int</span> arr[MAX],n,i,item,count<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>,a[MAX];
+     printf(<span style="background-color: #fff0f0">&quot;Enter size of Array: &quot;</span>); 
+     scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>n);
+     printf(<span style="background-color: #fff0f0">&quot;Enter %d elements</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>,n);
+     <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span>n;i<span style="color: #333333">++</span>)
+     {
+     	scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>arr[i]);
+     }
+     printf(<span style="background-color: #fff0f0">&quot;Enter element you want to search: &quot;</span>);
+     scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>item);
+     <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span>n;i<span style="color: #333333">++</span>)
+     {
+     	  <span style="color: #008800; font-weight: bold">if</span>(arr[i]<span style="color: #333333">==</span>item)
+     	  {
+     	  	a[count]<span style="color: #333333">=</span>i<span style="color: #333333">+</span><span style="color: #0000DD; font-weight: bold">1</span>;
+     	  	count<span style="color: #333333">++</span>;
+     	  }
+        
+     }
+     <span style="color: #008800; font-weight: bold">if</span>(count<span style="color: #333333">!=</span><span style="color: #0000DD; font-weight: bold">0</span>)
+     {   printf(<span style="background-color: #fff0f0">&quot;Item found at  &quot;</span>);
+     	<span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span>count;i<span style="color: #333333">++</span>)
+     	{
+     		printf(<span style="background-color: #fff0f0">&quot;%d &quot;</span>,a[i]);
+     	}
+     	
+     }
+     <span style="color: #008800; font-weight: bold">else</span>
+     {
+     	printf(<span style="background-color: #fff0f0">&quot;Item not found&quot;</span>);
+     }
+     
+}
+</pre></div>
+<h3>Remove duplicate number from array</h3>
+<div class="css3-shadow" style="background: #ffffff; overflow:auto;width:auto;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888"></span>
+<span style="color: #557799">#include&lt;stdio.h&gt;</span>
+<span style="color: #557799">#define MAX 100</span>
+<span style="color: #333399; font-weight: bold">void</span> <span style="color: #0066BB; font-weight: bold">main</span>()
+{
+     <span style="color: #333399; font-weight: bold">int</span> arr[MAX],n,i,j,k,temp,size<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;
+     printf(<span style="background-color: #fff0f0">&quot;Enter size of Array: &quot;</span>); 
+     scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>n);
+     printf(<span style="background-color: #fff0f0">&quot;Enter %d elements</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>,n);
+     <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span>n;i<span style="color: #333333">++</span>)
+     {
+     	scanf(<span style="background-color: #fff0f0">&quot;%d&quot;</span>,<span style="color: #333333">&amp;</span>arr[i]);
+     }
+
+     <span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span>n<span style="color: #333333">-</span><span style="color: #0000DD; font-weight: bold">1</span><span style="color: #333333">-</span>size;i<span style="color: #333333">++</span>)<span style="color: #888888">//-size is used because the size of array </span>
+     {                      <span style="color: #888888">//is reducing after removing duplicate element</span>
+     	<span style="color: #008800; font-weight: bold">for</span>(j<span style="color: #333333">=</span>i<span style="color: #333333">+</span><span style="color: #0000DD; font-weight: bold">1</span>;j<span style="color: #333333">&lt;</span>n<span style="color: #333333">-</span>size;j<span style="color: #333333">++</span>)
+     	{
+     		<span style="color: #008800; font-weight: bold">if</span>(arr[i]<span style="color: #333333">==</span>arr[j])
+     		{
+     			<span style="color: #008800; font-weight: bold">for</span>(k<span style="color: #333333">=</span>j;k<span style="color: #333333">&lt;</span>n<span style="color: #333333">-</span><span style="color: #0000DD; font-weight: bold">1</span><span style="color: #333333">-</span>size;k<span style="color: #333333">++</span>)
+     			{
+     				arr[k]<span style="color: #333333">=</span>arr[k<span style="color: #333333">+</span><span style="color: #0000DD; font-weight: bold">1</span>];
+     			
+     			}
+     				size<span style="color: #333333">++</span>;
+     		}
+     	}
+     
+        
+     }
+     printf(<span style="background-color: #fff0f0">&quot;Total repeated Elements were : %d</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>,size);
+     printf(<span style="background-color: #fff0f0">&quot;Array after removing duplicate element</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>);
+     n<span style="color: #333333">=</span>n<span style="color: #333333">-</span>size;<span style="color: #888888">//reducing size of array by removing duplicate elements</span>
+     
+ 	<span style="color: #008800; font-weight: bold">for</span>(i<span style="color: #333333">=</span><span style="color: #0000DD; font-weight: bold">0</span>;i<span style="color: #333333">&lt;</span>n;i<span style="color: #333333">++</span>)
+     {
+     	printf(<span style="background-color: #fff0f0">&quot;%d</span><span style="color: #666666; font-weight: bold; background-color: #fff0f0">\n</span><span style="background-color: #fff0f0">&quot;</span>,arr[i]);
+     }
+} 
+</pre></div>
+<hr>
+<p> &nbsp; </p>
+</html>

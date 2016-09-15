@@ -1,0 +1,80 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+
+<h3><strong>Structure </strong></h3>
+<p class="css3-shadow">
+  Structure is  user defined data type, which can store the different data type variable  together</p>
+<p class="css3-shadow">
+  <strong><em>Syntax:</em></strong><br>
+  struct  [structure tag]<br>
+  {<br>
+ &nbsp;&nbsp; member definition;<br>
+ &nbsp;&nbsp; member definition;<br>
+  ...<br>
+  } variables_name;</p>
+<p class="css3-shadow"><strong>Example</strong><br>
+  struct book<br>
+  {<br>
+  &nbsp;&nbsp;char&nbsp;&nbsp;name[50] <strong>;</strong><br>
+  &nbsp;&nbsp;char&nbsp;&nbsp;author[50] <strong>;</strong><br>
+  &nbsp;&nbsp;int&nbsp;&nbsp;id <strong>;</strong><br>
+} b <strong>;</strong></p>
+
+<h3><strong>Union</strong></h3>
+<p class="css3-shadow">
+  A union is a  user defined data type that enables to store different data types in the same  memory location. We can define a union with many members,<br>but only one member  can contain a value at any given time.<br>
+  The memory required to store a union variable is the memory required for largest element of an union</p>
+<p class="css3-shadow"><strong><em>Syntax:</em></strong><br>
+  union [union  tag]<br>
+  {<br>
+  member definition <strong>;</strong><br>
+  member definition <strong>;</strong><br>
+  ...<br>
+}  variables_name <strong>;</strong></p>
+<p class="css3-shadow"><strong>Example</strong><br>
+  union book<br>
+  {<br>
+  &nbsp;&nbsp;char&nbsp;&nbsp;name[50] <strong>;</strong><br>
+ &nbsp;&nbsp;char&nbsp;&nbsp;author[50] <strong>;</strong><br>
+  &nbsp;&nbsp;int&nbsp;&nbsp;id <strong>;</strong><br>
+  } b <strong>;</strong></p>
+<h3>Difference between Structure and Union</h3>
+<table border="1" cellspacing="0" cellpadding="3" width="647" >
+  <tr>
+    <td  width="350" valign="top" class="css3-shadow"><p align="center" ><strong>Structure</strong></p></td>
+    <td width="291" valign="top" class="css3-shadow"><p align="center"><strong>Union</strong></p></td>
+  </tr>
+  <tr>
+    <td width="350" valign="top"><p>1.The keyword&nbsp;&nbsp;<strong>struct</strong>&nbsp;is used to define a structure</p></td>
+    <td width="291" valign="top"><p>1.    The keyword union is used to define a union.</p></td>
+  </tr>
+  <tr>
+    <td width="350" align="top"><p>2.    When a variable is associated with a structure, the compiler allocates the    memory for each member. The size of structure is greater than or equal to the    sum of&nbsp;&nbsp;sizes of its members. The smaller members may end with    unused slack bytes.</p></td>
+    <td width="291" valign="top"><p>2.    When a variable is associated with a union, the&nbsp;&nbsp;compiler allocates    the&nbsp;&nbsp;memory by considering the size of the largest memory. So, size    of union is equal to the size of largest member.</p></td>
+  </tr>
+  <tr>
+    <td width="350" valign="top"><p>3.    Each member within a structure is assigned unique storage area of location.</p></td>
+    <td width="291" valign="top"><p>3.    Memory allocated is shared by individual members of union.</p></td>
+  </tr>
+  <tr>
+    <td width="350" valign="top"><p>4.    The address of each member will be in ascending order This indicates that    memory for each member will start at different offset values.</p></td>
+    <td width="291" valign="top"><p>4.    The address is same for all the members of a union. This indicates that every    member begins at the same offset value.</p></td>
+  </tr>
+  <tr>
+    <td width="350" valign="top"><p>5    Altering the value of a member will not affect other members of the    structure.</p></td>
+    <td width="291" valign="top"><p>5.    Altering the value of any of the member will alter other member values.</p></td>
+  </tr>
+  <tr>
+    <td width="350" valign="top"><p>6.    Individual member can be accessed at a time</p></td>
+    <td width="291" valign="top"><p>6.    Only one member can be accessed at a time.</p></td>
+  </tr>
+  <tr>
+    <td width="350" valign="top"><p>7.    Several members of a structure can initialize at once.</p></td>
+    <td width="291" valign="top"><p>7.    Only the first member of a union can be initialized.</p></td>
+  </tr>
+</table>
+<p>&nbsp;</p><hr>
+<p>&nbsp;</p>
+</html>

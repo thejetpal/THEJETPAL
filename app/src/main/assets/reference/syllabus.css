@@ -1,0 +1,134 @@
+body{
+	
+    background-size:100% 100%;
+	font-size: 10px;
+   font-variant: 87.5%; /* Base font size is 14 px*/
+   font-family:  opensansfont;
+   line-height:  1.5;
+   text-align: left;
+  
+}
+@font-face {
+    font-family: 'opensansfont'; 
+    src: ../../font; 
+}
+hr
+{
+	color: #455A64;
+	background-color: #455A64;
+	height: 1.5px;
+}
+.answer{
+	font-family: opensansfont;
+	font-size: 16px;
+	color: #2199FF;
+	 text-align: left;
+	
+	}
+.d1{
+	float:left;
+}
+.d2{
+	float:right;
+}
+.body {
+	margin: 0 auto;
+	width: 70%;
+	clear: both;
+	font-family: opensansfont;
+
+
+}
+.body  b{
+	color: #00695C;
+	}
+	.body strong{
+		color: #00695C;
+		}
+	.box{
+    width: 300px;
+    border: 1px solid grey;
+    padding: 25px;
+    margin: 25px;
+}
+	.formulae{
+    width: 250px;
+    border: 1px solid grey;
+    padding: 10px;
+    margin: 10px;
+}
+	.array{
+    width: 180px;
+    border: 1px solid grey;
+    padding: 1.5px;
+    margin: 25px;
+}
+
+
+@media only screen and (min-width: 150px) and (max-width: 600px)
+{
+
+
+.body {
+	margin: 0 auto;
+	width: 92%;
+	clear: both; font-size: 10px;
+	font-family: opensansfont;
+}
+
+{
+	color:#455A64;
+	background-color: #455A64;
+	height: 1.5px;
+}
+
+.answer{
+	font-family: opensansfont;
+	font-size: 18px;
+	color:#2F4F4F; 
+	text-align:left;
+	}
+
+}
+.table1{
+	border:1px solid black;
+	border-collapse:collapse;
+	background-color:#E6E6FA;
+	color:black;
+	clear:both;
+	
+}
+.d10{
+	clear:both;
+	color:black;
+}
+.table{
+	border:1px solid black;
+	border-collapse:collapse;
+	background-color:#E6E6FA;
+	color:black;
+	clear:both;
+	
+}
+tr:nth-child(odd){
+	background-color:#DCDCDC;
+	.box{
+    width: 300px;
+    border: 1px solid grey;
+    padding: 25px;
+    margin: 25px;
+}
+	.formulae{
+    width: 250px;
+    border: 1px solid grey;
+    padding: 10px;
+    margin: 10px;
+}
+
+	.array{
+    width: 180px;
+    border: 1px solid grey;
+    padding: 1.5px;
+    margin: 25px;
+}
+}

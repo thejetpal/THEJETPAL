@@ -2,14 +2,16 @@ package mykitab.mykitabcomptepu.CODE_TRAINING;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import mykitab.mykitabcomptepu.ADAPTERS.CodeAdapter;
-import mykitab.mykitabcomptepu.C_Programming.C;
 import mykitab.mykitabcomptepu.C_Programming.C_Tabs;
 import mykitab.mykitabcomptepu.R;
 
@@ -17,59 +19,43 @@ import mykitab.mykitabcomptepu.R;
 /**
  * Created by Admin on 20/08/2016.
  */
-public class CodeTraining extends AppCompatActivity {
+public class CodeTraining extends Fragment {
 
     private ListView listView;
     private String web[] = {
             "C",
-            "C++",
-            "Java",
-            "Data Structures",
+            "C++ (Soon)",
+            "Java (Soon)",
+          /*  "Data Structures",
             "Ruby",
-            "JSP"
+            "JSP" */
     };
     private Integer imageid[] = {
             R.drawable.tutorial_c_icon,
             R.drawable.tutorial_cplusplus_icon,
             R.drawable.tutorial_java_icon,
-            R.drawable.tutorial_data_structures_icon,
+           /* R.drawable.tutorial_data_structures_icon,
             R.drawable.tutorial_ruby_icon,
-            R.drawable.tutorial_jsp_icon
+            R.drawable.tutorial_jsp_icon*/
     };
 
+    @Nullable
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        setContentView(R.layout.universal_listview_code);
-
-        //Initialise Toolbar
-        Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
-
-        //setSupportActionBar(second);
-        setSupportActionBar(myToolbar);
-        getSupportActionBar().setTitle("Let's Code!");
-        //Initialise Back Button
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        if (myToolbar != null) {
-            myToolbar.setNavigationOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    onBackPressed();
-                }
-            });
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        if (container == null) {
+            return null;
         }
-        CodeAdapter customList = new CodeAdapter(this, web, imageid);
+        LinearLayout mLinearLayout = (LinearLayout) inflater.inflate(R.layout.primary_layout, container, false);
 
-        listView = (ListView) findViewById(R.id.sub_daa_all);
+        CodeAdapter customList = new CodeAdapter(getActivity(), web, imageid);
+
+        listView = (ListView) mLinearLayout.findViewById(R.id.listView);
         listView.setAdapter(customList);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 if (i == 0) {
-                    Intent intent = new Intent(CodeTraining.this, C_Tabs.class);
+                    Intent intent = new Intent(getActivity(), C_Tabs.class);
                     startActivity(intent);
                 }
             /*    if (i == 1) {
@@ -98,6 +84,7 @@ public class CodeTraining extends AppCompatActivity {
                 }*/
             }
         });
+        return mLinearLayout;
     }
 
 }

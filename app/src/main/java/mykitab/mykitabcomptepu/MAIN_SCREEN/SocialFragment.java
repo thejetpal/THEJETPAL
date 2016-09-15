@@ -13,8 +13,11 @@ import android.widget.ListView;
 
 import mykitab.mykitabcomptepu.ADAPTERS.ListAdapter;
 import mykitab.mykitabcomptepu.CODE_TRAINING.CodeTraining;
+import mykitab.mykitabcomptepu.CODE_TRAINING.Code_TABS;
 import mykitab.mykitabcomptepu.Other.Emergency;
 import mykitab.mykitabcomptepu.R;
+import mykitab.mykitabcomptepu.WEBVIEW.WebViewLocal;
+
 
 /**
  * Created by Admin on 08/08/2016.
@@ -55,11 +58,17 @@ public class SocialFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 if (i == 0) {
-                    Intent intent = new Intent(getActivity(), CodeTraining.class);
+                    Intent intent = new Intent(getActivity(), Code_TABS.class);
                     startActivity(intent);
                 }
                 if (i == 1) {
                     Intent intent = new Intent(getActivity(), Emergency.class);
+                    startActivity(intent);
+                }
+                if (i == 2) {
+                    String url = "file:///android_asset/local.html";
+                    Intent intent = new Intent(getActivity(), WebViewLocal.class);
+                    intent.putExtra("url", url);
                     startActivity(intent);
                 }
 

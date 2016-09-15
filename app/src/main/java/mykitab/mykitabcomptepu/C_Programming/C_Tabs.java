@@ -50,7 +50,6 @@ public class C_Tabs extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new QuestionOfDay(), "Question of the Day");
         adapter.addFragment(new C(), "C Tutorial");
         adapter.addFragment(new C_Programs(), "C Programs");
         viewPager.setAdapter(adapter);

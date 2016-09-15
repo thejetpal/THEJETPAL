@@ -101,7 +101,7 @@ public class MainActivity extends FragmentActivity {
                     xfragmentTransaction.replace(R.id.containerView, new AboutUs()).commit();
                 }
                 if (menuItem.getItemId() == R.id.references) {
-                    String url = "https://mykitab-a31b3.firebaseapp.com/Syllabus/references.html";
+                    String url = "file:///android_asset/reference/references.html";
                     String ques = "References";
                     Intent intent = new Intent(getApplicationContext(), WebViewActivity.class);
                     intent.putExtra("url", url);

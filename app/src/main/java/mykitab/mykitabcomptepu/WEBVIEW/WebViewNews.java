@@ -6,7 +6,6 @@ package mykitab.mykitabcomptepu.WEBVIEW;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
@@ -19,7 +18,7 @@ import android.widget.Toast;
 import mykitab.mykitabcomptepu.R;
 
 
-public class WebViewNews extends ActionBarActivity {
+public class WebViewNews extends AppCompatActivity {
 
 
     private WebView webView1;
@@ -37,7 +36,14 @@ public class WebViewNews extends ActionBarActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-
+        if (toolbar != null) {
+            toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    onBackPressed();
+                }
+            });
+        }
         title = getIntent().getExtras().getString("title");
         url = getIntent().getExtras().getString("url");
 

@@ -8,6 +8,8 @@ import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.pm.PackageInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -18,7 +20,9 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.view.KeyEvent;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
+import android.view.View;
 
 import mykitab.mykitabcomptepu.DRAWER_MENU.AboutUs;
 import mykitab.mykitabcomptepu.DRAWER_MENU.ContactUsFragment;
@@ -35,14 +39,15 @@ public class MainActivity extends FragmentActivity {
     FragmentTransaction mFragmentTransaction;
     private long mBackPressed;
     private static final String TAG = "Splash";
-
+    private static final String PRIVATE_PREF = "myapp";
+    private static final String VERSION_KEY = "version_number";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
-
+        init();
         /**
          *Setup the DrawerLayout and NavigationView
          */
@@ -130,6 +135,46 @@ public class MainActivity extends FragmentActivity {
 
         mDrawerToggle.syncState();
 
+    }
+
+    private void init() {
+        SharedPreferences sharedPref = getSharedPreferences(PRIVATE_PREF, Context.MODE_PRIVATE);
+        int currentVersionNumber = 0;
+
+        int savedVersionNumber = sharedPref.getInt(VERSION_KEY, 0);
+
+        try {
+            PackageInfo pi = getPackageManager().getPackageInfo(getPackageName(), 0);
+            currentVersionNumber = pi.versionCode;
+        } catch (Exception e) {
+        }
+
+        if (currentVersionNumber > savedVersionNumber) {
+            showWhatsNewDialog();
+
+            SharedPreferences.Editor editor = sharedPref.edit();
+
+            editor.putInt(VERSION_KEY, currentVersionNumber);
+            editor.commit();
+        }
+    }
+
+    private void showWhatsNewDialog() {
+        LayoutInflater inflater = LayoutInflater.from(this);
+
+        View view = inflater.inflate(R.layout.dialog_whatsnew, null);
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        builder.setView(view).setTitle("Whats New")
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+
+        builder.create().show();
     }
 
 

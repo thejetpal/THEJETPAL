@@ -16,6 +16,7 @@ import java.util.List;
 
 import mykitab.mykitabcomptepu.ADAPTERS.EmAdapter;
 import mykitab.mykitabcomptepu.R;
+import mykitab.mykitabcomptepu.WEBVIEW.WebViewActivity;
 import mykitab.mykitabcomptepu.XmlParsers.Employee;
 import mykitab.mykitabcomptepu.XmlParsers.XMLPullParserHandler;
 
@@ -56,12 +57,13 @@ public class TOCUnitSix extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
-
-       /*         String url = mAdapter.getItem(position).getLink();
+                String ques = mAdapter.getItem(position).getAbout();
+                String url = mAdapter.getItem(position).getLink();
                 Intent intent = new Intent(getApplicationContext(), WebViewActivity.class);
                 intent.putExtra("url", url);
+                intent.putExtra("ques", ques);
                 startActivity(intent);
-*/
+
 
             }
         });

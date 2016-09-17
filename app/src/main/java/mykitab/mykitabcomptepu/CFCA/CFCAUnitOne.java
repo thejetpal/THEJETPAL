@@ -10,6 +10,10 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+
 import java.io.IOException;
 import java.util.List;
 
@@ -25,6 +29,7 @@ import mykitab.mykitabcomptepu.XmlParsers.XMLPullParserHandler;
 public class CFCAUnitOne extends AppCompatActivity {
     private ListView listView;
     private EmAdapter mAdapter;
+    private AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +39,22 @@ public class CFCAUnitOne extends AppCompatActivity {
 
         //Initialise Toolbar
         Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
+        // Initialize the Mobile Ads SDK.
+        MobileAds.initialize(this, "ca-app-pub-3703525445460778~4792780040");
 
+        // Gets the ad view defined in layout/ad_fragment.xml with ad unit ID set in
+        // values/strings.xml.
+        mAdView = (AdView) findViewById(R.id.ad_view);
+
+        // Create an ad request. Check your logcat output for the hashed device ID to
+        // get test ads on a physical device. e.g.
+        // "Use AdRequest.Builder.addTestDevice("ABCDEF012345") to get test ads on this device."
+        AdRequest adRequest = new AdRequest.Builder()
+
+                .build();
+
+        // Start loading the ad in the background.
+        mAdView.loadAd(adRequest);
         //setSupportActionBar(second);
         setSupportActionBar(myToolbar);
         getSupportActionBar().setTitle("CFCA Unit One");
@@ -86,6 +106,38 @@ public class CFCAUnitOne extends AppCompatActivity {
         return true;
     }
 
-    /** Called when leaving the activity */
+    /**
+     * Called when leaving the activity
+     */
+    @Override
+    public void onPause() {
+        if (mAdView != null) {
+            mAdView.pause();
+        }
+        super.onPause();
+    }
+
+    /**
+     * Called when returning to the activity
+     */
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (mAdView != null) {
+            mAdView.resume();
+        }
+    }
+
+    /**
+     * Called before the activity is destroyed
+     */
+    @Override
+    public void onDestroy() {
+        if (mAdView != null) {
+            mAdView.destroy();
+        }
+        super.onDestroy();
+    }
+
 
 }

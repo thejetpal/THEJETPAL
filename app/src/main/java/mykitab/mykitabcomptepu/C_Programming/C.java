@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +11,10 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 
 import java.io.IOException;
 import java.util.List;
@@ -25,6 +28,7 @@ import mykitab.mykitabcomptepu.XmlParsers.XMLPullParser;
 public class C extends Fragment {
     private ListView listView;
     private CodeXMLAdapter mAdapter;
+    private AdView mAdView;
 
     @Nullable
     @Override
@@ -34,7 +38,22 @@ public class C extends Fragment {
         }
         LinearLayout mLinearLayout = (LinearLayout) inflater.inflate(R.layout.c_tutorial, container, false);
         //ListView Adapter
+        // View Inflater to make findviewbyid work
+        MobileAds.initialize(getActivity(), "ca-app-pub-3703525445460778~4792780040");
 
+        // Gets the ad view defined in layout/ad_fragment.xml with ad unit ID set in
+        // values/strings.xml.
+        mAdView = (AdView) mLinearLayout.findViewById(R.id.ad_view);
+
+        // Create an ad request. Check your logcat output for the hashed device ID to
+        // get test ads on a physical device. e.g.
+        // "Use AdRequest.Builder.addTestDevice("ABCDEF012345") to get test ads on this device."
+        AdRequest adRequest = new AdRequest.Builder()
+
+                .build();
+
+        // Start loading the ad in the background.
+        mAdView.loadAd(adRequest);
         listView = (ListView) mLinearLayout.findViewById(R.id.daa_unit_one);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -62,6 +81,39 @@ public class C extends Fragment {
             e.printStackTrace();
         }
         return mLinearLayout;
+    }
+
+    /**
+     * Called when leaving the activity
+     */
+    @Override
+    public void onPause() {
+        if (mAdView != null) {
+            mAdView.pause();
+        }
+        super.onPause();
+    }
+
+    /**
+     * Called when returning to the activity
+     */
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (mAdView != null) {
+            mAdView.resume();
+        }
+    }
+
+    /**
+     * Called before the activity is destroyed
+     */
+    @Override
+    public void onDestroy() {
+        if (mAdView != null) {
+            mAdView.destroy();
+        }
+        super.onDestroy();
     }
 }
 

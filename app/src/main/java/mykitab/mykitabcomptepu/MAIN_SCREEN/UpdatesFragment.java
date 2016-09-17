@@ -11,6 +11,10 @@ import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+
 import mykitab.mykitabcomptepu.ADAPTERS.ListAdapter;
 import mykitab.mykitabcomptepu.R;
 
@@ -30,6 +34,7 @@ public class UpdatesFragment extends Fragment {
             R.drawable.pl1,
             R.drawable.pl2,
     };
+    private AdView mAdView;
 
 
     @Nullable
@@ -41,6 +46,21 @@ public class UpdatesFragment extends Fragment {
 
         // View Inflater to make findviewbyid work
         LinearLayout mLinearLayout = (LinearLayout) inflater.inflate(R.layout.primary_layout, container, false);
+        MobileAds.initialize(getActivity(), "ca-app-pub-3703525445460778~4792780040");
+
+        // Gets the ad view defined in layout/ad_fragment.xml with ad unit ID set in
+        // values/strings.xml.
+        mAdView = (AdView) mLinearLayout.findViewById(R.id.ad_view);
+
+        // Create an ad request. Check your logcat output for the hashed device ID to
+        // get test ads on a physical device. e.g.
+        // "Use AdRequest.Builder.addTestDevice("ABCDEF012345") to get test ads on this device."
+        AdRequest adRequest = new AdRequest.Builder()
+
+                .build();
+
+        // Start loading the ad in the background.
+        mAdView.loadAd(adRequest);
         //ListView Adapter
         ListAdapter customList = new ListAdapter(getActivity(), web, imageid);
         // Initialise ListView
@@ -67,6 +87,39 @@ public class UpdatesFragment extends Fragment {
 
         //return inflated layout
     }
+    /**
+     * Called when leaving the activity
+     */
+    @Override
+    public void onPause() {
+        if (mAdView != null) {
+            mAdView.pause();
+        }
+        super.onPause();
+    }
+
+    /**
+     * Called when returning to the activity
+     */
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (mAdView != null) {
+            mAdView.resume();
+        }
+    }
+
+    /**
+     * Called before the activity is destroyed
+     */
+    @Override
+    public void onDestroy() {
+        if (mAdView != null) {
+            mAdView.destroy();
+        }
+        super.onDestroy();
+    }
+
 }
 
 

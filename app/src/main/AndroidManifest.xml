@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="mykitab.mykitabcomptepu">
+    package="mykitab.mykitabcomptepu" >
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
-
         android:allowBackup="true"
-
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme" >
         <activity
             android:name=".FirstScreen"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,12 +22,12 @@
             </intent-filter>
         </activity>
 
-        <service android:name=".MyFirebaseMessagingService">
+        <service android:name=".MyFirebaseMessagingService" >
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-        <service android:name=".MyFirebaseInstanceIDService">
+        <service android:name=".MyFirebaseInstanceIDService" >
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
@@ -37,8 +36,7 @@
         <activity android:name=".MAIN_SCREEN.MainActivity" />
         <activity android:name=".MAIN_SCREEN.PLOne" />
         <activity android:name=".MAIN_SCREEN.PLTwo" />
-
-        <activity android:name=".TOC.TocMain">
+        <activity android:name=".TOC.TocMain" >
             <intent-filter>
                 <action
                     android:name="android.intent.action.TOCMAIN"
@@ -53,8 +51,7 @@
         <activity android:name=".TOC.TOCUnitFour" />
         <activity android:name=".TOC.TOCUnitFive" />
         <activity android:name=".TOC.TOCUnitSix" />
-
-        <activity android:name=".OSD.OsdMain">
+        <activity android:name=".OSD.OsdMain" >
             <intent-filter>
                 <action
                     android:name="android.intent.action.OSDMAIN"
@@ -69,8 +66,7 @@
         <activity android:name=".OSD.OSDUnitFour" />
         <activity android:name=".OSD.OSDUnitFive" />
         <activity android:name=".OSD.OSDUnitSix" />
-
-        <activity android:name=".DCWSN.DcwsnMain">
+        <activity android:name=".DCWSN.DcwsnMain" >
             <intent-filter>
                 <action
                     android:name="android.intent.action.DCWSNMAIN"
@@ -85,8 +81,7 @@
         <activity android:name=".DCWSN.DCWSNUnitFour" />
         <activity android:name=".DCWSN.DCWSNUnitFive" />
         <activity android:name=".DCWSN.DCWSNUnitSix" />
-
-        <activity android:name=".DBMS.DbmsMain">
+        <activity android:name=".DBMS.DbmsMain" >
             <intent-filter>
                 <action
                     android:name="android.intent.action.DBMSMAIN"
@@ -101,8 +96,7 @@
         <activity android:name=".DBMS.DBMSUnitFour" />
         <activity android:name=".DBMS.DBMSUnitFive" />
         <activity android:name=".DBMS.DBMSUnitSix" />
-
-        <activity android:name=".CFCA.CfcaMain">
+        <activity android:name=".CFCA.CfcaMain" >
             <intent-filter>
                 <action
                     android:name="android.intent.action.CFCAMAIN"
@@ -119,10 +113,9 @@
         <activity android:name=".CFCA.CFCAUnitSix" />
         <activity android:name=".CODE_TRAINING.Code_TABS" />
         <activity android:name=".Other.Emergency" />
-
         <activity
             android:name=".WEBVIEW.WebViewActivity"
-            android:theme="@style/WebViewAct">
+            android:theme="@style/WebViewAct" >
             <intent-filter>
                 <action android:name="android.intent.action.WebViewActivity" />
 
@@ -131,7 +124,7 @@
         </activity>
         <activity
             android:name=".WEBVIEW.WebViewDocs"
-            android:theme="@style/WebViewAct">
+            android:theme="@style/WebViewAct" >
             <intent-filter>
                 <action android:name="android.intent.action.WebViewDocs" />
 
@@ -142,14 +135,14 @@
             android:name=".WEBVIEW.WebViewLocal"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="sensorLandscape"
-            android:theme="@style/WebViewAct">
+            android:theme="@style/WebViewAct" >
             <intent-filter>
                 <action android:name="android.intent.action.WebViewLocal" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".WEBVIEW.WebViewNews">
+        <activity android:name=".WEBVIEW.WebViewNews" >
             <intent-filter>
                 <action android:name="android.intent.action.WebViewNews" />
 
@@ -162,6 +155,10 @@
         <activity android:name=".CODE_TRAINING.DataStructures" />
         <activity android:name=".CODE_TRAINING.JSP" />
         <activity android:name=".CODE_TRAINING.Ruby" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
     </application>
 
 </manifest>

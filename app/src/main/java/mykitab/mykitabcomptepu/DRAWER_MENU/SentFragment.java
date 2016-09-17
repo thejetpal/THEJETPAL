@@ -11,6 +11,10 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+
 import mykitab.mykitabcomptepu.ADAPTERS.EmAdapter;
 import mykitab.mykitabcomptepu.ADAPTERS.ListAdapterDrawer;
 import mykitab.mykitabcomptepu.R;
@@ -31,6 +35,7 @@ public class SentFragment extends Fragment {
             "PL - 2"
     };
     private EmAdapter mAdapter;
+    private AdView mAdView;
 
 
     @Nullable
@@ -42,9 +47,26 @@ public class SentFragment extends Fragment {
 
 
         View rootView = inflater.inflate(R.layout.sent_layout, container, false); //modified
+
         Toolbar myToolbar = (Toolbar) rootView.findViewById(R.id.toolbar);
         myToolbar.setTitle("Syllabus");
         myToolbar.setTitleTextColor(0xFFFFFFFF);
+
+        MobileAds.initialize(getActivity(), "ca-app-pub-3703525445460778~4792780040");
+
+        // Gets the ad view defined in layout/ad_fragment.xml with ad unit ID set in
+        // values/strings.xml.
+        mAdView = (AdView) rootView.findViewById(R.id.ad_view);
+
+        // Create an ad request. Check your logcat output for the hashed device ID to
+        // get test ads on a physical device. e.g.
+        // "Use AdRequest.Builder.addTestDevice("ABCDEF012345") to get test ads on this device."
+        AdRequest adRequest = new AdRequest.Builder()
+
+                .build();
+
+        // Start loading the ad in the background.
+        mAdView.loadAd(adRequest);
         ListAdapterDrawer adapter = new ListAdapterDrawer(getActivity(), web);
 
         listView = (ListView) rootView.findViewById(R.id.syllabus); //modified
@@ -122,7 +144,39 @@ public class SentFragment extends Fragment {
     }
 
 
-    /** Called when leaving the activity */
+    /**
+     * Called when leaving the activity
+     */
+    @Override
+    public void onPause() {
+        if (mAdView != null) {
+            mAdView.pause();
+        }
+        super.onPause();
+    }
+
+    /**
+     * Called when returning to the activity
+     */
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (mAdView != null) {
+            mAdView.resume();
+        }
+    }
+
+    /**
+     * Called before the activity is destroyed
+     */
+    @Override
+    public void onDestroy() {
+        if (mAdView != null) {
+            mAdView.destroy();
+        }
+        super.onDestroy();
+    }
+
 
 }
 

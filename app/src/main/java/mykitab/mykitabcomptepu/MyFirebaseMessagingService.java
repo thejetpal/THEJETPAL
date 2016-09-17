@@ -18,7 +18,6 @@ import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
 import mykitab.mykitabcomptepu.MAIN_SCREEN.MainActivity;
-import mykitab.mykitabcomptepu.MAIN_SCREEN.UpdatesFragment;
 
 
 public class MyFirebaseMessagingService extends FirebaseMessagingService {
@@ -40,7 +39,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     //This method is only generating push notification
     //It is same as we did in earlier posts
     private void sendNotification(String messageBody) {
-        Intent intent = new Intent(this, UpdatesFragment.class);
+        Intent intent = new Intent(this, MainActivity.class);
 
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent,
